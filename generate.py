@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 
+from moves import detect_moves
 from research import CSS, build_research, list_research_tickers
 
 BASE = "https://youngbullinvests.com"
@@ -119,7 +120,27 @@ def cls(v):
     return "up" if v >= 0 else "down"
 
 
-def render(snap, rows, stats, generated_at, pages, quotes):
+MOVE_BADGE = {"BOUGHT": "up", "ADDED": "up", "EXITED": "down", "START": ""}
+
+
+def moves_html(moves):
+    if not moves:
+        return ""
+    items = []
+    for m in moves[:10]:
+        badge = MOVE_BADGE.get(m["type"], "")
+        tk = f" <span class='tk'>{escape(m['t'])}</span>" if m["t"] else ""
+        items.append(
+            f"<div style='margin:4px 0'><span class='chip {badge}'>{escape(m['type'])}</span>"
+            f"{tk} <span class='sub' style='margin:0'>{escape(m['detail'])}"
+            f" ({escape(m['date'])})</span></div>")
+    return ("<section><h2>The Moves</h2>"
+            "<div class='sub' style='margin-bottom:8px'>Detected automatically from my "
+            "brokerage snapshot. When I buy or sell, it shows up here on its own.</div>"
+            + "".join(items) + "</section>")
+
+
+def render(snap, rows, stats, generated_at, pages, quotes, moves):
     tr = []
     for r in sorted(rows, key=lambda x: -(x["weight"] or 0)):
         t = r["t"]
@@ -182,6 +203,8 @@ Free for everyone until July 22, 2026. After that, paid subscribers only.</div>
 <section><h2>Today's Tape</h2>
 <div>Leaders: {movers_up}</div><div style="margin-top:8px">Laggards: {movers_dn}</div></section>
 
+{moves_html(moves)}
+
 <section><h2>Research Library</h2>
 <div class="sub" style="margin-bottom:10px">Every name I have written a real thesis file on.
 Click any ticker. &#9679; = currently held. Held names in the book table above link to the
@@ -203,7 +226,8 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     rows_by_ticker = {r["t"]: r for r in rows}
     pages = build_research(OUT_DIR, quotes, rows_by_ticker, generated_at)
-    html = render(snap, rows, stats, generated_at, pages, quotes)
+    moves = detect_moves(snap)
+    html = render(snap, rows, stats, generated_at, pages, quotes, moves)
     tmp = OUT_DIR / "index.html.tmp"
     tmp.write_text(html, encoding="utf-8")
     tmp.replace(OUT_DIR / "index.html")

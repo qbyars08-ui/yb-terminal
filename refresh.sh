@@ -13,7 +13,7 @@ if ! python3 generate.py >> "$LOG" 2>&1; then
 fi
 
 if [ -d .git ] && git remote get-url origin > /dev/null 2>&1; then
-  git add docs/
+  git add docs/ data/
   if ! git diff --cached --quiet; then
     git commit -q -m "terminal: refresh $(date -u '+%Y-%m-%d %H:%M UTC')"
     git push -q origin main >> "$LOG" 2>&1 && echo "deployed" >> "$LOG"
