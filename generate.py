@@ -16,6 +16,8 @@ from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 
+from research import CSS, build_research, list_research_tickers
+
 BASE = "https://youngbullinvests.com"
 OUT_DIR = Path(__file__).parent / "docs"
 TIMEOUT = 20
@@ -32,8 +34,12 @@ def load_data():
     positions = snap.get("positions") or []
     if not positions:
         raise ValueError("positions.json returned no positions")
-    symbols = ",".join(p["t"] for p in positions)
-    live = fetch_json(f"{BASE}/api/prices?symbols={symbols}")
+    held = [p["t"] for p in positions]
+    extra = [t for t in list_research_tickers() if t not in held]
+    live = fetch_json(f"{BASE}/api/prices?symbols={','.join(held + extra)}")
+    if not live.get("ok") or not live.get("prices"):
+        # library symbols may not all quote; retry with held only before failing
+        live = fetch_json(f"{BASE}/api/prices?symbols={','.join(held)}")
     if not live.get("ok"):
         raise ValueError(f"prices API not ok: {live}")
     return snap, live
@@ -113,11 +119,14 @@ def cls(v):
     return "up" if v >= 0 else "down"
 
 
-def render(snap, rows, stats, generated_at):
+def render(snap, rows, stats, generated_at, pages, quotes):
     tr = []
     for r in sorted(rows, key=lambda x: -(x["weight"] or 0)):
+        t = r["t"]
+        cell = (f"<a href='t/{escape(t)}.html'>{escape(t)}</a>"
+                if t in pages else escape(t))
         tr.append(
-            f"<tr><td class='tk'>{escape(r['t'])}</td>"
+            f"<tr><td class='tk'>{cell}</td>"
             f"<td>{fmt(r['weight'], '.1f')}%</td>"
             f"<td>${fmt(r['cost'], ',.2f')}</td>"
             f"<td>${fmt(r['price'], ',.2f')}</td>"
@@ -132,41 +141,28 @@ def render(snap, rows, stats, generated_at):
         f"<span class='chip down'>{escape(m['t'])} {m['change']:+.1f}%</span>"
         for m in stats["worst"]
     )
+    held = {r["t"] for r in rows}
+    lib_chips = []
+    for t in sorted(pages):
+        q = quotes.get(t) or {}
+        ch = q.get("changePct")
+        pct = f" <span class='{cls(ch)}'>{ch:+.1f}%</span>" if ch is not None else ""
+        mark = " &#9679;" if t in held else ""
+        lib_chips.append(f"<a class='chip' href='t/{escape(t)}.html'>{escape(t)}{mark}{pct}</a>")
+    pending = sorted(held - pages)
+    pending_html = ""
+    if pending:
+        pending_html = (
+            "<div class='sub' style='margin-top:10px'>Held, thesis file not written yet: "
+            + ", ".join(escape(t) for t in pending)
+            + ". Rule 5 says every position needs one. They are coming.</div>")
     return f"""<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Young Bull Terminal</title>
-<style>
-  :root {{ --bg:#0a0e12; --panel:#11161d; --line:#1e2630; --text:#e8edf2;
-           --dim:#8b98a5; --green:#2ecc71; --red:#ff5c5c; --gold:#f0b90b; }}
-  * {{ box-sizing:border-box; margin:0; }}
-  body {{ background:var(--bg); color:var(--text); padding:24px 16px 60px;
-         font:15px/1.5 -apple-system, "SF Mono", Menlo, monospace; }}
-  main {{ max-width:820px; margin:0 auto; }}
-  h1 {{ font-size:20px; letter-spacing:2px; color:var(--gold); }}
-  .sub {{ color:var(--dim); font-size:12px; margin:4px 0 24px; }}
-  section {{ background:var(--panel); border:1px solid var(--line);
-             border-radius:10px; padding:18px; margin-bottom:18px; }}
-  h2 {{ font-size:13px; letter-spacing:1.5px; color:var(--dim);
-        text-transform:uppercase; margin-bottom:12px; }}
-  .stats {{ display:flex; gap:24px; flex-wrap:wrap; margin-bottom:6px; }}
-  .stat b {{ display:block; font-size:22px; }}
-  .stat span {{ color:var(--dim); font-size:11px; text-transform:uppercase; }}
-  table {{ width:100%; border-collapse:collapse; font-size:13px; }}
-  th {{ text-align:left; color:var(--dim); font-weight:400; font-size:11px;
-       text-transform:uppercase; padding:6px 8px; border-bottom:1px solid var(--line); }}
-  td {{ padding:7px 8px; border-bottom:1px solid var(--line); }}
-  tr:last-child td {{ border-bottom:none; }}
-  .tk {{ color:var(--gold); font-weight:700; }}
-  .up {{ color:var(--green); }} .down {{ color:var(--red); }}
-  .chip {{ display:inline-block; background:var(--bg); border:1px solid var(--line);
-           border-radius:6px; padding:3px 8px; margin:2px 4px 2px 0; font-size:12px; }}
-  .read {{ font-size:15px; line-height:1.7; }}
-  footer {{ color:var(--dim); font-size:11px; margin-top:24px; }}
-  @media (max-width:520px) {{ td:nth-child(3), th:nth-child(3) {{ display:none; }} }}
-</style></head><body><main>
+<style>{CSS}</style></head><body><main>
 <h1>YOUNG BULL TERMINAL</h1>
 <div class="sub">Generated {escape(generated_at)}. Holdings as of
 {escape(str(snap.get("as_of", "?")))}. Real money, real entries, verified daily.
@@ -186,6 +182,12 @@ Free for everyone until July 22, 2026. After that, paid subscribers only.</div>
 <section><h2>Today's Tape</h2>
 <div>Leaders: {movers_up}</div><div style="margin-top:8px">Laggards: {movers_dn}</div></section>
 
+<section><h2>Research Library</h2>
+<div class="sub" style="margin-bottom:10px">Every name I have written a real thesis file on.
+Click any ticker. &#9679; = currently held. Held names in the book table above link to the
+same pages.</div>
+<div>{''.join(lib_chips)}</div>{pending_html}</section>
+
 <footer>Young Bull Terminal. Not advice, it is my book and my machine. Free preview
 until July 22, 2026, then this becomes a paid-subscriber perk. Built and refreshed
 automatically by the same AI stack that runs Young Bull.</footer>
@@ -194,15 +196,18 @@ automatically by the same AI stack that runs Young Bull.</footer>
 
 def main():
     snap, live = load_data()
-    rows = enrich(snap["positions"], live.get("prices") or {})
+    quotes = live.get("prices") or {}
+    rows = enrich(snap["positions"], quotes)
     stats = book_stats(rows)
     generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    html = render(snap, rows, stats, generated_at)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    rows_by_ticker = {r["t"]: r for r in rows}
+    pages = build_research(OUT_DIR, quotes, rows_by_ticker, generated_at)
+    html = render(snap, rows, stats, generated_at, pages, quotes)
     tmp = OUT_DIR / "index.html.tmp"
     tmp.write_text(html, encoding="utf-8")
     tmp.replace(OUT_DIR / "index.html")
-    print(f"OK: wrote docs/index.html ({len(html)} bytes, {len(rows)} positions)")
+    print(f"OK: index ({len(html)} bytes, {len(rows)} positions) + {len(pages)} research pages")
 
 
 if __name__ == "__main__":
