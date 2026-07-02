@@ -5,7 +5,7 @@ Fetches the public book snapshot + live prices from youngbullinvests.com,
 renders a single self-contained dark-theme index.html into site/.
 Zero dependencies, zero servers. Run by cron, deployed as static files.
 
-Fails loudly and leaves the previous site/index.html untouched on any error,
+Fails loudly and leaves the previous docs/index.html untouched on any error,
 so a bad fetch never blanks the page paid subs are looking at.
 """
 
@@ -17,7 +17,7 @@ from html import escape
 from pathlib import Path
 
 BASE = "https://youngbullinvests.com"
-OUT_DIR = Path(__file__).parent / "site"
+OUT_DIR = Path(__file__).parent / "docs"
 TIMEOUT = 20
 
 
@@ -168,8 +168,9 @@ def render(snap, rows, stats, generated_at):
   @media (max-width:520px) {{ td:nth-child(3), th:nth-child(3) {{ display:none; }} }}
 </style></head><body><main>
 <h1>YOUNG BULL TERMINAL</h1>
-<div class="sub">Private build for paid subscribers. Generated {escape(generated_at)}.
-Holdings as of {escape(str(snap.get("as_of", "?")))}. Real money, real entries, verified daily.</div>
+<div class="sub">Generated {escape(generated_at)}. Holdings as of
+{escape(str(snap.get("as_of", "?")))}. Real money, real entries, verified daily.
+Free for everyone until July 22, 2026. After that, paid subscribers only.</div>
 
 <section><h2>The Read</h2><p class="read">{market_read(stats)}</p></section>
 
@@ -185,9 +186,9 @@ Holdings as of {escape(str(snap.get("as_of", "?")))}. Real money, real entries, 
 <section><h2>Today's Tape</h2>
 <div>Leaders: {movers_up}</div><div style="margin-top:8px">Laggards: {movers_dn}</div></section>
 
-<footer>Young Bull Terminal. Not advice, it is my book and my machine. The link is for
-paid subscribers, please do not share it. Built and refreshed automatically by the same
-AI stack that runs Young Bull.</footer>
+<footer>Young Bull Terminal. Not advice, it is my book and my machine. Free preview
+until July 22, 2026, then this becomes a paid-subscriber perk. Built and refreshed
+automatically by the same AI stack that runs Young Bull.</footer>
 </main></body></html>"""
 
 
@@ -201,7 +202,7 @@ def main():
     tmp = OUT_DIR / "index.html.tmp"
     tmp.write_text(html, encoding="utf-8")
     tmp.replace(OUT_DIR / "index.html")
-    print(f"OK: wrote site/index.html ({len(html)} bytes, {len(rows)} positions)")
+    print(f"OK: wrote docs/index.html ({len(html)} bytes, {len(rows)} positions)")
 
 
 if __name__ == "__main__":
