@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SITM | Young Bull Terminal</title>
+<style>
+  :root { --bg:#0a0e12; --panel:#11161d; --line:#1e2630; --text:#e8edf2;
+          --dim:#8b98a5; --green:#2ecc71; --red:#ff5c5c; --gold:#f0b90b; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--text); padding:24px 16px 60px;
+         font:15px/1.5 -apple-system, "SF Mono", Menlo, monospace; }
+  main { max-width:820px; margin:0 auto; }
+  h1 { font-size:20px; letter-spacing:2px; color:var(--gold); }
+  a { color:var(--gold); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .sub { color:var(--dim); font-size:12px; margin:4px 0 24px; }
+  section { background:var(--panel); border:1px solid var(--line);
+            border-radius:10px; padding:18px; margin-bottom:18px; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:var(--dim);
+       text-transform:uppercase; margin-bottom:12px; }
+  .stats { display:flex; gap:24px; flex-wrap:wrap; margin-bottom:6px; }
+  .stat b { display:block; font-size:22px; }
+  .stat span { color:var(--dim); font-size:11px; text-transform:uppercase; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th { text-align:left; color:var(--dim); font-weight:400; font-size:11px;
+       text-transform:uppercase; padding:6px 8px; border-bottom:1px solid var(--line); }
+  td { padding:7px 8px; border-bottom:1px solid var(--line); }
+  tr:last-child td { border-bottom:none; }
+  .tk { color:var(--gold); font-weight:700; }
+  .up { color:var(--green); } .down { color:var(--red); }
+  .chip { display:inline-block; background:var(--bg); border:1px solid var(--line);
+          border-radius:6px; padding:3px 8px; margin:2px 4px 2px 0; font-size:12px; }
+  .read { font-size:15px; line-height:1.7; }
+  footer { color:var(--dim); font-size:11px; margin-top:24px; }
+  .note { border-left:3px solid var(--gold); padding-left:12px; color:var(--dim);
+          font-size:12px; margin-bottom:18px; }
+  .body h1 { font-size:17px; margin:18px 0 8px; letter-spacing:0; color:var(--text); }
+  .body h2 { font-size:15px; margin:16px 0 8px; color:var(--text);
+             text-transform:none; letter-spacing:0; }
+  .body h3 { font-size:14px; margin:14px 0 6px; color:var(--gold); }
+  .body p { margin:8px 0; } .body ul { margin:8px 0 8px 20px; }
+  .body blockquote { border-left:3px solid var(--line); padding:4px 12px;
+                     color:var(--dim); margin:10px 0; }
+  .body table { margin:10px 0; } .body code { color:var(--gold); }
+  .kill li { color:var(--red); }
+  @media (max-width:520px) { td:nth-child(3), th:nth-child(3) { display:none; } }
+</style></head><body><main>
+<div class="sub"><a href="../index.html">&larr; Terminal</a></div>
+<h1>SITM <span class="chip">HELD</span></h1>
+<div class="sub">Research page. Generated 2026-07-02 02:58 UTC.</div>
+<section><div class="stats"><div class='stat'><b>$703.84</b><span>Live</span></div><div class='stat'><b class='down'>-5.60%</b><span>Today</span></div><div class='stat'><b>$705.24</b><span>My avg cost</span></div><div class='stat'><b class='down'>-0.2%</b><span>My gain</span></div><div class='stat'><b>4.2%</b><span>Of book</span></div></div></section>
+<section><h2>Why I Own It</h2><p class="read">The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company</p><div style="margin-top:10px"><span class='chip'>Networking</span><span class='chip'>pivot</span><span class='chip'>MEMS silicon timing vs quartz physics + programmable-frequency platform + first integrated AI-datacenter clock products</span></div></section>
+<section><h2>What Kills The Thesis</h2><ul class='kill'><li>soft-quarter-valuation-cut</li><li>renesas-integration-slip</li><li>small-dollar-tam-ceiling</li><li>risk-off-multiple-crush</li></ul></section>
+<section><h2>The Research Note</h2>
+<div class="note">Written by me, last edited 2026-07-01. Prices and position sizes inside
+reflect that date. The live numbers above are current.</div>
+<div class="body"><h1>SITM — SiTime</h1>
+<blockquote><p>Machine-drafted 2026-07-01 from my own drafts and research notes. I review everything that carries my name.</p></blockquote>
+<h2>Thesis</h2>
+<p>I sold my Nokia to buy a clock. 395 employees, revenue up 88 percent in a quarter, and it makes the one part almost no investor has ever thought about: the timing chip that gives every chip in an AI datacenter its heartbeat. Most controversial trade I have made all year, and I think one of the best.</p>
+<p>The bottleneck is real. An AI cluster is not one computer, it is tens of thousands of GPUs that have to behave like one, passing data over links running 800 gigabits per second with signaling at 224 gigabits per lane. At those speeds the clock cannot wobble. Wobble has a name, jitter, and when jitter creeps up, bits get read at the wrong instant, links throw errors and retrain, and the most expensive hardware ever built sits idle waiting for late data. An idle GPU is money on fire. The cheapest-sounding part in the room decides how fast the most expensive part runs. Small in dollars, enormous in consequence.</p>
+<p>The old way is breaking. Timing meant quartz for a hundred years, and an AI hall is a terrible place to be a quartz crystal: hot, electrically noisy, vibrating from thousands of fans and pumps. Quartz drifts with temperature, ages, and hates vibration, exactly as the requirements get harder. This is the same shape as Wolfspeed, which is why I bought both the same week. In power, silicon hit a wall and silicon carbide took over. In timing, quartz is hitting a wall and silicon is taking over.</p>
+<p>SiTime owns the silicon version. MEMS resonators etched from silicon plus a custom analog chip: stable across temperature, shrugs off vibration, and programmable to almost any frequency, which collapses a customer&#x27;s parts list into one flexible product. For the AI datacenter they built Chorus, the first fully integrated clock generator built for AI datacenters, and Epoch, an oscillator that holds time roughly twice as accurately as quartz after eight hours of drift. Holding time better is not a luxury when thousands of accelerators have to stay synchronized. It is throughput.</p>
+<p>The receipts: FY25 revenue $326.7M, up 61 percent. Then it accelerated: Q1 FY26 at $113.6M, up more than 88 percent. The datacenter segment did $75.7M in the quarter, up 158 percent, seven straight quarters above 100 percent growth. Guide is at least 80 percent for the year. Then they pressed the bet and agreed to buy Renesas&#x27; timing business, about $300M of revenue at 70 percent gross margin within a year of closing. A 395-person company growing 88 percent is buying a business as big as itself.</p>
+<p>The Nokia swap, stated plainly: NOK is a real AI-infrastructure play (optical, DCI, IP routing, an ex-Intel datacenter CEO) but it is a $73B battleship with 78,000 employees where AI is a thin slice of a slow base. SiTime is 395 people where the AI datacenter is the entire story. I am 17, my horizon is decades, and I am compounding where the buildout is most constrained. Sold the safety, bought the slope.</p>
+<h2>The Numbers That Matter</h2>
+<ul><li>Stock at write-up: ~$729, ~$19.2B cap, ~395 employees, beta ~2.92, 52wk $186.49-$901.81, no dividend. Position: $3,000 in, ~+4% at write-up (noise).</li><li>FY2025 revenue: $326.7M, +61% (from $202.7M FY2024).</li><li>Q1 FY2026 revenue: $113.6M, +88.3% Y/Y (from $60.3M).</li><li>CED (Communications/Enterprise/Datacenter) segment: $75.7M in Q1 FY26, +158% Y/Y. Seven consecutive quarters of &gt;100% Y/Y growth.</li><li>FY2026 guide: revenue growth of at least 80%.</li><li>Renesas timing acquisition: ~$300M revenue expected within 12 months of close at ~70% gross margin. Roughly doubles the company.</li><li>Valuation: ~59x trailing sales, ~30x pro forma with Renesas. Priced for perfection.</li><li>Products: Chorus (first fully integrated clock generator for AI datacenters), Epoch OCXO (~2x less time error after 8 hours vs quartz).</li><li>Network context: 800Gbps links and climbing, 224Gbps per lane signaling.</li><li>NOK side of the swap: ~$13.49, ~$73B cap, 78,434 employees, beta ~0.78, dividend, founded 1865, new CEO ex-Intel datacenter/AI.</li></ul>
+<h2>What Kills It</h2>
+<ul><li><b>soft-quarter-valuation-cut:</b> at ~59x sales a single soft quarter does not dent the stock, it cuts it in half; the $186-$901 52-week range is the warning label.</li><li><b>renesas-integration-slip:</b> the deal roughly doubles the company, and acquisitions that size are where good companies trip.</li><li><b>small-dollar-tam-ceiling:</b> timing is a small-dollar component, so the market is real and growing but not infinite, and 80-plus percent growth has to persist to justify the multiple.</li><li><b>risk-off-multiple-crush:</b> I gave up a dividend and a 0.78-beta battleship for a beta-2.9 name; a real risk-off stretch cuts this kind of stock to the bone.</li></ul></div></section>
+<footer>Young Bull Terminal. Not advice, it is my book, my research, my machine.</footer>
+</main></body></html>
