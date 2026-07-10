@@ -1,125 +1,100 @@
 {
- "as_of": "2026-06-29",
+ "as_of": "2026-07-10",
  "positions": {
-  "NBIS": {
-   "t": "NBIS",
-   "weightPct": 11.6,
-   "costBasis": 126.2807,
-   "snapPrice": 261.15
-  },
-  "MU": {
-   "t": "MU",
-   "weightPct": 8.48,
-   "costBasis": 348.806,
-   "snapPrice": 1145.28
-  },
-  "OUST": {
-   "t": "OUST",
-   "weightPct": 8.01,
-   "costBasis": 35.653,
-   "snapPrice": 54.07
-  },
-  "CRDO": {
-   "t": "CRDO",
-   "weightPct": 7.28,
-   "costBasis": 209.7915,
-   "snapPrice": 245.68
-  },
-  "WYY": {
-   "t": "WYY",
-   "weightPct": 6.17,
-   "costBasis": 9.6647,
-   "snapPrice": 16.66
-  },
-  "ASTS": {
-   "t": "ASTS",
-   "weightPct": 5.14,
-   "costBasis": 71.8718,
-   "snapPrice": 86.77
-  },
-  "ARM": {
-   "t": "ARM",
-   "weightPct": 5.09,
-   "costBasis": 267.268,
-   "snapPrice": 343.58
-  },
-  "OSS": {
-   "t": "OSS",
-   "weightPct": 4.91,
-   "costBasis": 17.1236,
-   "snapPrice": 16.58
+  "ALMU": {
+   "t": "ALMU",
+   "weightPct": 5.1,
+   "costBasis": 14.033131570563874
   },
   "ANET": {
    "t": "ANET",
-   "weightPct": 4.86,
-   "costBasis": 150.1995,
-   "snapPrice": 164.095
+   "weightPct": 6.221337634078693,
+   "costBasis": 150.1995
   },
-  "WOLF": {
-   "t": "WOLF",
-   "weightPct": 4.59,
-   "costBasis": 47.7471,
-   "snapPrice": 44.24
+  "ARM": {
+   "t": "ARM",
+   "weightPct": 5.3659701199141585,
+   "costBasis": 267.268
   },
-  "ALMU": {
-   "t": "ALMU",
-   "weightPct": 4.44,
-   "costBasis": 20.1128,
-   "snapPrice": 22.23
+  "ASTS": {
+   "t": "ASTS",
+   "weightPct": 7.46,
+   "costBasis": 64.90133616494114
   },
-  "SILC": {
-   "t": "SILC",
-   "weightPct": 4.35,
-   "costBasis": 40.673,
-   "snapPrice": 41.93
+  "CIFR": {
+   "t": "CIFR",
+   "weightPct": 2.7543763703396005,
+   "costBasis": 20.3014
   },
-  "SITM": {
-   "t": "SITM",
-   "weightPct": 4.21,
-   "costBasis": 705.24,
-   "snapPrice": 710.47
+  "CRDO": {
+   "t": "CRDO",
+   "weightPct": 8.561644404199667,
+   "costBasis": 209.7915
   },
-  "FN": {
-   "t": "FN",
-   "weightPct": 3.92,
-   "costBasis": 588.706,
-   "snapPrice": 529.03
-  },
-  "PENG": {
-   "t": "PENG",
-   "weightPct": 3.32,
-   "costBasis": 49.8442,
-   "snapPrice": 67.94
-  },
-  "XNDU": {
-   "t": "XNDU",
-   "weightPct": 3.26,
-   "costBasis": 8.297,
-   "snapPrice": 11.02
-  },
-  "RAAQ": {
-   "t": "RAAQ",
-   "weightPct": 3.18,
-   "costBasis": 11.1825,
-   "snapPrice": 10.74
+  "IQMX": {
+   "t": "IQMX",
+   "weightPct": 3.1105027907361307,
+   "costBasis": 11.425000000000002
   },
   "LPKFF": {
    "t": "LPKFF",
-   "weightPct": 3.14,
-   "costBasis": 28.33,
-   "snapPrice": 24.97
+   "weightPct": 1.6926381612786152,
+   "costBasis": 28.077999999999996
+  },
+  "LUMN": {
+   "t": "LUMN",
+   "weightPct": 3.357051851010652,
+   "costBasis": 10.0123
+  },
+  "MU": {
+   "t": "MU",
+   "weightPct": 12.93,
+   "costBasis": 477.77452701384834
+  },
+  "NBIS": {
+   "t": "NBIS",
+   "weightPct": 9.8,
+   "costBasis": 102.97521435599494
+  },
+  "NOK": {
+   "t": "NOK",
+   "weightPct": 2.890351912672821,
+   "costBasis": 13.524099999999999
+  },
+  "OSS": {
+   "t": "OSS",
+   "weightPct": 5.13270316389685,
+   "costBasis": 17.2264
+  },
+  "OUST": {
+   "t": "OUST",
+   "weightPct": 8.63369981979505,
+   "costBasis": 34.0516
+  },
+  "PENG": {
+   "t": "PENG",
+   "weightPct": 3.642749913583309,
+   "costBasis": 47.8842
   },
   "RKLB": {
    "t": "RKLB",
-   "weightPct": 2.9,
-   "costBasis": 85.67,
-   "snapPrice": 97.95
+   "weightPct": 2.6906222699049764,
+   "costBasis": 85.67
   },
-  "PPSI": {
-   "t": "PPSI",
-   "weightPct": 1.15,
-   "costBasis": null,
-   "snapPrice": null
+  "SILC": {
+   "t": "SILC",
+   "weightPct": 3.644277355572889,
+   "costBasis": 40.8574
+  },
+  "WYY": {
+   "t": "WYY",
+   "weightPct": 6.507400954518423,
+   "costBasis": 9.7721
+  },
+  "XNDU": {
+   "t": "XNDU",
+   "weightPct": 6.06,
+   "costBasis": 6.815410875396244
   }
  }
 }

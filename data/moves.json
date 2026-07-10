@@ -1,5 +1,119 @@
 [
  {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "ALMU",
+  "detail": "averaged, avg cost $20.11 -> $14.03"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "ASTS",
+  "detail": "averaged, avg cost $71.87 -> $64.90"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "BOUGHT",
+  "t": "CIFR",
+  "detail": "new position, 2.8% of book"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "BOUGHT",
+  "t": "IQMX",
+  "detail": "new position, 3.1% of book"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "LPKFF",
+  "detail": "averaged, avg cost $28.33 -> $28.08"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "BOUGHT",
+  "t": "LUMN",
+  "detail": "new position, 3.4% of book"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "MU",
+  "detail": "added, avg cost $348.81 -> $477.77"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "NBIS",
+  "detail": "averaged, avg cost $126.28 -> $102.98"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "BOUGHT",
+  "t": "NOK",
+  "detail": "new position, 2.9% of book"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "OSS",
+  "detail": "added, avg cost $17.12 -> $17.23"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "OUST",
+  "detail": "averaged, avg cost $35.65 -> $34.05"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "PENG",
+  "detail": "averaged, avg cost $49.84 -> $47.88"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "WYY",
+  "detail": "added, avg cost $9.66 -> $9.77"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "ADDED",
+  "t": "XNDU",
+  "detail": "averaged, avg cost $8.30 -> $6.82"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "EXITED",
+  "t": "WOLF",
+  "detail": "position closed"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "EXITED",
+  "t": "SITM",
+  "detail": "position closed"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "EXITED",
+  "t": "FN",
+  "detail": "position closed"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "EXITED",
+  "t": "RAAQ",
+  "detail": "position closed"
+ },
+ {
+  "date": "2026-07-10",
+  "type": "EXITED",
+  "t": "PPSI",
+  "detail": "position closed"
+ },
+ {
   "date": "2026-06-29",
   "type": "START",
   "t": "",
