@@ -31,19 +31,36 @@ def fetch_json(url):
 
 
 def load_data():
-    snap = fetch_json(f"{BASE}/positions.json")
-    positions = snap.get("positions") or []
-    if not positions:
-        raise ValueError("positions.json returned no positions")
-    held = [p["t"] for p in positions]
+    # Site retired /positions.json (2026-07-06); /api/portfolio-live is the
+    # public book now, and /api/prices takes ?tickers= instead of ?symbols=.
+    book = fetch_json(f"{BASE}/api/portfolio-live")
+    raw = book.get("positions") or []
+    if not raw:
+        raise ValueError("portfolio-live returned no positions")
+    snap = {"as_of": book.get("baseDate", "?"),
+            "positions": [_to_position(p) for p in raw]}
+    held = [p["t"] for p in snap["positions"]]
     extra = [t for t in list_research_tickers() if t not in held]
-    live = fetch_json(f"{BASE}/api/prices?symbols={','.join(held + extra)}")
+    live = fetch_json(f"{BASE}/api/prices?tickers={','.join(held + extra)}")
     if not live.get("ok") or not live.get("prices"):
         # library symbols may not all quote; retry with held only before failing
-        live = fetch_json(f"{BASE}/api/prices?symbols={','.join(held)}")
+        live = fetch_json(f"{BASE}/api/prices?tickers={','.join(held)}")
     if not live.get("ok"):
         raise ValueError(f"prices API not ok: {live}")
     return snap, live
+
+
+def _to_position(p):
+    """Map an /api/portfolio-live position onto the old positions.json shape.
+
+    portfolio-live has no costBasis; derive it from the base-date price and
+    gain so downstream gain math and move detection keep working.
+    """
+    cost = None
+    last, gain = p.get("last"), p.get("gainPctAtBase")
+    if last is not None and gain is not None and gain > -100:
+        cost = last / (1 + gain / 100)
+    return {"t": p["t"], "weightPct": p.get("weightPct"), "costBasis": cost}
 
 
 def enrich(positions, prices):
