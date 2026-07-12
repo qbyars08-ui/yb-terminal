@@ -4,97 +4,97 @@
   "ALMU": {
    "t": "ALMU",
    "weightPct": 5.1,
-   "costBasis": 14.033131570563874
+   "costBasis": 14.017202930869704
   },
   "ANET": {
    "t": "ANET",
-   "weightPct": 6.221337634078693,
-   "costBasis": 150.1995
+   "weightPct": 6.208397741253667,
+   "costBasis": 150.19949999999997
   },
   "ARM": {
    "t": "ARM",
-   "weightPct": 5.3659701199141585,
+   "weightPct": 5.369420586071948,
    "costBasis": 267.268
   },
   "ASTS": {
    "t": "ASTS",
    "weightPct": 7.46,
-   "costBasis": 64.90133616494114
+   "costBasis": 64.8792142288293
   },
   "CIFR": {
    "t": "CIFR",
-   "weightPct": 2.7543763703396005,
+   "weightPct": 2.753282936038161,
    "costBasis": 20.3014
   },
   "CRDO": {
    "t": "CRDO",
-   "weightPct": 8.561644404199667,
-   "costBasis": 209.7915
+   "weightPct": 8.560455999774192,
+   "costBasis": 209.79150000000004
   },
   "IQMX": {
    "t": "IQMX",
-   "weightPct": 3.1105027907361307,
-   "costBasis": 11.425000000000002
+   "weightPct": 3.0982215942392335,
+   "costBasis": 11.425
   },
   "LPKFF": {
    "t": "LPKFF",
-   "weightPct": 1.6926381612786152,
-   "costBasis": 28.077999999999996
+   "weightPct": 1.6894107567730015,
+   "costBasis": 28.078
   },
   "LUMN": {
    "t": "LUMN",
-   "weightPct": 3.357051851010652,
+   "weightPct": 3.352255840712226,
    "costBasis": 10.0123
   },
   "MU": {
    "t": "MU",
    "weightPct": 12.93,
-   "costBasis": 477.77452701384834
+   "costBasis": 477.52096742734545
   },
   "NBIS": {
    "t": "NBIS",
    "weightPct": 9.8,
-   "costBasis": 102.97521435599494
+   "costBasis": 102.91430445579347
   },
   "NOK": {
    "t": "NOK",
-   "weightPct": 2.890351912672821,
-   "costBasis": 13.524099999999999
+   "weightPct": 2.891673487956618,
+   "costBasis": 13.5241
   },
   "OSS": {
    "t": "OSS",
-   "weightPct": 5.13270316389685,
+   "weightPct": 5.129250300109085,
    "costBasis": 17.2264
   },
   "OUST": {
    "t": "OUST",
-   "weightPct": 8.63369981979505,
+   "weightPct": 8.62321740184399,
    "costBasis": 34.0516
   },
   "PENG": {
    "t": "PENG",
-   "weightPct": 3.642749913583309,
-   "costBasis": 47.8842
+   "weightPct": 3.642485816421238,
+   "costBasis": 47.88419999999999
   },
   "RKLB": {
    "t": "RKLB",
-   "weightPct": 2.6906222699049764,
+   "weightPct": 2.6911026580616024,
    "costBasis": 85.67
   },
   "SILC": {
    "t": "SILC",
-   "weightPct": 3.644277355572889,
+   "weightPct": 3.666893028337271,
    "costBasis": 40.8574
   },
   "WYY": {
    "t": "WYY",
-   "weightPct": 6.507400954518423,
+   "weightPct": 6.5500987080781226,
    "costBasis": 9.7721
   },
   "XNDU": {
    "t": "XNDU",
    "weightPct": 6.06,
-   "costBasis": 6.815410875396244
+   "costBasis": 6.809314801267983
   }
  }
 }
