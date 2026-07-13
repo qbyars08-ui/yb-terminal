@@ -4,97 +4,97 @@
   "ALMU": {
    "t": "ALMU",
    "weightPct": 5.1,
-   "costBasis": 13.585536795157694
+   "costBasis": 12.918126791971964
   },
   "ANET": {
    "t": "ANET",
-   "weightPct": 6.4533710675569695,
+   "weightPct": 6.337772509911739,
    "costBasis": 150.1995
   },
   "ARM": {
    "t": "ARM",
-   "weightPct": 5.173529237413005,
+   "weightPct": 5.232302304888753,
    "costBasis": 267.268
   },
   "ASTS": {
    "t": "ASTS",
    "weightPct": 7.46,
-   "costBasis": 62.898858508096616
+   "costBasis": 59.80001769754888
   },
   "CIFR": {
    "t": "CIFR",
-   "weightPct": 2.8172726191039743,
+   "weightPct": 2.636144815721862,
    "costBasis": 20.3014
   },
   "CRDO": {
    "t": "CRDO",
-   "weightPct": 8.410364799701128,
+   "weightPct": 8.290764038810982,
    "costBasis": 209.7915
   },
   "IQMX": {
    "t": "IQMX",
-   "weightPct": 3.216450210911622,
+   "weightPct": 3.0712366785109073,
    "costBasis": 11.425
   },
   "LPKFF": {
    "t": "LPKFF",
-   "weightPct": 1.7357401695054762,
+   "weightPct": 1.6449928648434489,
    "costBasis": 28.078
   },
   "LUMN": {
    "t": "LUMN",
-   "weightPct": 3.418597837532161,
-   "costBasis": 10.0123
+   "weightPct": 3.3888603008184455,
+   "costBasis": 10.012299999999998
   },
   "MU": {
    "t": "MU",
    "weightPct": 12.93,
-   "costBasis": 448.3518626877317
+   "costBasis": 456.89487029451925
   },
   "NBIS": {
    "t": "NBIS",
    "weightPct": 9.8,
-   "costBasis": 100.0538818347936
+   "costBasis": 98.63186993393617
   },
   "NOK": {
    "t": "NOK",
-   "weightPct": 2.8455903457022944,
+   "weightPct": 2.8640375772370086,
    "costBasis": 13.5241
   },
   "OSS": {
    "t": "OSS",
-   "weightPct": 5.256477999813206,
+   "weightPct": 5.114790314597011,
    "costBasis": 17.2264
   },
   "OUST": {
    "t": "OUST",
-   "weightPct": 8.625306579905246,
+   "weightPct": 8.406263537831906,
    "costBasis": 34.0516
   },
   "PENG": {
    "t": "PENG",
-   "weightPct": 3.6174701608353046,
+   "weightPct": 3.7832735900508028,
    "costBasis": 47.8842
   },
   "RKLB": {
    "t": "RKLB",
-   "weightPct": 2.685066365406997,
+   "weightPct": 2.6855383514774007,
    "costBasis": 85.67
   },
   "SILC": {
    "t": "SILC",
-   "weightPct": 3.7486869999884855,
+   "weightPct": 3.733608805471807,
    "costBasis": 40.8574
   },
   "WYY": {
    "t": "WYY",
-   "weightPct": 6.673430509194518,
+   "weightPct": 7.124219098699659,
    "costBasis": 9.7721
   },
   "XNDU": {
    "t": "XNDU",
    "weightPct": 6.06,
-   "costBasis": 6.6264325774201405
+   "costBasis": 6.4008778346744695
   }
  }
 }
