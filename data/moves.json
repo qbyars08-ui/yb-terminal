@@ -1,5 +1,35 @@
 [
  {
+  "date": "2026-07-13",
+  "type": "ADDED",
+  "t": "ALMU",
+  "detail": "averaged, avg cost $14.02 -> $13.59"
+ },
+ {
+  "date": "2026-07-13",
+  "type": "ADDED",
+  "t": "ASTS",
+  "detail": "averaged, avg cost $64.88 -> $62.90"
+ },
+ {
+  "date": "2026-07-13",
+  "type": "ADDED",
+  "t": "MU",
+  "detail": "averaged, avg cost $477.52 -> $448.35"
+ },
+ {
+  "date": "2026-07-13",
+  "type": "ADDED",
+  "t": "NBIS",
+  "detail": "averaged, avg cost $102.91 -> $100.05"
+ },
+ {
+  "date": "2026-07-13",
+  "type": "ADDED",
+  "t": "XNDU",
+  "detail": "averaged, avg cost $6.81 -> $6.63"
+ },
+ {
   "date": "2026-07-10",
   "type": "ADDED",
   "t": "ALMU",
