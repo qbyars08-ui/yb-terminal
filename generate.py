@@ -502,7 +502,8 @@ def main():
     members_dir = OUT_DIR / "members" / token
     members_dir.mkdir(parents=True, exist_ok=True)
     write_page(members_dir / "index.html",
-               html.replace("<head>", "<head>\n<base href='../../'>", 1))
+               html.replace("<head>", "<head>\n<base href='../../'>\n"
+                            "<meta name='robots' content='noindex, nofollow'>", 1))
 
     print(f"OK: index ({len(html):,} bytes, {len(rows)} positions) + "
           f"{len(pages)} research pages + prices.json + members/{token}/")

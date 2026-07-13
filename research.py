@@ -222,7 +222,6 @@ def render_ticker_page(ticker, meta, body_html, quote, row, generated_at):
 
     return f"""<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
 <title>{escape(ticker)} | Young Bull</title>
 <style>{CSS}</style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>

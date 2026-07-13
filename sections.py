@@ -268,7 +268,6 @@ stay up. That is the product.</footer>
 def pricing_page_html(css):
     return f"""<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
 <title>Pricing | Young Bull Terminal</title>
 <style>{css}{EXTRA_CSS}</style></head><body><main>
 <div class="sub"><a href="index.html">&larr; Terminal</a></div>
