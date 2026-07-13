@@ -1,22 +1,19 @@
 #!/usr/bin/env python3
-"""Young Bull Terminal: nightly static dashboard for paid subscribers.
+"""Young Bull Terminal: static site for GitHub Pages.
 
-Fetches the public book snapshot + live prices from youngbullinvests.com,
-renders a single self-contained dark-theme index.html into site/.
-Zero dependencies, zero servers. Run by cron, deployed as static files.
-
-Fails loudly and leaves the previous docs/index.html untouched on any error,
-so a bad fetch never blanks the page paid subs are looking at.
+Reads positions from data/book-state.json, fetches live prices from Yahoo
+Finance via yfinance, renders a self-contained site into docs/.
+Zero servers, zero cost. Run by launchd cron or manually via refresh.sh.
 """
 
 import json
 import sys
-import urllib.request
 from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 
-from moves import detect_moves
+import yfinance as yf
+
 from research import (CSS, TICKERS_DIR, build_research, list_research_tickers,
                       parse_frontmatter)
 from sections import EXTRA_CSS, cards_html, pricing_page_html, tape_html
@@ -25,61 +22,66 @@ from thesis import (build_cards, de_dash, fetch_catalysts, fetch_committee,
                     health_badge)
 from track import load_calls, receipts_from_calls
 
-BASE = "https://youngbullinvests.com"
 OUT_DIR = Path(__file__).parent / "docs"
 DATA_DIR = Path(__file__).parent / "data"
-TIMEOUT = 20
+SUBSTACK = "https://youngbullinvests.substack.com"
 
 
-def fetch_json(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "yb-terminal/1.0"})
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        return json.loads(r.read().decode("utf-8"))
+# ── Data fetching ────────────────────────────────────────────────
+
+def fetch_prices(tickers):
+    """Fetch quotes for all tickers via yfinance (handles Yahoo auth)."""
+    prices = {}
+    print(f"  fetching {len(tickers)} quotes via yfinance...")
+    try:
+        data = yf.download(tickers, period="2d", interval="1d",
+                           group_by="ticker", progress=False, threads=True)
+        for t in tickers:
+            try:
+                if len(tickers) == 1:
+                    df = data
+                else:
+                    df = data[t]
+                if df.empty or len(df) < 1:
+                    continue
+                row = df.iloc[-1]
+                price = float(row["Close"].iloc[0]) if hasattr(row["Close"], "iloc") else float(row["Close"])
+                if len(df) >= 2:
+                    prev_row = df.iloc[-2]
+                    prev = float(prev_row["Close"].iloc[0]) if hasattr(prev_row["Close"], "iloc") else float(prev_row["Close"])
+                else:
+                    prev = price
+                pct = round((price - prev) / prev * 100, 2) if prev else 0
+                prices[t] = {"price": round(price, 2), "changePct": pct}
+            except Exception as e:
+                print(f"  WARN: {t}: {e}")
+    except Exception as e:
+        print(f"  WARN: yfinance bulk download failed: {e}")
+    print(f"  got {len(prices)}/{len(tickers)} quotes")
+    return prices
 
 
-def load_data():
-    # Site retired /positions.json (2026-07-06); /api/portfolio-live is the
-    # public book now, and /api/prices takes ?tickers= instead of ?symbols=.
-    book = fetch_json(f"{BASE}/api/portfolio-live")
-    raw = book.get("positions") or []
-    if not raw:
-        raise ValueError("portfolio-live returned no positions")
-    snap = {"as_of": book.get("baseDate", "?"),
-            "positions": [_to_position(p) for p in raw]}
-    held = [p["t"] for p in snap["positions"]]
-    calls, _ = load_calls()
-    extra = sorted((set(list_research_tickers()) |
-                    {c["t"] for c in calls if c.get("status") != "closed"})
-                   - set(held))
-    # the API silently truncates long ticker lists, so fetch in chunks and
-    # merge; the held chunk is load-bearing, extras degrade to blanks
-    live = fetch_json(f"{BASE}/api/prices?tickers={','.join(held)}")
-    if not live.get("ok") or not live.get("prices"):
-        raise ValueError(f"prices API not ok for held names: {live}")
-    prices = dict(live["prices"])
-    for i in range(0, len(extra), 30):
-        chunk = extra[i:i + 30]
-        try:
-            more = fetch_json(f"{BASE}/api/prices?tickers={','.join(chunk)}")
-            if more.get("ok") and more.get("prices"):
-                prices.update(more["prices"])
-        except Exception as e:
-            print(f"WARN: extra quote chunk failed ({chunk[0]}..): {e}")
-    return snap, {"ok": True, "prices": prices}
+def load_positions():
+    """Load Quinn's positions from the local book-state.json."""
+    state = json.loads((DATA_DIR / "book-state.json").read_text("utf-8"))
+    return {
+        "as_of": state.get("as_of", "?"),
+        "positions": [
+            {"t": t, "weightPct": p.get("weightPct"), "costBasis": p.get("costBasis")}
+            for t, p in state.get("positions", {}).items()
+        ],
+    }
 
 
-def _to_position(p):
-    """Map an /api/portfolio-live position onto the old positions.json shape.
+def load_moves():
+    """Load existing move history."""
+    try:
+        return json.loads((DATA_DIR / "moves.json").read_text("utf-8"))
+    except (OSError, ValueError):
+        return []
 
-    portfolio-live has no costBasis; derive it from the base-date price and
-    gain so downstream gain math and move detection keep working.
-    """
-    cost = None
-    last, gain = p.get("last"), p.get("gainPctAtBase")
-    if last is not None and gain is not None and gain > -100:
-        cost = last / (1 + gain / 100)
-    return {"t": p["t"], "weightPct": p.get("weightPct"), "costBasis": cost}
 
+# ── Enrichment ───────────────────────────────────────────────────
 
 def enrich(positions, prices):
     rows = []
@@ -93,12 +95,8 @@ def enrich(positions, prices):
         if price is not None and cost:
             gain = (price - cost) / cost * 100
         rows.append({
-            "t": t,
-            "weight": p.get("weightPct"),
-            "cost": cost,
-            "price": price,
-            "change": change,
-            "gain": gain,
+            "t": t, "weight": p.get("weightPct"), "cost": cost,
+            "price": price, "change": change, "gain": gain,
         })
     return rows
 
@@ -112,13 +110,14 @@ def book_stats(rows):
     weighted_gain = sum(r["gain"] * (r["weight"] or 0) for r in gains)
     gain_w = sum(r["weight"] or 0 for r in gains) or 1
     movers = sorted(priced, key=lambda r: r["change"], reverse=True)
+    dummy = {"t": "-", "change": 0, "weight": 0}
+    while len(movers) < 3:
+        movers.append(dummy)
     return {
-        "green": len(green),
-        "priced": len(priced),
+        "green": len(green), "priced": len(priced),
         "day": weighted_day / total_w,
         "gain": weighted_gain / gain_w,
-        "best": movers[:3],
-        "worst": movers[-3:][::-1],
+        "best": movers[:3], "worst": movers[-3:][::-1],
     }
 
 
@@ -135,8 +134,7 @@ def market_read(stats):
         mood = "Red day, nothing structural."
     else:
         mood = "Brutal red day. This is what buying opportunities feel like."
-    best = stats["best"][0]
-    worst = stats["worst"][0]
+    best, worst = stats["best"][0], stats["worst"][0]
     return (
         f"{mood} {g} of {n} names green, book {day:+.2f}% weighted on the day. "
         f"Top mover {best['t']} {best['change']:+.2f}%, laggard {worst['t']} "
@@ -145,34 +143,16 @@ def market_read(stats):
     )
 
 
+# ── Rendering helpers ────────────────────────────────────────────
+
 def fmt(v, spec, dash="-"):
     return format(v, spec) if v is not None else dash
 
-
 def cls(v):
-    if v is None:
-        return ""
+    if v is None: return ""
     return "up" if v >= 0 else "down"
 
-
 MOVE_BADGE = {"BOUGHT": "up", "ADDED": "up", "EXITED": "down", "START": ""}
-
-
-def moves_html(moves):
-    if not moves:
-        return ""
-    items = []
-    for m in moves[:10]:
-        badge = MOVE_BADGE.get(m["type"], "")
-        tk = f" <span class='tk'>{escape(m['t'])}</span>" if m["t"] else ""
-        items.append(
-            f"<div style='margin:4px 0'><span class='chip {badge}'>{escape(m['type'])}</span>"
-            f"{tk} <span class='sub' style='margin:0'>{escape(m['detail'])}"
-            f" ({escape(m['date'])})</span></div>")
-    return ("<section><h2>The Moves</h2>"
-            "<div class='sub' style='margin-bottom:8px'>Detected automatically from my "
-            "brokerage snapshot. When I buy or sell, it shows up here on its own.</div>"
-            + "".join(items) + "</section>")
 
 
 def load_metas():
@@ -206,88 +186,231 @@ def members_token():
     return token
 
 
+# ── Client-side JS for portfolio tracker ─────────────────────────
+
+TRACKER_JS = """
+(function(){
+  var K='yb-portfolio', prices={};
+  var pos = JSON.parse(localStorage.getItem(K)||'[]');
+  fetch('prices.json').then(function(r){return r.json()}).then(function(p){
+    prices=p; render();
+  }).catch(function(){ render(); });
+  function esc(s){
+    return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+      return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);
+    });
+  }
+  function render(){
+    var empty=document.getElementById('tracker-empty');
+    var tbl=document.getElementById('tracker-table');
+    var sum=document.getElementById('tracker-summary');
+    if(!pos.length){ empty.style.display=''; tbl.style.display='none'; sum.textContent=''; return; }
+    empty.style.display='none'; tbl.style.display='';
+    var totalVal=0, totalCost=0, html='';
+    for(var i=0;i<pos.length;i++){
+      var p=pos[i], q=prices[p.t]||{}, pr=q.price||null;
+      var val=pr?pr*p.shares:null, cst=p.cost*p.shares;
+      var gain=pr?((pr-p.cost)/p.cost*100):null;
+      if(val) totalVal+=val; totalCost+=cst;
+      var gc=gain!=null?(gain>=0?'up':'down'):'';
+      var gs=gain!=null?((gain>=0?'+':'')+gain.toFixed(1)+'%'):'-';
+      html+='<tr><td class="tk">'+esc(p.t)+'</td>'
+        +'<td>'+p.shares+'</td>'
+        +'<td>$'+p.cost.toFixed(2)+'</td>'
+        +'<td>'+(pr?'$'+pr.toFixed(2):'-')+'</td>'
+        +'<td class="'+gc+'">'+gs+'</td>'
+        +'<td><button class="btn-rm" onclick="ybRemove('+i+')">x</button></td></tr>';
+    }
+    tbl.querySelector('tbody').innerHTML=html;
+    if(totalCost>0 && totalVal>0){
+      var tg=((totalVal-totalCost)/totalCost*100);
+      sum.innerHTML='Your book: <span class="'+(tg>=0?'up':'down')+'">'
+        +(tg>=0?'+':'')+tg.toFixed(1)+'%</span>';
+    } else { sum.textContent=''; }
+  }
+  window.ybAdd=function(){
+    var ti=document.getElementById('add-ticker');
+    var si=document.getElementById('add-shares');
+    var ci=document.getElementById('add-cost');
+    var t=ti.value.toUpperCase().trim(), s=parseFloat(si.value), c=parseFloat(ci.value);
+    if(!t||!s||!c||s<=0||c<=0) return;
+    pos.push({t:t,shares:s,cost:c});
+    localStorage.setItem(K,JSON.stringify(pos));
+    ti.value=''; si.value=''; ci.value=''; ti.focus();
+    render();
+  };
+  window.ybRemove=function(i){
+    pos.splice(i,1);
+    localStorage.setItem(K,JSON.stringify(pos));
+    render();
+  };
+  document.querySelectorAll('.tracker-form input').forEach(function(el){
+    el.addEventListener('keydown',function(e){ if(e.key==='Enter') ybAdd(); });
+  });
+  render();
+})();
+"""
+
+
+# ── Main render ──────────────────────────────────────────────────
+
 def render(snap, rows, stats, generated_at, pages, quotes, moves,
            tape_section="", cards_section=""):
+    # Book table rows
     tr = []
     for r in sorted(rows, key=lambda x: -(x["weight"] or 0)):
         t = r["t"]
-        cell = (f"<a href='t/{escape(t)}.html'>{escape(t)}</a>"
+        link = (f"<a href='t/{escape(t)}.html'>{escape(t)}</a>"
                 if t in pages else escape(t))
         tr.append(
-            f"<tr><td class='tk'>{cell}</td>"
+            f"<tr><td class='tk'>{link}</td>"
             f"<td>{fmt(r['weight'], '.1f')}%</td>"
             f"<td>${fmt(r['cost'], ',.2f')}</td>"
             f"<td>${fmt(r['price'], ',.2f')}</td>"
             f"<td class='{cls(r['change'])}'>{fmt(r['change'], '+.2f')}%</td>"
-            f"<td class='{cls(r['gain'])}'>{fmt(r['gain'], '+.1f')}%</td></tr>"
-        )
+            f"<td class='{cls(r['gain'])}'>{fmt(r['gain'], '+.1f')}%</td></tr>")
     movers_up = " ".join(
         f"<span class='chip up'>{escape(m['t'])} {m['change']:+.1f}%</span>"
-        for m in stats["best"]
-    )
+        for m in stats["best"])
     movers_dn = " ".join(
         f"<span class='chip down'>{escape(m['t'])} {m['change']:+.1f}%</span>"
-        for m in stats["worst"]
-    )
+        for m in stats["worst"])
+
+    # Moves
+    moves_items = ""
+    for m in (moves or [])[:10]:
+        badge = MOVE_BADGE.get(m["type"], "")
+        tk = f" <span class='tk'>{escape(m['t'])}</span>" if m["t"] else ""
+        moves_items += (
+            f"<div class='move'><span class='chip {badge}'>{escape(m['type'])}</span>"
+            f"{tk} <span class='sub'>{escape(m['detail'])} ({escape(m['date'])})</span></div>")
+
+    # Research library chips
     held = {r["t"] for r in rows}
     lib_chips = []
     for t in sorted(pages):
         q = quotes.get(t) or {}
         ch = q.get("changePct")
         pct = f" <span class='{cls(ch)}'>{ch:+.1f}%</span>" if ch is not None else ""
-        mark = " &#9679;" if t in held else ""
-        lib_chips.append(f"<a class='chip' href='t/{escape(t)}.html'>{escape(t)}{mark}{pct}</a>")
+        dot = " &#9679;" if t in held else ""
+        lib_chips.append(
+            f"<a class='chip' href='t/{escape(t)}.html'>{escape(t)}{dot}{pct}</a>")
     pending = sorted(held - pages)
-    pending_html = ""
-    if pending:
-        pending_html = (
-            "<div class='sub' style='margin-top:10px'>Held, thesis file not written yet: "
-            + ", ".join(escape(t) for t in pending)
-            + ". Rule 5 says every position needs one. They are coming.</div>")
+
     return f"""<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Young Bull Terminal</title>
-<style>{CSS}{EXTRA_CSS}</style></head><body><main>
-<h1>YOUNG BULL TERMINAL</h1>
-<div class="sub">Generated {escape(generated_at)}. Holdings as of
-{escape(str(snap.get("as_of", "?")))}. Real money, real entries, verified daily.
-Free for everyone until July 22, 2026. After that, paid subscribers only.
-<a href="pricing.html">Pricing</a></div>
+<title>Young Bull</title>
+<meta name="description" content="A 17-year-old's real money portfolio in the Physical Layer of AI. Every position public. Track your own book alongside mine.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23c8952e'/></svg>">
+<style>{CSS}{EXTRA_CSS}</style>
+</head><body>
 
-<section><h2>The Read</h2><p class="read">{market_read(stats)}</p></section>
+<nav class="yb-nav">
+  <div class="yb-nav-inner">
+    <a href="#" class="brand">Young Bull</a>
+    <div class="yb-nav-links">
+      <a href="#book">Book</a>
+      <a href="#research">Research</a>
+      <a href="#track">Track Yours</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="{SUBSTACK}" target="_blank" rel="noopener" class="ext">Substack &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<div class="tagline">
+  <b>Real money. Every position public.</b><br>
+  A 17-year-old's book in the Physical Layer of AI.
+</div>
+
+<div class="hero-grid">
+  <div class="hero-cell"><b class="{cls(stats['gain'])}">{stats['gain']:+.1f}%</b><span>Open gain</span></div>
+  <div class="hero-cell"><b>{len(rows)}</b><span>Positions</span></div>
+  <div class="hero-cell"><b class="{cls(stats['day'])}">{stats['day']:+.2f}%</b><span>Today</span></div>
+  <div class="hero-cell"><b>{stats['green']}/{stats['priced']}</b><span>Green today</span></div>
+</div>
+
+<section>
+  <h2>The Read</h2>
+  <p class="read">{market_read(stats)}</p>
+  <div style="margin-top:14px">
+    <div>Leaders: {movers_up}</div>
+    <div style="margin-top:6px">Laggards: {movers_dn}</div>
+  </div>
+</section>
 
 {tape_section}
 
-<section><h2>The Book, Live</h2>
-<div class="stats">
-  <div class="stat"><b class="{cls(stats['day'])}">{stats['day']:+.2f}%</b><span>Today (weighted)</span></div>
-  <div class="stat"><b class="{cls(stats['gain'])}">{stats['gain']:+.1f}%</b><span>Open gain (weighted)</span></div>
-  <div class="stat"><b>{stats['green']}/{stats['priced']}</b><span>Green today</span></div>
-</div>
-<table><thead><tr><th>Ticker</th><th>Weight</th><th>Avg cost</th><th>Live</th>
-<th>Today</th><th>Gain</th></tr></thead><tbody>{''.join(tr)}</tbody></table></section>
+<section id="book">
+  <h2>The Book</h2>
+  <div class="sub" style="margin-bottom:12px">Holdings as of {escape(str(snap.get("as_of", "?")))}.
+  Real money, real entries. Prices refresh daily.</div>
+  <div style="overflow-x:auto">
+  <table><thead><tr>
+    <th>Ticker</th><th>Weight</th><th>Avg cost</th><th>Price</th><th>Today</th><th>Gain</th>
+  </tr></thead><tbody>{''.join(tr)}</tbody></table>
+  </div>
+</section>
 
-<section><h2>Today's Tape</h2>
-<div>Leaders: {movers_up}</div><div style="margin-top:8px">Laggards: {movers_dn}</div></section>
-
-{moves_html(moves)}
+{f'''<section>
+  <h2>The Moves</h2>
+  <div class="sub" style="margin-bottom:10px">Auto-detected from my brokerage snapshot.
+  When I buy or sell, it shows up here on its own.</div>
+  {moves_items}
+</section>''' if moves_items else ''}
 
 {cards_section}
 
-<section><h2>Research Library</h2>
-<div class="sub" style="margin-bottom:10px">Every name I have written a real thesis file on.
-Click any ticker. &#9679; = currently held. Held names in the book table above link to the
-same pages.</div>
-<div>{''.join(lib_chips)}</div>{pending_html}</section>
+<section id="track">
+  <h2>Track Your Book</h2>
+  <div class="sub" style="margin-bottom:16px">Add your positions below. Everything stays
+  in your browser, nothing is sent anywhere. Prices available for names in our research universe.</div>
+  <div class="tracker-form">
+    <div class="field"><label>Ticker</label><input id="add-ticker" placeholder="NVDA" autocomplete="off" spellcheck="false"></div>
+    <div class="field"><label>Shares</label><input id="add-shares" type="number" placeholder="10" min="0" step="any"></div>
+    <div class="field"><label>Avg cost</label><input id="add-cost" type="number" placeholder="125.00" min="0" step="any"></div>
+    <button class="btn-gold" onclick="ybAdd()">Add</button>
+  </div>
+  <div id="tracker-summary"></div>
+  <div id="tracker-empty" class="tracker-empty">
+    No positions yet. Add a ticker above to start tracking your book.
+  </div>
+  <div style="overflow-x:auto">
+  <table id="tracker-table" style="display:none"><thead><tr>
+    <th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Price</th><th>Gain</th><th></th>
+  </tr></thead><tbody></tbody></table>
+  </div>
+</section>
 
-<footer>Young Bull Terminal. Not advice, it is my book and my machine. Free preview
-until July 22, 2026, then this becomes a paid-subscriber perk. Built and refreshed
-automatically by the same AI stack that runs Young Bull.</footer>
-</main></body></html>"""
+<section id="research">
+  <h2>Research Library</h2>
+  <div class="sub" style="margin-bottom:12px">Every name I have written a real thesis file on.
+  Click any ticker. &#9679; = currently held.</div>
+  <div>{''.join(lib_chips)}</div>
+  {f'<div class="sub" style="margin-top:10px">Held but thesis not written yet: {", ".join(escape(t) for t in pending)}.</div>' if pending else ''}
+</section>
 
+<div class="cta-section">
+  <h2>The Writing</h2>
+  <p>Thesis updates. Morning reads. Conviction calls.<br>
+  Free subscribers get the weekly. Paid gets the full research.</p>
+  <a class="cta-btn" href="{SUBSTACK}" target="_blank" rel="noopener">Subscribe on Substack</a>
+</div>
+
+<footer>Young Bull. Not financial advice. Real positions, real money, real risk.<br>
+Generated {escape(generated_at)}.</footer>
+
+</main>
+
+<script>{TRACKER_JS}</script>
+</body></html>"""
+
+
+# ── Extras (tape + thesis cards) ─────────────────────────────────
 
 def build_extras(rows, quotes, generated_at):
     """Tape and thesis cards. Each source degrades to blank alone."""
@@ -311,32 +434,64 @@ def write_page(path, html):
     tmp.replace(path)
 
 
+# ── Main ─────────────────────────────────────────────────────────
+
 def main():
-    snap, live = load_data()
-    quotes = live.get("prices") or {}
+    print("Young Bull Terminal build")
+
+    # Load positions from local state (no Vercel dependency)
+    snap = load_positions()
+    held = [p["t"] for p in snap["positions"]]
+
+    calls, _ = load_calls()
+    extra = sorted((set(list_research_tickers()) |
+                    {c["t"] for c in calls if c.get("status") != "closed"})
+                   - set(held))
+
+    # Fetch prices via yfinance (no Vercel dependency)
+    quotes = fetch_prices(held + extra)
+
     rows = enrich(snap["positions"], quotes)
     stats = book_stats(rows)
     generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Write prices.json for client-side tracker
+    (OUT_DIR / "prices.json").write_text(
+        json.dumps(quotes, indent=1), encoding="utf-8")
+
+    # Build per-ticker research pages
     rows_by_ticker = {r["t"]: r for r in rows}
     pages = build_research(OUT_DIR, quotes, rows_by_ticker, generated_at)
-    moves = detect_moves(snap)
+
+    # Load existing moves
+    moves = load_moves()
+
+    # Build tape + thesis cards (degrade gracefully)
     try:
         tape_section, cards_section = build_extras(rows, quotes, generated_at)
-    except Exception as e:  # extras must never blank the core page
-        print(f"WARN: extras failed, shipping core page only: {e}")
+    except Exception as e:
+        print(f"  WARN: extras failed, shipping core page only: {e}")
         tape_section, cards_section = "", ""
+
+    # Render index
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                   tape_section, cards_section)
     write_page(OUT_DIR / "index.html", html)
+
+    # Pricing page
     write_page(OUT_DIR / "pricing.html", pricing_page_html(CSS))
+
+    # Members mirror (unlisted URL for paid subs)
     token = members_token()
     members_dir = OUT_DIR / "members" / token
     members_dir.mkdir(parents=True, exist_ok=True)
     write_page(members_dir / "index.html",
                html.replace("<head>", "<head>\n<base href='../../'>", 1))
-    print(f"OK: index ({len(html)} bytes, {len(rows)} positions) + "
-          f"{len(pages)} research pages + members mirror /members/{token}/")
+
+    print(f"OK: index ({len(html):,} bytes, {len(rows)} positions) + "
+          f"{len(pages)} research pages + prices.json + members/{token}/")
 
 
 if __name__ == "__main__":
