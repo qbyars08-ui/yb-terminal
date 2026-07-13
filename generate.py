@@ -188,6 +188,18 @@ def members_token():
 
 # ── Client-side JS for portfolio tracker ─────────────────────────
 
+# Liquid names subscribers are likely to hold; keeps the tracker's
+# prices.json useful beyond the research universe. Dedupe happens at fetch.
+TRACKER_POPULAR = [
+    "AAPL", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "TSLA", "AMD", "NFLX",
+    "COST", "WMT", "JPM", "V", "MA", "BRK-B", "UNH", "XOM", "CVX", "PLTR",
+    "COIN", "HOOD", "SOFI", "F", "GM", "INTC", "QCOM", "TXN", "TSM", "SMCI",
+    "DELL", "ORCL", "CRM", "NOW", "SNOW", "CRWD", "NET", "DDOG", "UBER",
+    "ABNB", "DIS", "PYPL", "SHOP", "SPOT", "BA", "CAT", "DE", "GE", "HON",
+    "LMT", "RTX", "IONQ", "RGTI", "QBTS", "SPY", "QQQ", "IWM", "VTI", "VOO",
+    "SCHD", "O", "KO", "PEP", "MCD", "SBUX", "NKE",
+]
+
 TRACKER_JS = """
 (function(){
   var K='yb-portfolio', prices={};
@@ -368,7 +380,7 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
 <section id="track">
   <h2>Track Your Book</h2>
   <div class="sub" style="margin-bottom:16px">Add your positions below. Everything stays
-  in your browser, nothing is sent anywhere. Prices available for names in our research universe.</div>
+  in your browser, nothing is sent anywhere. Live prices cover our research universe plus the most-traded US names and ETFs. Anything else still tracks, just without a live quote.</div>
   <div class="tracker-form">
     <div class="field"><label>Ticker</label><input id="add-ticker" placeholder="NVDA" autocomplete="off" spellcheck="false"></div>
     <div class="field"><label>Shares</label><input id="add-shares" type="number" placeholder="10" min="0" step="any"></div>
@@ -448,8 +460,10 @@ def main():
                     {c["t"] for c in calls if c.get("status") != "closed"})
                    - set(held))
 
-    # Fetch prices via yfinance (no Vercel dependency)
-    quotes = fetch_prices(held + extra)
+    # Fetch prices via yfinance (no Vercel dependency); popular names ride
+    # along so the tracker covers what subscribers actually hold
+    popular = sorted(set(TRACKER_POPULAR) - set(held) - set(extra))
+    quotes = fetch_prices(held + extra + popular)
 
     rows = enrich(snap["positions"], quotes)
     stats = book_stats(rows)
