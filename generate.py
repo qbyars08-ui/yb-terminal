@@ -19,12 +19,11 @@ from pathlib import Path
 from moves import detect_moves
 from research import (CSS, TICKERS_DIR, build_research, list_research_tickers,
                       parse_frontmatter)
-from sections import (EXTRA_CSS, cards_html, pricing_page_html,
-                      record_page_html, tape_html)
+from sections import EXTRA_CSS, cards_html, pricing_page_html, tape_html
 from tape import build_tape, load_scout
 from thesis import (build_cards, de_dash, fetch_catalysts, fetch_committee,
                     health_badge)
-from track import load_calls, receipts_from_calls, record_stats, score_calls
+from track import load_calls, receipts_from_calls
 
 BASE = "https://youngbullinvests.com"
 OUT_DIR = Path(__file__).parent / "docs"
@@ -256,7 +255,7 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
 <div class="sub">Generated {escape(generated_at)}. Holdings as of
 {escape(str(snap.get("as_of", "?")))}. Real money, real entries, verified daily.
 Free for everyone until July 22, 2026. After that, paid subscribers only.
-<a href="record.html">The Record</a> &middot; <a href="pricing.html">Pricing</a></div>
+<a href="pricing.html">Pricing</a></div>
 
 <section><h2>The Read</h2><p class="read">{market_read(stats)}</p></section>
 
@@ -278,10 +277,6 @@ Free for everyone until July 22, 2026. After that, paid subscribers only.
 
 {cards_section}
 
-<section><h2>The Record</h2>
-<div class="sub" style="margin:0">Every public call I have made, scored, losers
-included. <a href="record.html">See the full track record.</a></div></section>
-
 <section><h2>Research Library</h2>
 <div class="sub" style="margin-bottom:10px">Every name I have written a real thesis file on.
 Click any ticker. &#9679; = currently held. Held names in the book table above link to the
@@ -295,7 +290,7 @@ automatically by the same AI stack that runs Young Bull.</footer>
 
 
 def build_extras(rows, quotes, generated_at):
-    """Tape, thesis cards, track record. Each source degrades to blank alone."""
+    """Tape and thesis cards. Each source degrades to blank alone."""
     today = generated_at[:10]
     held = [r["t"] for r in rows]
     metas = load_metas()
@@ -303,14 +298,11 @@ def build_extras(rows, quotes, generated_at):
     catalysts = fetch_catalysts(today)
     scout = load_scout()
     healths = {r["t"]: health_badge(r.get("price"), r.get("cost")) for r in rows}
-    calls, unscored = load_calls()
+    calls, _ = load_calls()
     receipts = receipts_from_calls(calls)
     tape = build_tape(rows, metas, healths, scout)
     cards = build_cards(rows, metas, committee, receipts, catalysts)
-    scored = score_calls(calls, quotes)
-    record = record_page_html(scored, unscored, record_stats(scored),
-                              generated_at, CSS)
-    return tape_html(tape), cards_html(cards), record
+    return tape_html(tape), cards_html(cards)
 
 
 def write_page(path, html):
@@ -330,15 +322,13 @@ def main():
     pages = build_research(OUT_DIR, quotes, rows_by_ticker, generated_at)
     moves = detect_moves(snap)
     try:
-        tape_section, cards_section, record = build_extras(rows, quotes, generated_at)
+        tape_section, cards_section = build_extras(rows, quotes, generated_at)
     except Exception as e:  # extras must never blank the core page
         print(f"WARN: extras failed, shipping core page only: {e}")
-        tape_section, cards_section, record = "", "", None
+        tape_section, cards_section = "", ""
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                   tape_section, cards_section)
     write_page(OUT_DIR / "index.html", html)
-    if record:
-        write_page(OUT_DIR / "record.html", record)
     write_page(OUT_DIR / "pricing.html", pricing_page_html(CSS))
     token = members_token()
     members_dir = OUT_DIR / "members" / token
@@ -346,7 +336,7 @@ def main():
     write_page(members_dir / "index.html",
                html.replace("<head>", "<head>\n<base href='../../'>", 1))
     print(f"OK: index ({len(html)} bytes, {len(rows)} positions) + "
-          f"{len(pages)} research pages + record + members mirror /members/{token}/")
+          f"{len(pages)} research pages + members mirror /members/{token}/")
 
 
 if __name__ == "__main__":
