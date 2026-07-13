@@ -8,12 +8,12 @@
   },
   "ANET": {
    "t": "ANET",
-   "weightPct": 6.337772509911739,
+   "weightPct": 6.340233594645575,
    "costBasis": 150.1995
   },
   "ARM": {
    "t": "ARM",
-   "weightPct": 5.232302304888753,
+   "weightPct": 5.232311461394095,
    "costBasis": 267.268
   },
   "ASTS": {
@@ -23,28 +23,28 @@
   },
   "CIFR": {
    "t": "CIFR",
-   "weightPct": 2.636144815721862,
+   "weightPct": 2.6361494289633534,
    "costBasis": 20.3014
   },
   "CRDO": {
    "t": "CRDO",
-   "weightPct": 8.290764038810982,
+   "weightPct": 8.29077854761051,
    "costBasis": 209.7915
   },
   "IQMX": {
    "t": "IQMX",
-   "weightPct": 3.0712366785109073,
+   "weightPct": 3.071242053161188,
    "costBasis": 11.425
   },
   "LPKFF": {
    "t": "LPKFF",
-   "weightPct": 1.6449928648434489,
+   "weightPct": 1.6449957435735136,
    "costBasis": 28.078
   },
   "LUMN": {
    "t": "LUMN",
-   "weightPct": 3.3888603008184455,
-   "costBasis": 10.012299999999998
+   "weightPct": 3.386241238100797,
+   "costBasis": 10.0123
   },
   "MU": {
    "t": "MU",
@@ -58,37 +58,37 @@
   },
   "NOK": {
    "t": "NOK",
-   "weightPct": 2.8640375772370086,
+   "weightPct": 2.8640425892898005,
    "costBasis": 13.5241
   },
   "OSS": {
    "t": "OSS",
-   "weightPct": 5.114790314597011,
+   "weightPct": 5.1147992654569014,
    "costBasis": 17.2264
   },
   "OUST": {
    "t": "OUST",
-   "weightPct": 8.406263537831906,
+   "weightPct": 8.406278248755033,
    "costBasis": 34.0516
   },
   "PENG": {
    "t": "PENG",
-   "weightPct": 3.7832735900508028,
+   "weightPct": 3.7832802107624546,
    "costBasis": 47.8842
   },
   "RKLB": {
    "t": "RKLB",
-   "weightPct": 2.6855383514774007,
+   "weightPct": 2.6855430511573557,
    "costBasis": 85.67
   },
   "SILC": {
    "t": "SILC",
-   "weightPct": 3.733608805471807,
+   "weightPct": 3.7336153392703104,
    "costBasis": 40.8574
   },
   "WYY": {
    "t": "WYY",
-   "weightPct": 7.124219098699659,
+   "weightPct": 7.124231566050825,
    "costBasis": 9.7721
   },
   "XNDU": {
