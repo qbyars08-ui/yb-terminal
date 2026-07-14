@@ -146,6 +146,30 @@ EXTRA_CSS = """
   }
   .tagline b { color: var(--bright); }
 
+  /* Pro tools: visualizer + scanner */
+  .viz-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+              gap:16px; }
+  .viz-grid h3, #screens h3 { font-size:11px; letter-spacing:1.5px; color:var(--dim);
+              text-transform:uppercase; margin:14px 0 8px; font-weight:600; }
+  .bar-row { display:flex; align-items:center; gap:8px; margin:5px 0; font-size:12px;
+             font-family:var(--mono); }
+  .bar-row .lbl { width:64px; flex-shrink:0; }
+  .bar-row .val { width:84px; flex-shrink:0; text-align:right; }
+  .bar-track { flex:1; background:var(--bg); border-radius:4px; height:14px;
+               overflow:hidden; }
+  .bar-fill { display:block; height:100%; background:var(--gold); border-radius:4px; }
+  .bar-fill.up { background:var(--green); } .bar-fill.down { background:var(--red); }
+  .spark { display:inline-block; margin:4px 10px 4px 0; text-align:center; }
+  .spark svg { display:block; }
+  .spark .lbl { font-size:11px; font-family:var(--mono); color:var(--dim); }
+  .scan-bar { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px;
+              align-items:center; }
+  .scan-chip { background:var(--bg); border:1px solid var(--border); color:var(--dim);
+               border-radius:6px; padding:5px 10px; font-size:11px; cursor:pointer;
+               font-family:var(--mono); }
+  .scan-chip.active { border-color:var(--gold); color:var(--gold); }
+  .viz-note { font-size:12px; color:var(--dim); margin-top:6px; }
+
   @media (max-width: 600px) {
     .hero-grid { grid-template-columns: repeat(2, 1fr); }
     .yb-nav .brand { font-size: 11px; letter-spacing: 2px; white-space: nowrap; }
@@ -314,6 +338,9 @@ handles it on the day.</p></section>
 <li><b>The Terminal.</b> This site. My live book with real entries and real weights,
 the daily Tape, the thesis card on every position, and the moves feed that posts my
 buys and sells automatically. No one else my size shows you this much.</li>
+<li><b>The tools.</b> Track your own book, see it visualized, run it against my
+coverage with the Scanner: layers, health badges, machine conviction, and real
+earnings dates. All computed from data the machine actually has, never invented.</li>
 <li><b>The deep dives.</b> The full research notes behind every position, the
 paywalled posts, and every teardown that goes behind the paywall from here on.</li>
 <li><b>The machine.</b> The same AI research desk that runs my book runs this site.
@@ -334,6 +361,67 @@ Substack</a> and the Terminal link lands in your welcome email on the 22nd.</p><
 <footer>Young Bull Terminal. Not advice, it is my book and my machine. Questions?
 Reply to any post, I read everything.</footer>
 </main></body></html>"""
+
+
+def scanner_html(tools_tickers, quotes, pages):
+    """Server-rendered coverage scanner. One row per name the machine has
+    real data on; filters and sorting are client-side over these rows."""
+    covered = {t: d for t, d in tools_tickers.items() if d}
+    if not covered:
+        return ""
+    rows = []
+    order = sorted(covered,
+                   key=lambda t: -abs((quotes.get(t) or {}).get("changePct") or 0))
+    layers = sorted({d["layer"] for d in covered.values() if d.get("layer")})
+    for t in order:
+        d = covered[t]
+        q = quotes.get(t) or {}
+        ch = q.get("changePct")
+        name = (f"<a class='tk' href='t/{escape(t)}.html'>{escape(t)}</a>"
+                if t in pages else f"<span class='tk'>{escape(t)}</span>")
+        held = f"{d['held']:.1f}%" if d.get("held") is not None else ""
+        health = (f"<span class='badge {d['health']}'>{d['health']}</span>"
+                  if d.get("health") else "")
+        conv = ""
+        if d.get("conviction") is not None:
+            conv = f"{int(d['conviction'])} {escape(d.get('stance') or '')}".strip()
+        price = f"${q['price']:,.2f}" if q.get("price") is not None else "-"
+        rows.append(
+            f"<tr data-layer=\"{escape(d.get('layer') or '')}\" "
+            f"data-held=\"{1 if d.get('held') is not None else 0}\" "
+            f"data-day=\"{ch if ch is not None else ''}\" "
+            f"data-conv=\"{d.get('conviction') if d.get('conviction') is not None else ''}\">"
+            f"<td>{name}</td>"
+            f"<td style='font-size:12px'>{escape(d.get('layer') or '')}</td>"
+            f"<td>{price}</td>"
+            f"<td class='{_cls(ch)}'>{_pct(ch)}</td>"
+            f"<td>{held}</td><td>{health}</td>"
+            f"<td style='font-size:12px'>{conv}</td>"
+            f"<td style='font-size:12px'>{escape(d.get('earnings') or '')}</td></tr>")
+    chips = "".join(
+        f"<button class='scan-chip' data-filter-layer=\"{escape(l)}\">{escape(l)}</button>"
+        for l in layers)
+    return f"""<section id="scanner">
+<h2>The Scanner <span class="chip" style="border-color:var(--gold);color:var(--gold)">Pro, free until July 22</span></h2>
+<div class="sub" style="margin-bottom:10px">Every name the machine has real coverage on:
+layer and thesis from my research files, health from my entries, conviction from the
+machine desk, earnings dates from the calendar it tracks. Blank means no data, not
+no opinion worth guessing at.</div>
+<div class="scan-bar">
+  <button class="scan-chip active" data-filter-layer="*">All</button>
+  <button class="scan-chip" data-filter-held="1">In my book</button>
+  {chips}
+  <span style="flex:1"></span>
+  <button class="scan-chip" data-sort="day">Sort: day move</button>
+  <button class="scan-chip" data-sort="conv">Sort: conviction</button>
+</div>
+<div style="overflow-x:auto">
+<table id="scan-table"><thead><tr>
+<th>Ticker</th><th>Layer</th><th>Price</th><th>Today</th><th>My weight</th>
+<th>Health</th><th>Machine</th><th>Earnings</th>
+</tr></thead><tbody>{''.join(rows)}</tbody></table>
+</div>
+</section>"""
 
 
 def record_rows_html(rows):

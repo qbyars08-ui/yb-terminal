@@ -18,7 +18,8 @@ from generate import members_html, validate_output
 PAGE = """<!doctype html><html><head><title>Young Bull</title></head><body>
 <nav><a href="#book">Book</a><a href="pricing.html">Pricing</a></nav>
 <a href='t/MU.html'>MU</a>
-<script>fetch('prices.json').then(function(r){return r.json()})</script>
+<script>fetch('prices.json').then(function(r){return r.json()})
+fetch('tools-data.json');fetch('history.json')</script>
 </body></html>"""
 
 
@@ -28,6 +29,8 @@ class TestMembersHtml(unittest.TestCase):
         self.assertIn("href='../../t/MU.html'", out)
         self.assertIn('href="../../pricing.html"', out)
         self.assertIn("fetch('../../prices.json')", out)
+        self.assertIn("fetch('../../tools-data.json')", out)
+        self.assertIn("fetch('../../history.json')", out)
 
     def test_anchors_untouched(self):
         out = members_html(PAGE)
