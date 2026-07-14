@@ -7,6 +7,8 @@ Zero servers, zero cost. Run by launchd cron or manually via refresh.sh.
 """
 
 import json
+import math
+import re
 import sys
 from datetime import datetime, timezone
 from html import escape
@@ -16,7 +18,8 @@ import yfinance as yf
 
 from research import (CSS, TICKERS_DIR, build_research, list_research_tickers,
                       parse_frontmatter)
-from sections import EXTRA_CSS, cards_html, pricing_page_html, tape_html
+from sections import (EXTRA_CSS, cards_html, og_tags, pricing_page_html,
+                      tape_html)
 from tape import build_tape, load_scout
 from thesis import (build_cards, de_dash, fetch_catalysts, fetch_committee,
                     health_badge)
@@ -51,7 +54,11 @@ def fetch_prices(tickers):
                     prev = float(prev_row["Close"].iloc[0]) if hasattr(prev_row["Close"], "iloc") else float(prev_row["Close"])
                 else:
                     prev = price
-                pct = round((price - prev) / prev * 100, 2) if prev else 0
+                if not math.isfinite(price):
+                    continue  # NaN close (delisted/halted): no quote beats a fake one
+                pct = None
+                if prev and math.isfinite(prev):
+                    pct = round((price - prev) / prev * 100, 2)
                 prices[t] = {"price": round(price, 2), "changePct": pct}
             except Exception as e:
                 print(f"  WARN: {t}: {e}")
@@ -223,7 +230,7 @@ TRACKER_JS = """
       var p=pos[i], q=prices[p.t]||{}, pr=q.price||null;
       var val=pr?pr*p.shares:null, cst=p.cost*p.shares;
       var gain=pr?((pr-p.cost)/p.cost*100):null;
-      if(val) totalVal+=val; totalCost+=cst;
+      if(val){ totalVal+=val; totalCost+=cst; }
       var gc=gain!=null?(gain>=0?'up':'down'):'';
       var gs=gain!=null?((gain>=0?'+':'')+gain.toFixed(1)+'%'):'-';
       html+='<tr><td class="tk">'+esc(p.t)+'</td>'
@@ -315,6 +322,7 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Young Bull</title>
 <meta name="description" content="A 17-year-old's real money portfolio in the Physical Layer of AI. Every position public. Track your own book alongside mine.">
+{og_tags("Young Bull", "Real money. Every position public. A 17-year-old's book in the Physical Layer of AI.")}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23c8952e'/></svg>">
 <style>{CSS}{EXTRA_CSS}</style>
 </head><body>
@@ -325,7 +333,7 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
     <div class="yb-nav-links">
       <a href="#book">Book</a>
       <a href="#research">Research</a>
-      <a href="#track">Track Yours</a>
+      <a href="#track">Track</a>
       <a href="pricing.html">Pricing</a>
       <a href="{SUBSTACK}" target="_blank" rel="noopener" class="ext">Substack &rarr;</a>
     </div>
@@ -424,7 +432,7 @@ Generated {escape(generated_at)}.</footer>
 
 # ── Extras (tape + thesis cards) ─────────────────────────────────
 
-def build_extras(rows, quotes, generated_at):
+def build_extras(rows, quotes, generated_at, pages):
     """Tape and thesis cards. Each source degrades to blank alone."""
     today = generated_at[:10]
     held = [r["t"] for r in rows]
@@ -437,7 +445,49 @@ def build_extras(rows, quotes, generated_at):
     receipts = receipts_from_calls(calls)
     tape = build_tape(rows, metas, healths, scout)
     cards = build_cards(rows, metas, committee, receipts, catalysts)
-    return tape_html(tape), cards_html(cards)
+    return tape_html(tape), cards_html(cards, pages)
+
+
+def members_html(html):
+    """Mirror page for the unlisted members path, two directories deep.
+
+    Rewrites asset paths instead of using <base>: a base tag makes every
+    in-page anchor (#book, #track) navigate to the public index, which
+    bounces paid members off their own page.
+    """
+    out = (html
+           .replace("href='t/", "href='../../t/")
+           .replace('href="t/', 'href="../../t/')
+           .replace('href="pricing.html"', 'href="../../pricing.html"')
+           .replace("href='pricing.html'", "href='../../pricing.html'")
+           .replace("fetch('prices.json')", "fetch('../../prices.json')"))
+    return out.replace(
+        "<head>", "<head>\n<meta name='robots' content='noindex, nofollow'>", 1)
+
+
+MIN_QUOTE_COVERAGE = 0.9
+REQUIRED_MARKS = ("hero-grid", "id='book'", "id='track'", "id='research'")
+
+
+def validate_output(html, rows, pages):
+    """The truth gate. A build that fails here must not ship; refresh.sh
+    keeps the previous good site when generate exits nonzero."""
+    problems = []
+    priced = sum(1 for r in rows if r.get("price") is not None)
+    if rows and priced / len(rows) < MIN_QUOTE_COVERAGE:
+        problems.append(f"quote coverage {priced}/{len(rows)} below "
+                        f"{MIN_QUOTE_COVERAGE:.0%}: refusing to ship a blank tape")
+    for dash in ("—", "–"):
+        if dash in html:
+            problems.append("em dash or en dash in output (house rule: never)")
+            break
+    for m in re.findall(r"href=['\"]t/([A-Z.\-]+)\.html", html):
+        if m not in pages:
+            problems.append(f"dead research link: t/{m}.html not being written")
+    for mark in REQUIRED_MARKS:
+        if mark.replace("'", '"') not in html and mark not in html:
+            problems.append(f"required section missing: {mark}")
+    return problems
 
 
 def write_page(path, html):
@@ -473,7 +523,7 @@ def main():
 
     # Write prices.json for client-side tracker
     (OUT_DIR / "prices.json").write_text(
-        json.dumps(quotes, indent=1), encoding="utf-8")
+        json.dumps(quotes, indent=1, allow_nan=False), encoding="utf-8")
 
     # Build per-ticker research pages
     rows_by_ticker = {r["t"]: r for r in rows}
@@ -484,14 +534,19 @@ def main():
 
     # Build tape + thesis cards (degrade gracefully)
     try:
-        tape_section, cards_section = build_extras(rows, quotes, generated_at)
+        tape_section, cards_section = build_extras(rows, quotes, generated_at, pages)
     except Exception as e:
         print(f"  WARN: extras failed, shipping core page only: {e}")
         tape_section, cards_section = "", ""
 
-    # Render index
+    # Render index, then gate it: ship fully consistent or not at all
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                   tape_section, cards_section)
+    problems = validate_output(html, rows, pages)
+    if problems:
+        for p in problems:
+            print(f"VALIDATION: {p}", file=sys.stderr)
+        sys.exit(1)  # refresh.sh keeps the previous good site
     write_page(OUT_DIR / "index.html", html)
 
     # Pricing page
@@ -501,12 +556,19 @@ def main():
     token = members_token()
     members_dir = OUT_DIR / "members" / token
     members_dir.mkdir(parents=True, exist_ok=True)
-    write_page(members_dir / "index.html",
-               html.replace("<head>", "<head>\n<base href='../../'>\n"
-                            "<meta name='robots' content='noindex, nofollow'>", 1))
+    write_page(members_dir / "index.html", members_html(html))
+
+    # Sitemap for the public pages (members path deliberately absent)
+    urls = ["", "pricing.html"] + [f"t/{t}.html" for t in sorted(pages)]
+    sitemap = ("<?xml version='1.0' encoding='UTF-8'?>\n"
+               "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>\n"
+               + "".join(f"<url><loc>https://youngbullinvests.com/{u}</loc></url>\n"
+                         for u in urls)
+               + "</urlset>\n")
+    (OUT_DIR / "sitemap.xml").write_text(sitemap, encoding="utf-8")
 
     print(f"OK: index ({len(html):,} bytes, {len(rows)} positions) + "
-          f"{len(pages)} research pages + prices.json + members/{token}/")
+          f"{len(pages)} research pages + prices.json + sitemap + members/{token}/")
 
 
 if __name__ == "__main__":

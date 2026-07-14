@@ -195,10 +195,6 @@
   "price": 3.57,
   "changePct": -2.19
  },
- "RAAQ": {
-  "price": NaN,
-  "changePct": NaN
- },
  "SITM": {
   "price": 602.55,
   "changePct": -4.2
@@ -206,10 +202,6 @@
  "SKHY": {
   "price": 152.35,
   "changePct": -9.32
- },
- "SVAC": {
-  "price": NaN,
-  "changePct": NaN
  },
  "TLN": {
   "price": 396.35,

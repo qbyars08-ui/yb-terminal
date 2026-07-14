@@ -6,6 +6,21 @@ computed; missing values render as blanks or are skipped entirely.
 
 from html import escape
 
+FAVICON = ("<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www."
+           "w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' "
+           "fill='%23c8952e'/></svg>\">")
+
+
+def og_tags(title, description, path=""):
+    """Minimal OpenGraph + twitter card block for a public page."""
+    url = f"https://youngbullinvests.com/{path}"
+    return (f'<meta property="og:title" content="{escape(title)}">\n'
+            f'<meta property="og:description" content="{escape(description)}">\n'
+            f'<meta property="og:url" content="{url}">\n'
+            f'<meta property="og:type" content="website">\n'
+            f'<meta name="twitter:card" content="summary">')
+
+
 EXTRA_CSS = """
   /* Badges + cards + tape (v2 sprint) */
   .badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
@@ -133,7 +148,9 @@ EXTRA_CSS = """
 
   @media (max-width: 600px) {
     .hero-grid { grid-template-columns: repeat(2, 1fr); }
-    .yb-nav-links a { padding: 6px 8px; font-size: 11px; }
+    .yb-nav .brand { font-size: 11px; letter-spacing: 2px; white-space: nowrap; }
+    .yb-nav-links a { padding: 6px 6px; font-size: 11px; white-space: nowrap; }
+    .yb-nav-links { gap: 0; overflow-x: auto; scrollbar-width: none; }
     .tracker-form { flex-direction: column; }
     .tracker-form .field { min-width: unset; }
     .cards { grid-template-columns: 1fr; }
@@ -174,7 +191,7 @@ def tape_html(tape):
             "at every refresh.</div>" + "".join(items) + "</section>")
 
 
-def _card(c):
+def _card(c, pages):
     badge = (f"<span class='badge {c['health']}'>{c['health']}</span>"
              if c["health"] else "")
     conviction = ""
@@ -199,14 +216,16 @@ def _card(c):
     layer = (f"<span class='chip'>{escape(c['layer'])}</span>" if c["layer"] else "")
     gain = (f"<span class='{_cls(c['gain'])}'>{_pct(c['gain'], '+.1f')} on cost</span>"
             if c["gain"] is not None else "")
+    name = (f"<a class='tk' href='t/{escape(c['t'])}.html'>{escape(c['t'])}</a>"
+            if c["t"] in pages else f"<span class='tk'>{escape(c['t'])}</span>")
     return (f"<div class='card'><div class='row'>"
-            f"<span><a class='tk' href='t/{escape(c['t'])}.html'>{escape(c['t'])}</a> "
+            f"<span>{name} "
             f"{badge}</span><span style='font-size:12px'>{gain}</span></div>"
             f"{thesis}<div style='margin-top:8px'>{layer}</div>"
             f"{receipt}{catalyst}{conviction}</div>")
 
 
-def cards_html(cards):
+def cards_html(cards, pages=frozenset()):
     if not cards:
         return ""
     return ("<section><h2>Living Thesis Cards</h2>"
@@ -214,7 +233,7 @@ def cards_html(cards):
             "health badge is pure math against my entry, INTACT within 15% of cost, "
             "STRESSED past that, BROKEN past 30%. The receipt links the post where I "
             "made the call in public.</div>"
-            "<div class='cards'>" + "".join(_card(c) for c in cards) + "</div></section>")
+            "<div class='cards'>" + "".join(_card(c, pages) for c in cards) + "</div></section>")
 
 
 def record_page_html(rows, unscored, stats, generated_at, css):
@@ -268,7 +287,10 @@ stay up. That is the product.</footer>
 def pricing_page_html(css):
     return f"""<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pricing | Young Bull Terminal</title>
+<title>Pricing | Young Bull</title>
+<meta name="description" content="What stays free and what paid adds when Young Bull flips paid on July 22, 2026. Founding members lock $99 a year for life.">
+{og_tags("Pricing | Young Bull", "Founding members lock $99 a year for life before the price goes up.", "pricing.html")}
+{FAVICON}
 <style>{css}{EXTRA_CSS}</style></head><body><main>
 <div class="sub"><a href="index.html">&larr; Terminal</a></div>
 <h1>WHAT HAPPENS JULY 22</h1>

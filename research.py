@@ -7,6 +7,8 @@ parsers below handle exactly the subset these files use.
 
 import re
 from html import escape
+
+from sections import FAVICON, og_tags
 from pathlib import Path
 
 TICKERS_DIR = Path.home() / "Quinn/YOUNG-BULL/Research/Tickers"
@@ -223,6 +225,9 @@ def render_ticker_page(ticker, meta, body_html, quote, row, generated_at):
     return f"""<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(ticker)} | Young Bull</title>
+{f'<meta name="description" content="{thesis}">' if thesis else ''}
+{og_tags(f"{ticker} | Young Bull", str(meta.get("thesis_short") or f"{ticker} research"), f"t/{ticker}.html")}
+{FAVICON}
 <style>{CSS}</style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
 <h1>{escape(ticker)} <span class="chip" style="font-size:11px">{escape(held)}</span></h1>
