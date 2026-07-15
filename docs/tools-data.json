@@ -13,7 +13,7 @@
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
    "health": "INTACT",
-   "conviction": 58,
+   "conviction": 59,
    "stance": "neutral",
    "earnings": "2026-08-04"
   },
@@ -39,7 +39,7 @@
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
-   "conviction": 54,
+   "conviction": 53,
    "stance": "neutral",
    "earnings": "2026-08-06"
   },
@@ -156,7 +156,7 @@
   "ASML": {
    "layer": "Compute",
    "thesis": "EUV lithography monopoly, EUR 38.8B backlog, irreplaceable",
-   "conviction": 56,
+   "conviction": 57,
    "stance": "neutral",
    "earnings": "2026-07-15"
   },
@@ -181,7 +181,7 @@
   "BIRD": {
    "layer": "Other",
    "thesis": "Allbirds consumer brand, pending exit",
-   "conviction": 36,
+   "conviction": 35,
    "stance": "bear"
   },
   "BN": {
@@ -193,7 +193,9 @@
   "CC": {},
   "CEG": {
    "layer": "Power",
-   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand"
+   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
+   "conviction": 62,
+   "stance": "bull"
   },
   "COHR": {
    "layer": "Networking",
@@ -204,62 +206,64 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 42,
+   "conviction": 41,
    "stance": "neutral"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 47,
+   "conviction": 50,
    "stance": "neutral"
   },
   "KTOS": {
    "layer": "Space",
    "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 43,
+   "conviction": 41,
    "stance": "neutral"
   },
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 50,
+   "conviction": 49,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 54,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
    "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 47,
+   "conviction": 45,
    "stance": "neutral"
   },
   "LWLG": {
    "layer": "Networking",
    "thesis": "Electro-optic polymer modulators, 200G+ capable",
-   "conviction": 52,
+   "conviction": 56,
    "stance": "neutral"
   },
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 53,
+   "conviction": 56,
    "stance": "neutral"
   },
   "MOD": {
    "layer": "DataCenter",
-   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation"
+   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation",
+   "conviction": 48,
+   "stance": "neutral"
   },
   "MRVL": {
    "layer": "Compute",
@@ -296,7 +300,7 @@
   "PANW": {
    "layer": "DataCenter",
    "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B",
-   "conviction": 56,
+   "conviction": 57,
    "stance": "neutral"
   },
   "PLTR": {
@@ -393,14 +397,14 @@
    "stance": "neutral"
   },
   "IONQ": {
-   "conviction": 43,
+   "conviction": 41,
    "stance": "neutral"
   },
   "IWM": {},
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 45,
+   "conviction": 49,
    "stance": "neutral"
   },
   "MA": {},
@@ -430,18 +434,18 @@
   },
   "QQQ": {},
   "RGTI": {
-   "conviction": 40,
-   "stance": "neutral"
+   "conviction": 39,
+   "stance": "bear"
   },
   "RTX": {
-   "conviction": 45,
+   "conviction": 42,
    "stance": "neutral"
   },
   "SBUX": {},
   "SCHD": {},
   "SHOP": {},
   "SMCI": {
-   "conviction": 47,
+   "conviction": 46,
    "stance": "neutral"
   },
   "SNOW": {},
@@ -449,7 +453,10 @@
   "SPOT": {},
   "SPY": {},
   "TSLA": {},
-  "TSM": {},
+  "TSM": {
+   "conviction": 54,
+   "stance": "neutral"
+  },
   "TXN": {},
   "UBER": {},
   "UNH": {},
