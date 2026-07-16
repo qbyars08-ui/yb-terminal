@@ -22,6 +22,8 @@
    "thesis": "IP toll on every non-x86 AI chip, v9 royalty rate 2x v8, hyperscaler share approaching 50%, royalty annuity model",
    "held": 5.2,
    "health": "INTACT",
+   "conviction": 69,
+   "stance": "bull",
    "earnings": "2026-07-29"
   },
   "ASTS": {
@@ -89,6 +91,8 @@
   "NOK": {
    "held": 2.9,
    "health": "STRESSED",
+   "conviction": 60,
+   "stance": "bull",
    "earnings": "2026-07-23"
   },
   "OSS": {
@@ -104,8 +108,8 @@
    "thesis": "Lidar + cameras + full perception stack for robotics. REV8 launched. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 8.4,
    "health": "INTACT",
-   "conviction": 59,
-   "stance": "neutral"
+   "conviction": 60,
+   "stance": "bull"
   },
   "PENG": {
    "layer": "Datacenters",
@@ -169,7 +173,9 @@
   },
   "BE": {
    "layer": "Power & Grid",
-   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet"
+   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
+   "conviction": 56,
+   "stance": "neutral"
   },
   "BIRD": {
    "layer": "Other",
@@ -186,7 +192,9 @@
   "CC": {},
   "CEG": {
    "layer": "Power",
-   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand"
+   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
+   "conviction": 62,
+   "stance": "bull"
   },
   "COHR": {
    "layer": "Networking",
@@ -222,13 +230,13 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
@@ -247,13 +255,13 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 52,
+   "conviction": 53,
    "stance": "neutral"
   },
   "MOD": {
    "layer": "DataCenter",
    "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation",
-   "conviction": 48,
+   "conviction": 47,
    "stance": "neutral"
   },
   "MRVL": {
@@ -278,7 +286,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 51,
+   "conviction": 49,
    "stance": "neutral"
   },
   "ON": {
@@ -394,7 +402,10 @@
   "IWM": {},
   "JPM": {},
   "KO": {},
-  "LMT": {},
+  "LMT": {
+   "conviction": 45,
+   "stance": "neutral"
+  },
   "MA": {},
   "MCD": {},
   "META": {
@@ -402,7 +413,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 51,
+   "conviction": 52,
    "stance": "neutral"
   },
   "NET": {},

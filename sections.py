@@ -15,8 +15,8 @@ SITE_BASE = "https://qbyars08-ui.github.io/yb-terminal/"
 # the session report), paste the two URLs here, and the buy buttons appear on
 # the pricing page at the next refresh. While either is empty the page keeps
 # the Substack subscribe path only, so a dead buy button can never ship.
-STRIPE_LINK_FOUNDER = ""   # $99/yr founding, recurring yearly
-STRIPE_LINK_ANNUAL = ""    # $199/yr standard, recurring yearly
+STRIPE_LINK_FOUNDER = "https://buy.stripe.com/eVq7sN4I91deaJo17X5c400"  # $99/yr founding
+STRIPE_LINK_ANNUAL = "https://buy.stripe.com/00w4gB8Yp7BC3gW5od5c401"  # $200/yr standard
 
 FAVICON = ("<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www."
            "w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' "
@@ -366,7 +366,7 @@ def _buy_buttons():
             f"class=\"cta-btn\">Lock $99/yr founding</a> "
             f"<a href=\"{escape(STRIPE_LINK_ANNUAL)}\" rel=\"noopener\" "
             f"class=\"cta-btn\" style=\"background:none;border:1px solid "
-            f"var(--gold);color:var(--gold)\">$199/yr standard</a>")
+            f"var(--gold);color:var(--gold)\">$200/yr standard</a>")
 
 
 FOUNDER_NOTE = """<section><h2>From Me</h2>
@@ -421,7 +421,7 @@ next.</li>
 <section><h2>The price</h2>
 <div class="stats">
   <div class="stat"><b>$99/yr</b><span>Founding, locked for life</span></div>
-  <div class="stat"><b>$199/yr</b><span>Standard, after founding closes</span></div>
+  <div class="stat"><b>$200/yr</b><span>Standard, after founding closes</span></div>
 </div>
 <p class="read" style="margin-top:10px;margin-bottom:16px">Founding members lock in
 $99 a year for life before the price goes up. That is the whole pitch. No tiers
