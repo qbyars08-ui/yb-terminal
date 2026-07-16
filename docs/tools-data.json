@@ -57,15 +57,6 @@
    "conviction": 57,
    "stance": "neutral"
   },
-  "LPKFF": {
-   "layer": "Photonics",
-   "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
-   "held": 1.6,
-   "health": "BROKEN",
-   "conviction": 55,
-   "stance": "neutral",
-   "earnings": "2026-07-23"
-  },
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
@@ -123,7 +114,7 @@
    "layer": "Adjacent Tech",
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
-   "health": "INTACT",
+   "health": "STRESSED",
    "conviction": 64,
    "stance": "bull",
    "earnings": "2026-08-06"
@@ -173,9 +164,7 @@
   },
   "BE": {
    "layer": "Power & Grid",
-   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 56,
-   "stance": "neutral"
+   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet"
   },
   "BIRD": {
    "layer": "Other",
@@ -236,20 +225,18 @@
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 54,
+   "conviction": 55,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
-   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 47,
-   "stance": "neutral"
+   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue."
   },
   "LWLG": {
    "layer": "Networking",
    "thesis": "Electro-optic polymer modulators, 200G+ capable",
-   "conviction": 52,
+   "conviction": 53,
    "stance": "neutral"
   },
   "MBLY": {
@@ -261,7 +248,7 @@
   "MOD": {
    "layer": "DataCenter",
    "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation",
-   "conviction": 47,
+   "conviction": 48,
    "stance": "neutral"
   },
   "MRVL": {
@@ -304,9 +291,7 @@
   },
   "PLTR": {
    "layer": "Software",
-   "thesis": "AI software platform, 82% gross margins, government + commercial",
-   "conviction": 50,
-   "stance": "neutral"
+   "thesis": "AI software platform, 82% gross margins, government + commercial"
   },
   "POET": {
    "layer": "Networking",
@@ -385,20 +370,14 @@
    "stance": "neutral"
   },
   "GM": {},
-  "GOOGL": {
-   "conviction": 55,
-   "stance": "neutral"
-  },
+  "GOOGL": {},
   "HON": {},
   "HOOD": {},
   "INTC": {
    "conviction": 40,
    "stance": "neutral"
   },
-  "IONQ": {
-   "conviction": 43,
-   "stance": "neutral"
-  },
+  "IONQ": {},
   "IWM": {},
   "JPM": {},
   "KO": {},
@@ -437,7 +416,7 @@
    "stance": "neutral"
   },
   "RTX": {
-   "conviction": 45,
+   "conviction": 42,
    "stance": "neutral"
   },
   "SBUX": {},
