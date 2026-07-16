@@ -22,8 +22,6 @@
    "thesis": "IP toll on every non-x86 AI chip, v9 royalty rate 2x v8, hyperscaler share approaching 50%, royalty annuity model",
    "held": 5.2,
    "health": "INTACT",
-   "conviction": 69,
-   "stance": "bull",
    "earnings": "2026-07-29"
   },
   "ASTS": {
@@ -91,8 +89,6 @@
   "NOK": {
    "held": 2.9,
    "health": "STRESSED",
-   "conviction": 60,
-   "stance": "bull",
    "earnings": "2026-07-23"
   },
   "OSS": {
@@ -173,9 +169,7 @@
   },
   "BE": {
    "layer": "Power & Grid",
-   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 55,
-   "stance": "neutral"
+   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet"
   },
   "BIRD": {
    "layer": "Other",
@@ -192,9 +186,7 @@
   "CC": {},
   "CEG": {
    "layer": "Power",
-   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
-   "conviction": 62,
-   "stance": "bull"
+   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand"
   },
   "COHR": {
    "layer": "Networking",
@@ -402,10 +394,7 @@
   "IWM": {},
   "JPM": {},
   "KO": {},
-  "LMT": {
-   "conviction": 45,
-   "stance": "neutral"
-  },
+  "LMT": {},
   "MA": {},
   "MCD": {},
   "META": {
