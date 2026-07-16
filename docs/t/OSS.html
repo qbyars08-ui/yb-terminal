@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -110,11 +120,12 @@ footer {
 }
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
-<h1>OSS <span class="chip" style="font-size:11px">HELD</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<h1>OSS <span class="chip" style="font-size:11px">HELD</span> <span class='badge STRESSED'>STRESSED</span></h1>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$13.22</b><span>Live</span></div><div class='stat'><b class='down'>-2.58%</b><span>Today</span></div><div class='stat'><b>$17.23</b><span>My avg cost</span></div><div class='stat'><b class='down'>-23.3%</b><span>My gain</span></div><div class='stat'><b>5.1%</b><span>Of book</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">The rugged box for AI in the field: 55% revenue growth, 1.8x book-to-bill, zero debt, turning itself into a defense-AI supplier in real time</p><div style="margin-top:12px"><span class='chip'>Datacenters</span><span class='chip'>pivot</span><span class='chip'>rugged edge-AI engineering + recurring defense program design-ins</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>valuation-leaves-no-room</li><li>single-customer-half-of-revenue</li><li>defense-program-slip</li><li>short-squeeze-unwind</li><li>ai-capex-pause-hits-microcaps</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 29.2,34.0 54.4,34.0 79.6,34.0 104.8,51.4 130.0,51.4 155.2,51.4 180.4,58.0 205.6,52.8 230.8,56.0 256.0,56.0' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-07-01. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -131,5 +142,6 @@ reflect that date. The live numbers above are current.</div>
 <ul><li>Q1 revenue $8.1M, +55% Y/Y</li><li>Gross margin 51.6%, up from the low 40s pre-Bressner divestiture</li><li>Book-to-bill 1.8x; pipeline &gt;$1B</li><li>Three straight quarters of positive adjusted EPS; zero debt; ~$56M net cash</li><li>Market cap $434M; stock ~$17.50, near 12x sales, after a 5x off the lows</li><li>2026 guide: 20-25% revenue growth (sandbagged vs the 55% print)</li><li>June: $8.4M initial defense contract, 91 rugged 3U servers, stated potential ~$44M over four years</li><li>One customer ~51% of revenue</li><li>12% of float sold short; three analysts around a $19 target</li><li>Russell 2000 inclusion (week of 2026-06-30)</li><li>Divested Bressner (German distribution) Dec 2025; P-8A program $65M+</li><li>My position: entered ~$17, roughly 5-6% of book</li></ul>
 <h2>What Kills It</h2>
 <ul><li><b>valuation-leaves-no-room</b>: 12 times sales on a ~$35M revenue base prices in perfection, and a single miss at this size dents a quarter and the multiple at once.</li><li><b>single-customer-half-of-revenue</b>: one customer is ~51% of revenue, so a program loss or delay there is not a dent, it is a crater.</li><li><b>defense-program-slip</b>: the whole thesis leans on government budgets and program timing, which are lumpy and political by nature.</li><li><b>short-squeeze-unwind</b>: 12% short interest squeezes up fast and unwinds just as fast; the tape here is a coiled spring in both directions.</li><li><b>ai-capex-pause-hits-microcaps</b>: if the AI capex cycle pauses, the small fish feel it first, and a thin micro cap falls faster than the megacaps on a red tape.</li></ul></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-06-13</span><a href='https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180' rel='noopener'>I&#x27;m 17. One of My AI Stocks Is Up 180%. Here&#x27;s My Whole Top Ten.</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

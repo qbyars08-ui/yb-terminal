@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -110,11 +120,12 @@ footer {
 }
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
-<h1>CRDO <span class="chip" style="font-size:11px">HELD</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<h1>CRDO <span class="chip" style="font-size:11px">HELD</span> <span class='badge INTACT'>INTACT</span></h1>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$226.74</b><span>Live</span></div><div class='stat'><b class='down'>-4.00%</b><span>Today</span></div><div class='stat'><b>$209.79</b><span>My avg cost</span></div><div class='stat'><b class='up'>+8.1%</b><span>My gain</span></div><div class='stat'><b>8.3%</b><span>Of book</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27</p><div style="margin-top:12px"><span class='chip'>Networking</span><span class='chip'>pivot</span><span class='chip'>hyperscaler design wins in AECs + 200G/lane SerDes + copper-and-optical both-sides hedge</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>hyperscaler-concentration</li><li>optics-leapfrogs-aec</li><li>growth-guide-miss</li><li>ai-capex-pause</li><li>interconnect-competition</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 29.2,37.4 54.4,37.4 79.6,37.4 104.8,15.8 130.0,15.8 155.2,15.8 180.4,44.2 205.6,45.2 230.8,58.0 256.0,58.0' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-07-01. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -130,5 +141,6 @@ reflect that date. The live numbers above are current.</div>
 <ul><li>FY26 revenue $1.335B, roughly 3x; Q4 +157% Y/Y</li><li>Gross margin 68%; net income $662M, up more than 5x</li><li>FY27 guide: &gt;80% growth</li><li>Q3 FY26 revenue $407M, +52% sequential, ~3x Y/Y</li><li>Customer concentration improving 67% to 34%; five hyperscale AEC customers</li><li>~$750M DustPhotonics acquisition (the optical leg)</li><li>200G/lane SerDes, 1.6T transition underway</li><li>Market cap ~$35B (as of May 8, 2026)</li><li>My position: 7.9% of book, +20%, average $209 (added 2026-06-12 and on red days since)</li><li>Networking layer total: 24% of book, my largest layer</li></ul>
 <h2>What Kills It</h2>
 <ul><li><b>hyperscaler-concentration</b>: concentration improved from 67% to 34% but a handful of hyperscalers still drive the revenue, and one lost program or in-source decision dents the ramp.</li><li><b>optics-leapfrogs-aec</b>: if short-reach links jump straight to optics faster than expected, the copper AEC franchise shrinks and the DustPhotonics hedge has to carry more than it was priced for.</li><li><b>growth-guide-miss</b>: a &gt;80% FY27 guide is the multiple&#x27;s whole spine; one guide-down quarter reprices the stock hard.</li><li><b>ai-capex-pause</b>: interconnect demand is a direct derivative of cluster buildouts; if hyperscaler capex pauses, the wires get cut first.</li><li><b>interconnect-competition</b>: the interconnect socket is contested; a competitor winning the 200G/lane generation at a major customer breaks the tollbooth framing.</li></ul></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-06-13</span><a href='https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180' rel='noopener'>I&#x27;m 17. One of My AI Stocks Is Up 180%. Here&#x27;s My Whole Top Ten.</a></div><div class='receipt-row'><span class='receipt-date'>2026-07-05</span><a href='https://youngbullinvests.substack.com/p/my-graduation-money-isnt-buying-clothes' rel='noopener'>My Graduation Money Isn&#x27;t Buying Clothes. It&#x27;s Buying This Dip.</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

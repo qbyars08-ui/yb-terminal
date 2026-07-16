@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -110,11 +120,12 @@ footer {
 }
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
-<h1>NBIS <span class="chip" style="font-size:11px">HELD</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<h1>NBIS <span class="chip" style="font-size:11px">HELD</span> <span class='badge INTACT'>INTACT</span></h1>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$199.51</b><span>Live</span></div><div class='stat'><b class='up'>+2.79%</b><span>Today</span></div><div class='stat'><b>$98.63</b><span>My avg cost</span></div><div class='stat'><b class='up'>+102.3%</b><span>My gain</span></div><div class='stat'><b>9.8%</b><span>Of book</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">GPU cloud infrastructure with $19.4B Microsoft + $27B Meta backlog. ~$46B locked, total backlog approaching $50B.</p><div style="margin-top:12px"><span class='chip'>Datacenters</span><span class='chip'>anchor</span><span class='chip'>anchor-customer-backlog + neutral-cloud positioning + execution-paced capacity build</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>microsoft-cancel</li><li>meta-cancel</li><li>finland-iceland-execution-slip</li><li>neoclouds-margin-compression</li><li>fy-guide-cut-below-2_5b</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 29.2,31.0 54.4,31.0 79.6,31.0 104.8,25.9 130.0,25.9 155.2,25.9 180.4,37.4 205.6,58.0 230.8,51.2 256.0,51.2' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-05-11. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -152,5 +163,6 @@ reflect that date. The live numbers above are current.</div>
 <ul><li>Master Thesis v2</li><li>Discipline v2</li><li>Three-Sleeve Mandate v2</li><li>Manifesto v2 draft</li><li>POST_NBIS_PreEarnings_2026-04-25</li><li>Portfolio Snapshot 5/5</li></ul>
 <h2>Notes</h2>
 <p>Anchor file expanded 2026-05-07 from template state to full anchor page during master onboarding protocol session. Earliest anchor entry (2/9/2026), pre-thesis-formalization. Position numbers as of 2026-05-05 close.</p></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-02-20</span><a href='https://youngbullinvests.substack.com/p/nbis-the-most-underrated-ai-cloud' rel='noopener'>NBIS: The Most Underrated AI Cloud Play Not Enough People Are Talking About</a></div><div class='receipt-row'><span class='receipt-date'>2026-03-21</span><a href='https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres' rel='noopener'>$25,000 Hits My Account Monday. Here&#x27;s Exactly Where It&#x27;s Going.</a></div><div class='receipt-row'><span class='receipt-date'>2026-04-12</span><a href='https://youngbullinvests.substack.com/p/the-ceasefire-rally-is-a-trap-heres' rel='noopener'>The Ceasefire Rally Is a Trap. Here&#x27;s What I&#x27;m Doing About It.</a></div><div class='receipt-row'><span class='receipt-date'>2026-04-25</span><a href='https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind' rel='noopener'>+36% YTD. The Three Positions Behind the Number — and the Layer I&#x27;m Building Around Them.</a></div><div class='receipt-row'><span class='receipt-date'>2026-04-30</span><a href='https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im' rel='noopener'>NBIS confirmed. XNDU is +236%. Now I&#x27;m building the quantum tier.</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-02</span><a href='https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole' rel='noopener'>The Five Names That Hold the Whole Thesis Up</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-10</span><a href='https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm' rel='noopener'>The Layer Beneath the Layer — Why ARM Is in My Book</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-11</span><a href='https://youngbullinvests.substack.com/p/holding-nbis-into-earnings-part-1' rel='noopener'>Holding NBIS Into Earnings: Part 1</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-13</span><a href='https://youngbullinvests.substack.com/p/generational' rel='noopener'>Generational</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-13</span><a href='https://youngbullinvests.substack.com/p/nbis-part-2-684' rel='noopener'>NBIS · Part 2 · 684%</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-14</span><a href='https://youngbullinvests.substack.com/p/orbit' rel='noopener'>Orbit</a></div><div class='receipt-row'><span class='receipt-date'>2026-06-13</span><a href='https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180' rel='noopener'>I&#x27;m 17. One of My AI Stocks Is Up 180%. Here&#x27;s My Whole Top 10, and I Buy Them Red.</a></div><div class='receipt-row'><span class='receipt-date'>2026-06-17</span><a href='https://youngbullinvests.substack.com/p/im-not-old-enough-to-open-a-brokerage' rel='noopener'>I&#x27;m Not Old Enough to Open a Brokerage. I Turned $42K Into $66K Anyway.</a></div><div class='receipt-row'><span class='receipt-date'>2026-06-25</span><a href='https://youngbullinvests.substack.com/p/micron-just-reported-heres-what-it' rel='noopener'>Micron Just Reported. Here&#x27;s What It Means for My Portfolio, and Why Im Buying More of This one Stock.</a></div><div class='receipt-row'><span class='receipt-date'>2026-07-05</span><a href='https://youngbullinvests.substack.com/p/my-graduation-money-isnt-buying-clothes' rel='noopener'>My Graduation Money Isn&#x27;t Buying Clothes. It&#x27;s Buying This Dip.</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

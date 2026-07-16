@@ -11,6 +11,13 @@ from html import escape
 # in the same commit that flips DNS to GitHub Pages.
 SITE_BASE = "https://qbyars08-ui.github.io/yb-terminal/"
 
+# Stripe Payment Links. QUINN: mint these in the Stripe Dashboard (steps in
+# the session report), paste the two URLs here, and the buy buttons appear on
+# the pricing page at the next refresh. While either is empty the page keeps
+# the Substack subscribe path only, so a dead buy button can never ship.
+STRIPE_LINK_FOUNDER = ""   # $99/yr founding, recurring yearly
+STRIPE_LINK_ANNUAL = ""    # $199/yr standard, recurring yearly
+
 FAVICON = ("<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www."
            "w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' "
            "fill='%23c8952e'/></svg>\">")
@@ -150,6 +157,21 @@ EXTRA_CSS = """
     font-size: 14px;
   }
   .tagline b { color: var(--bright); }
+
+  /* Catalyst calendar */
+  .cal-item { display:flex; gap:12px; padding:8px 0; border-bottom:1px solid var(--line);
+              font-size:13px; align-items:baseline; }
+  .cal-item:last-child { border-bottom:none; }
+  .cal-date { font-family:var(--mono); color:var(--gold); flex-shrink:0; width:44px;
+              font-size:12px; }
+  .cal-body { flex:1; }
+  .cal-why { color:var(--dim); font-size:12px; margin-top:2px; line-height:1.5; }
+  .cal-receipt { font-size:11px; border:1px solid var(--border); border-radius:5px;
+                 padding:1px 7px; margin-left:6px; }
+  .cal-day { margin-bottom:14px; }
+  .cal-dayhead { font-family:var(--mono); font-size:11px; color:var(--dim);
+                 letter-spacing:1px; border-bottom:1px solid var(--border);
+                 padding-bottom:4px; margin-bottom:2px; }
 
   /* Pro tools: visualizer + scanner */
   .viz-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -313,7 +335,48 @@ stay up. That is the product.</footer>
 </main></body></html>"""
 
 
-def pricing_page_html(css):
+WEEK_STRIP_LABELS = (
+    ("desknote", "desk notes filed"),
+    ("content", "drafts staged for review"),
+    ("reviews", "reviews run"),
+    ("fixes", "pipelines self-healed"),
+    ("briefings", "morning briefings compiled"),
+    ("monitoring", "health alerts triaged"),
+)
+
+
+def week_strip_html(counts):
+    """What the machine actually did in the last 7 days, from the mission
+    log. Zero activity renders nothing rather than an empty boast."""
+    parts = [f"<div class='stat'><b>{counts[k]}</b><span>{label}</span></div>"
+             for k, label in WEEK_STRIP_LABELS if counts.get(k)]
+    if not parts:
+        return ""
+    return (f"<section><h2>What Members Got This Week</h2>"
+            f"<div class='sub' style='margin-bottom:10px'>Straight from the "
+            f"machine's own action log, last 7 days. Counts, not promises.</div>"
+            f"<div class='stats'>{''.join(parts)}</div></section>")
+
+
+def _buy_buttons():
+    if not (STRIPE_LINK_FOUNDER and STRIPE_LINK_ANNUAL):
+        return ("<a href=\"https://youngbullinvests.substack.com/subscribe\" "
+                "rel=\"noopener\" class=\"cta-btn\">Subscribe on Substack</a>")
+    return (f"<a href=\"{escape(STRIPE_LINK_FOUNDER)}\" rel=\"noopener\" "
+            f"class=\"cta-btn\">Lock $99/yr founding</a> "
+            f"<a href=\"{escape(STRIPE_LINK_ANNUAL)}\" rel=\"noopener\" "
+            f"class=\"cta-btn\" style=\"background:none;border:1px solid "
+            f"var(--gold);color:var(--gold)\">$199/yr standard</a>")
+
+
+FOUNDER_NOTE = """<section><h2>From Me</h2>
+<p class="read">I built this machine because I could not afford a Bloomberg and
+refused to invest blind. $99 is what it costs to sit at the same desk I sit at,
+with my real book, my receipts, and the staff that never sleeps. If that is not
+worth $8.25 a month, do not buy it, the free posts stay free.</p></section>"""
+
+
+def pricing_page_html(css, week_counts=None):
     return f"""<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing | Young Bull</title>
@@ -353,15 +416,20 @@ Paid subscribers are the reason it exists and the first to get whatever it build
 next.</li>
 </ul></section>
 
+{week_strip_html(week_counts or {})}
+
 <section><h2>The price</h2>
 <div class="stats">
   <div class="stat"><b>$99/yr</b><span>Founding, locked for life</span></div>
   <div class="stat"><b>$199/yr</b><span>Standard, after founding closes</span></div>
 </div>
-<p class="read" style="margin-top:10px">Founding members lock in $99 a year for life
-before the price goes up. That is the whole pitch. No tiers inside tiers, no upsells.
-<a href="https://youngbullinvests.substack.com/subscribe" rel="noopener">Subscribe on
-Substack</a> and the Terminal link lands in your welcome email on the 22nd.</p></section>
+<p class="read" style="margin-top:10px;margin-bottom:16px">Founding members lock in
+$99 a year for life before the price goes up. That is the whole pitch. No tiers
+inside tiers, no upsells. The Terminal members link lands in your welcome email
+on the 22nd.</p>
+{_buy_buttons()}</section>
+
+{FOUNDER_NOTE}
 
 <footer>Young Bull Terminal. Not advice, it is my book and my machine. Questions?
 Reply to any post, I read everything.</footer>
@@ -441,6 +509,58 @@ def request_line_html():
             f"Request Line posts and research pages here.</div>"
             f"<a class='cta-btn' href='{chat}' target='_blank' "
             f"rel='noopener'>Drop a request in the chat</a></section>")
+
+
+def _cal_row(e, pages):
+    tick = ""
+    if e["t"]:
+        tick = (f"<a class='tk' href='t/{escape(e['t'])}.html'>{escape(e['t'])}</a>"
+                if e["t"] in pages else f"<span class='tk'>{escape(e['t'])}</span>")
+    why = (f"<div class='cal-why'>{escape(e['why'])}</div>" if e["why"] else "")
+    receipt = ""
+    if e["receipt"]:
+        receipt = (f" <a class='cal-receipt' href='{escape(e['receipt'])}' "
+                   f"rel='noopener'>receipt</a>")
+    return (f"<div class='cal-item'><span class='cal-date'>{escape(e['date'][5:])}"
+            f"</span><span class='cal-body'>{tick} "
+            f"<span>{escape(e['what'])}</span>{receipt}{why}</span></div>")
+
+
+def calendar_public_html(entries):
+    """Next 7 days, compact, with the members tease. Empty week says so."""
+    inner = ("".join(_cal_row(e, frozenset()) for e in entries)
+             or "<div class='viz-note'>no dated catalysts in the next 7 days</div>")
+    return f"""<section id="calendar">
+<h2>Catalyst Calendar, Next 7 Days</h2>
+<div class="sub" style="margin-bottom:10px">Every dated event the desk actually has a
+source for. Earnings from the machine's calendar, the rest hand-verified. Members see
+the full quarter. <a href="pricing.html">How to get in</a>.</div>
+{inner}
+</section>"""
+
+
+def calendar_members_html(entries, pages):
+    """The full quarter, grouped by date, receipts linked."""
+    if not entries:
+        return ""
+    groups, order = {}, []
+    for e in entries:
+        if e["date"] not in groups:
+            order.append(e["date"])
+        groups.setdefault(e["date"], []).append(e)
+    blocks = []
+    for d in order:
+        rows = "".join(_cal_row(e, pages) for e in groups[d])
+        blocks.append(f"<div class='cal-day'><div class='cal-dayhead'>{escape(d)}"
+                      f"</div>{rows}</div>")
+    return f"""<section id="calendar-full">
+<h2>Catalyst Calendar, The Quarter <span class="chip" style="border-color:var(--gold);color:var(--gold)">Members</span></h2>
+<div class="sub" style="margin-bottom:10px">Every dated event across the coverage
+universe with a real source behind it: earnings from the machine's calendar table,
+everything else verified by hand before it lands here. No date is ever guessed. If a
+name you care about is missing a date, it is because nobody has announced one.</div>
+{''.join(blocks)}
+</section>"""
 
 
 def record_rows_html(rows):

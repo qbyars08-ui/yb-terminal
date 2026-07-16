@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -111,10 +121,11 @@ footer {
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
 <h1>AVGO <span class="chip" style="font-size:11px">ANCHOR</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$394.28</b><span>Live</span></div><div class='stat'><b class='up'>+1.33%</b><span>Today</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.</p><div style="margin-top:12px"><span class='chip'>Compute IP + Networking (dual)</span><span class='chip'>anchor</span><span class='chip'>custom-silicon-relationship + ethernet-switch-monopoly</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>google-tpu-loss</li><li>meta-mtia-loss</li><li>ethernet-share-erosion</li><li>vmware-execution</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,58.0 130.0,14.0 256.0,14.0' fill='none' stroke='#22c55e' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-05-07. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -147,5 +158,6 @@ reflect that date. The live numbers above are current.</div>
 <ul><li>Master Thesis v2</li><li>Discipline v2</li><li>Three-Sleeve Mandate v2</li><li>Manifesto v2 draft</li><li>Portfolio Snapshot 5/5</li></ul>
 <h2>Notes</h2>
 <p>Anchor file expanded 2026-05-07 from template state to full anchor page during master onboarding protocol session. Dual-layer position — counts in Compute IP and Networking. Excluded from sector-cap calculation when single-layer accounting matters. Position numbers as of 2026-05-05 close.</p></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-04-30</span><a href='https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im' rel='noopener'>NBIS confirmed. XNDU is +236%. Now I&#x27;m building the quantum sleeve.</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-02</span><a href='https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole' rel='noopener'>The Five Names That Hold the Whole Thesis Up</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-06</span><a href='https://youngbullinvests.substack.com/p/what-is-young-bull' rel='noopener'>What is Young Bull</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-10</span><a href='https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm' rel='noopener'>The Layer Beneath the Layer — Why ARM Is in My Book</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-13</span><a href='https://youngbullinvests.substack.com/p/generational' rel='noopener'>Generational</a></div><div class='receipt-row'><span class='receipt-date'>2026-05-14</span><a href='https://youngbullinvests.substack.com/p/orbit' rel='noopener'>Orbit</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

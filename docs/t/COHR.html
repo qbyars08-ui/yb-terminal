@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -111,10 +121,11 @@ footer {
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
 <h1>COHR <span class="chip" style="font-size:11px">WATCH</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$299.38</b><span>Live</span></div><div class='stat'><b class='down'>-3.67%</b><span>Today</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">25% optical transceiver market share, NVIDIA $2B partnership</p><div style="margin-top:12px"><span class='chip'>Networking</span></div></section>
 
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 130.0,58.0 256.0,58.0' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-04-17T21:00:02.864Z. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -127,5 +138,6 @@ reflect that date. The live numbers above are current.</div>
 <p>1. <b>CAPEX</b> — _(when would hyperscalers cut this?)_ 2. <b>Moat</b> — _(who is building a bigger/faster pipe?)_ 3. <b>Policy</b> — _(which regulatory or tariff shift ends the tollbooth?)_ 4. <b>Execution</b> — _(which flagship project, if delayed, breaks the story?)_</p>
 <h2>Notes</h2>
 <p>_(free-form — edit anything above the <code>---</code>, Supabase syncs from frontmatter only.)_</p></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-03-21</span><a href='https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres' rel='noopener'>$25,000 Hits My Account Monday. Here&#x27;s Exactly Where It&#x27;s Going.</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

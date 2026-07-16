@@ -1,0 +1,741 @@
+{
+ "_readme": "Per-ticker Substack receipts, chronological. Derived from a verified scan of the full archive (2026-07-13): a post counts as a receipt when the ticker is in the title or mentioned at least twice in the body, plus every entry in the public call ledger. Append via the same rule only.",
+ "receipts": {
+  "MU": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   },
+   {
+    "date": "2026-03-27",
+    "title": "I'm 17. My AI Sent Me This Briefing Tonight. Here's What It Said.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-my-ai-sent-me-this-briefing"
+   },
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   },
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-10",
+    "title": "The Layer Beneath the Layer \u2014 Why ARM Is in My Book",
+    "url": "https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm"
+   },
+   {
+    "date": "2026-05-13",
+    "title": "Generational",
+    "url": "https://youngbullinvests.substack.com/p/generational"
+   },
+   {
+    "date": "2026-05-14",
+    "title": "Orbit",
+    "url": "https://youngbullinvests.substack.com/p/orbit"
+   },
+   {
+    "date": "2026-06-17",
+    "title": "I'm Not Old Enough to Open a Brokerage. I Turned $42K Into $66K Anyway.",
+    "url": "https://youngbullinvests.substack.com/p/im-not-old-enough-to-open-a-brokerage"
+   },
+   {
+    "date": "2026-06-25",
+    "title": "Micron Just Reported. Here's What It Means for My Portfolio, and Why Im Buying More of This one Stock.",
+    "url": "https://youngbullinvests.substack.com/p/micron-just-reported-heres-what-it"
+   },
+   {
+    "date": "2026-07-05",
+    "title": "My Graduation Money Isn't Buying Clothes. It's Buying This Dip.",
+    "url": "https://youngbullinvests.substack.com/p/my-graduation-money-isnt-buying-clothes"
+   },
+   {
+    "date": "2026-07-10",
+    "title": "SK Hynix Is the Anti-SpaceX IPO",
+    "url": "https://youngbullinvests.substack.com/p/sk-hynix-is-the-anti-spacex-ipo"
+   }
+  ],
+  "WOLF": [
+   {
+    "date": "2026-06-20",
+    "title": "I Sold My Nokia for Two Stocks Nobody's Watching",
+    "url": "https://youngbullinvests.substack.com/p/i-sold-my-nokia-for-two-stocks"
+   },
+   {
+    "date": "2026-07-09",
+    "title": "This Isn't a Crash. It's a Split Screen.",
+    "url": "https://youngbullinvests.substack.com/p/this-isnt-a-crash-its-a-split-screen"
+   }
+  ],
+  "PENG": [
+   {
+    "date": "2026-07-09",
+    "title": "This Isn't a Crash. It's a Split Screen.",
+    "url": "https://youngbullinvests.substack.com/p/this-isnt-a-crash-its-a-split-screen"
+   }
+  ],
+  "SVAC": [
+   {
+    "date": "2026-07-07",
+    "title": "I Was About to Buy the Fusion SPAC. Then I Did the Homework. Delayed Gratification?",
+    "url": "https://youngbullinvests.substack.com/p/i-was-about-to-buy-the-fusion-spac"
+   }
+  ],
+  "NWCL": [
+   {
+    "date": "2026-07-07",
+    "title": "I Was About to Buy the Fusion SPAC. Then I Did the Homework. Delayed Gratification?",
+    "url": "https://youngbullinvests.substack.com/p/i-was-about-to-buy-the-fusion-spac"
+   }
+  ],
+  "NBIS": [
+   {
+    "date": "2026-02-20",
+    "title": "NBIS: The Most Underrated AI Cloud Play Not Enough People Are Talking About",
+    "url": "https://youngbullinvests.substack.com/p/nbis-the-most-underrated-ai-cloud"
+   },
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   },
+   {
+    "date": "2026-04-12",
+    "title": "The Ceasefire Rally Is a Trap. Here's What I'm Doing About It.",
+    "url": "https://youngbullinvests.substack.com/p/the-ceasefire-rally-is-a-trap-heres"
+   },
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   },
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-02",
+    "title": "The Five Names That Hold the Whole Thesis Up",
+    "url": "https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole"
+   },
+   {
+    "date": "2026-05-10",
+    "title": "The Layer Beneath the Layer \u2014 Why ARM Is in My Book",
+    "url": "https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm"
+   },
+   {
+    "date": "2026-05-11",
+    "title": "Holding NBIS Into Earnings: Part 1",
+    "url": "https://youngbullinvests.substack.com/p/holding-nbis-into-earnings-part-1"
+   },
+   {
+    "date": "2026-05-13",
+    "title": "Generational",
+    "url": "https://youngbullinvests.substack.com/p/generational"
+   },
+   {
+    "date": "2026-05-13",
+    "title": "NBIS \u00b7 Part 2 \u00b7 684%",
+    "url": "https://youngbullinvests.substack.com/p/nbis-part-2-684"
+   },
+   {
+    "date": "2026-05-14",
+    "title": "Orbit",
+    "url": "https://youngbullinvests.substack.com/p/orbit"
+   },
+   {
+    "date": "2026-06-13",
+    "title": "I'm 17. One of My AI Stocks Is Up 180%. Here's My Whole Top 10, and I Buy Them Red.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180"
+   },
+   {
+    "date": "2026-06-17",
+    "title": "I'm Not Old Enough to Open a Brokerage. I Turned $42K Into $66K Anyway.",
+    "url": "https://youngbullinvests.substack.com/p/im-not-old-enough-to-open-a-brokerage"
+   },
+   {
+    "date": "2026-06-25",
+    "title": "Micron Just Reported. Here's What It Means for My Portfolio, and Why Im Buying More of This one Stock.",
+    "url": "https://youngbullinvests.substack.com/p/micron-just-reported-heres-what-it"
+   },
+   {
+    "date": "2026-07-05",
+    "title": "My Graduation Money Isn't Buying Clothes. It's Buying This Dip.",
+    "url": "https://youngbullinvests.substack.com/p/my-graduation-money-isnt-buying-clothes"
+   }
+  ],
+  "CRDO": [
+   {
+    "date": "2026-06-13",
+    "title": "I'm 17. One of My AI Stocks Is Up 180%. Here's My Whole Top Ten.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180"
+   },
+   {
+    "date": "2026-07-05",
+    "title": "My Graduation Money Isn't Buying Clothes. It's Buying This Dip.",
+    "url": "https://youngbullinvests.substack.com/p/my-graduation-money-isnt-buying-clothes"
+   }
+  ],
+  "SILC": [
+   {
+    "date": "2026-07-01",
+    "title": "Is Silicom a $100 Stock?",
+    "url": "https://youngbullinvests.substack.com/p/is-silicom-a-100-stock"
+   }
+  ],
+  "RAAQ": [
+   {
+    "date": "2026-06-23",
+    "title": "There's a Cheaper IonQ With More Upside. The Market Doesn't Know It Exists Yet.",
+    "url": "https://youngbullinvests.substack.com/p/theres-a-cheaper-ionq-with-more-upside"
+   }
+  ],
+  "IQMX": [
+   {
+    "date": "2026-06-23",
+    "title": "There's a Cheaper IonQ With More Upside. The Market Doesn't Know It Exists Yet.",
+    "url": "https://youngbullinvests.substack.com/p/theres-a-cheaper-ionq-with-more-upside"
+   }
+  ],
+  "IONQ": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-06-23",
+    "title": "There's a Cheaper IonQ With More Upside. The Market Doesn't Know It Exists Yet.",
+    "url": "https://youngbullinvests.substack.com/p/theres-a-cheaper-ionq-with-more-upside"
+   }
+  ],
+  "WYY": [
+   {
+    "date": "2026-06-18",
+    "title": "I Own $4k of a $126 Million Stock Nobody's Heard Of. Here's Wyy (Pun intended)",
+    "url": "https://youngbullinvests.substack.com/p/i-own-4k-of-a-126-million-stock-nobodys"
+   },
+   {
+    "date": "2026-06-18",
+    "title": "I Own $4k of a $126 Million Stock Nobody's Heard Of. Here's Why.",
+    "url": "https://youngbullinvests.substack.com/p/i-own-4k-of-a-126-million-stock"
+   }
+  ],
+  "ARM": [
+   {
+    "date": "2026-05-10",
+    "title": "The Layer Beneath the Layer \u2014 Why ARM Is in My Book",
+    "url": "https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm"
+   },
+   {
+    "date": "2026-05-10",
+    "title": "The Layer Beneath the Layer: Why ARM Is in My Book",
+    "url": "https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why"
+   },
+   {
+    "date": "2026-06-17",
+    "title": "I'm Not Old Enough to Open a Brokerage. I Turned $42K Into $66K Anyway.",
+    "url": "https://youngbullinvests.substack.com/p/im-not-old-enough-to-open-a-brokerage"
+   }
+  ],
+  "XNDU": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   },
+   {
+    "date": "2026-03-27",
+    "title": "I'm 17. My AI Sent Me This Briefing Tonight. Here's What It Said.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-my-ai-sent-me-this-briefing"
+   },
+   {
+    "date": "2026-04-15",
+    "title": "The Only Photonic Quantum Company in Public Markets",
+    "url": "https://youngbullinvests.substack.com/p/the-only-photonic-quantum-company"
+   },
+   {
+    "date": "2026-04-16",
+    "title": "I Bought a Quantum Computing SPAC at $8.32. It's Now $34. I Didn't Sell.",
+    "url": "https://youngbullinvests.substack.com/p/i-bought-a-quantum-computing-spac"
+   },
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   },
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-02",
+    "title": "The Five Names That Hold the Whole Thesis Up",
+    "url": "https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole"
+   },
+   {
+    "date": "2026-05-06",
+    "title": "What is Young Bull",
+    "url": "https://youngbullinvests.substack.com/p/what-is-young-bull"
+   },
+   {
+    "date": "2026-05-15",
+    "title": "First Public Quarter For The Photonic Quantum Bet",
+    "url": "https://youngbullinvests.substack.com/p/first-public-quarter-for-the-photonic"
+   },
+   {
+    "date": "2026-06-17",
+    "title": "I'm Not Old Enough to Open a Brokerage. I Turned $42K Into $66K Anyway.",
+    "url": "https://youngbullinvests.substack.com/p/im-not-old-enough-to-open-a-brokerage"
+   }
+  ],
+  "POET": [
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   },
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-06-15",
+    "title": "You Sent Me 16 Tickers. Here's the Real Case on Every Single One.",
+    "url": "https://youngbullinvests.substack.com/p/you-sent-me-16-tickers-heres-the"
+   }
+  ],
+  "VST": [
+   {
+    "date": "2026-02-17",
+    "title": "4 AI Infrastructure Positions I Bought Today While the Market Bled",
+    "url": "https://youngbullinvests.substack.com/p/4-ai-infrastructure-positions-i"
+   },
+   {
+    "date": "2026-03-12",
+    "title": "Oracle Just Showed You the Physical Layer Thesis in One Number: $553 Billion",
+    "url": "https://youngbullinvests.substack.com/p/oracle-just-showed-you-the-physical"
+   },
+   {
+    "date": "2026-03-27",
+    "title": "The $600 Billion Blueprint",
+    "url": "https://youngbullinvests.substack.com/p/the-600-billion-blueprint"
+   },
+   {
+    "date": "2026-04-12",
+    "title": "The Ceasefire Rally Is a Trap. Here's What I'm Doing About It.",
+    "url": "https://youngbullinvests.substack.com/p/the-ceasefire-rally-is-a-trap-heres"
+   },
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   },
+   {
+    "date": "2026-05-02",
+    "title": "The Five Names That Hold the Whole Thesis Up",
+    "url": "https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole"
+   },
+   {
+    "date": "2026-05-10",
+    "title": "The Layer Beneath the Layer \u2014 Why ARM Is in My Book",
+    "url": "https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm"
+   },
+   {
+    "date": "2026-05-13",
+    "title": "Generational",
+    "url": "https://youngbullinvests.substack.com/p/generational"
+   },
+   {
+    "date": "2026-05-14",
+    "title": "Orbit",
+    "url": "https://youngbullinvests.substack.com/p/orbit"
+   },
+   {
+    "date": "2026-06-15",
+    "title": "You Sent Me 16 Tickers. Here's the Real Case on Every Single One.",
+    "url": "https://youngbullinvests.substack.com/p/you-sent-me-16-tickers-heres-the"
+   }
+  ],
+  "ALMU": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-13",
+    "title": "Generational",
+    "url": "https://youngbullinvests.substack.com/p/generational"
+   },
+   {
+    "date": "2026-05-14",
+    "title": "Orbit",
+    "url": "https://youngbullinvests.substack.com/p/orbit"
+   },
+   {
+    "date": "2026-06-13",
+    "title": "I'm 17. One of My AI Stocks Is Up 180%. Here's My Whole Top Ten.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180"
+   },
+   {
+    "date": "2026-06-15",
+    "title": "You Sent Me 16 Tickers. Here's the Real Case on Every Single One.",
+    "url": "https://youngbullinvests.substack.com/p/you-sent-me-16-tickers-heres-the"
+   }
+  ],
+  "PPSI": [
+   {
+    "date": "2026-06-14",
+    "title": "I Went Looking for the Next 100x. I Found 13 Tiny AI Stocks Hiding Under the GPU.",
+    "url": "https://youngbullinvests.substack.com/p/i-went-looking-for-the-next-100x"
+   }
+  ],
+  "OUST": [
+   {
+    "date": "2026-06-13",
+    "title": "I'm 17. One of My AI Stocks Is Up 180%. Here's My Whole Top 10, and I Buy Them Red.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180"
+   }
+  ],
+  "ASTS": [
+   {
+    "date": "2026-05-11",
+    "title": "Holding ASTS Into Earnings: Part 1",
+    "url": "https://youngbullinvests.substack.com/p/holding-asts-into-earnings-part-1"
+   },
+   {
+    "date": "2026-05-12",
+    "title": "Holding ASTS Into Earnings: Part 2",
+    "url": "https://youngbullinvests.substack.com/p/holding-asts-into-earnings-part-2"
+   },
+   {
+    "date": "2026-05-14",
+    "title": "Orbit",
+    "url": "https://youngbullinvests.substack.com/p/orbit"
+   },
+   {
+    "date": "2026-06-13",
+    "title": "I'm 17. One of My AI Stocks Is Up 180%. Here's My Whole Top 10, and I Buy Them Red.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180"
+   }
+  ],
+  "RKLB": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum sleeve.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-14",
+    "title": "Orbit",
+    "url": "https://youngbullinvests.substack.com/p/orbit"
+   }
+  ],
+  "AVGO": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum sleeve.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-02",
+    "title": "The Five Names That Hold the Whole Thesis Up",
+    "url": "https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole"
+   },
+   {
+    "date": "2026-05-06",
+    "title": "What is Young Bull",
+    "url": "https://youngbullinvests.substack.com/p/what-is-young-bull"
+   },
+   {
+    "date": "2026-05-10",
+    "title": "The Layer Beneath the Layer \u2014 Why ARM Is in My Book",
+    "url": "https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm"
+   },
+   {
+    "date": "2026-05-13",
+    "title": "Generational",
+    "url": "https://youngbullinvests.substack.com/p/generational"
+   },
+   {
+    "date": "2026-05-14",
+    "title": "Orbit",
+    "url": "https://youngbullinvests.substack.com/p/orbit"
+   }
+  ],
+  "NVDA": [
+   {
+    "date": "2026-05-02",
+    "title": "The Five Names That Hold the Whole Thesis Up",
+    "url": "https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole"
+   },
+   {
+    "date": "2026-05-13",
+    "title": "Generational",
+    "url": "https://youngbullinvests.substack.com/p/generational"
+   }
+  ],
+  "ON": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-10",
+    "title": "The Layer Beneath the Layer \u2014 Why ARM Is in My Book",
+    "url": "https://youngbullinvests.substack.com/p/the-layer-beneath-the-layer-why-arm"
+   }
+  ],
+  "NOK": [
+   {
+    "date": "2026-05-03",
+    "title": "Why Nokia Could Be the Next Big Pivot",
+    "url": "https://youngbullinvests.substack.com/p/why-nokia-could-be-the-next-big-pivot"
+   },
+   {
+    "date": "2026-05-03",
+    "title": "Why Nokia Could Be the Next Big Pivot",
+    "url": "https://youngbullinvests.substack.com/p/why-nokia-could-be-the-next-big"
+   }
+  ],
+  "ANET": [
+   {
+    "date": "2026-03-12",
+    "title": "Oracle Just Showed You the Physical Layer Thesis in One Number: $553 Billion",
+    "url": "https://youngbullinvests.substack.com/p/oracle-just-showed-you-the-physical"
+   },
+   {
+    "date": "2026-03-27",
+    "title": "The $600 Billion Blueprint",
+    "url": "https://youngbullinvests.substack.com/p/the-600-billion-blueprint"
+   },
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum sleeve.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   },
+   {
+    "date": "2026-05-02",
+    "title": "The Five Names That Hold the Whole Thesis Up",
+    "url": "https://youngbullinvests.substack.com/p/the-five-names-that-hold-the-whole"
+   }
+  ],
+  "LWLG": [
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   },
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum tier.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   }
+  ],
+  "LPTH": [
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   },
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum sleeve.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   }
+  ],
+  "CEG": [
+   {
+    "date": "2026-03-04",
+    "title": "48 Hours From Deploy to Vindication: Why Red Days Build Wealth",
+    "url": "https://youngbullinvests.substack.com/p/48-hours-from-deploy-to-vindication"
+   },
+   {
+    "date": "2026-03-12",
+    "title": "Oracle Just Showed You the Physical Layer Thesis in One Number: $553 Billion",
+    "url": "https://youngbullinvests.substack.com/p/oracle-just-showed-you-the-physical"
+   },
+   {
+    "date": "2026-03-27",
+    "title": "The $600 Billion Blueprint",
+    "url": "https://youngbullinvests.substack.com/p/the-600-billion-blueprint"
+   },
+   {
+    "date": "2026-03-30",
+    "title": "$690 Billion and Nowhere to Plug It In",
+    "url": "https://youngbullinvests.substack.com/p/690-billion-and-nowhere-to-plug-it"
+   },
+   {
+    "date": "2026-04-12",
+    "title": "The Ceasefire Rally Is a Trap. Here's What I'm Doing About It.",
+    "url": "https://youngbullinvests.substack.com/p/the-ceasefire-rally-is-a-trap-heres"
+   },
+   {
+    "date": "2026-04-25",
+    "title": "+36% YTD. The Three Positions Behind the Number \u2014 and the Layer I'm Building Around Them.",
+    "url": "https://youngbullinvests.substack.com/p/36-ytd-the-three-positions-behind"
+   }
+  ],
+  "KTOS": [
+   {
+    "date": "2026-02-17",
+    "title": "4 AI Infrastructure Positions I Bought Today While the Market Bled",
+    "url": "https://youngbullinvests.substack.com/p/4-ai-infrastructure-positions-i"
+   },
+   {
+    "date": "2026-03-04",
+    "title": "48 Hours From Deploy to Vindication: Why Red Days Build Wealth",
+    "url": "https://youngbullinvests.substack.com/p/48-hours-from-deploy-to-vindication"
+   },
+   {
+    "date": "2026-04-12",
+    "title": "The Ceasefire Rally Is a Trap. Here's What I'm Doing About It.",
+    "url": "https://youngbullinvests.substack.com/p/the-ceasefire-rally-is-a-trap-heres"
+   }
+  ],
+  "VRT": [
+   {
+    "date": "2026-03-04",
+    "title": "48 Hours From Deploy to Vindication: Why Red Days Build Wealth",
+    "url": "https://youngbullinvests.substack.com/p/48-hours-from-deploy-to-vindication"
+   },
+   {
+    "date": "2026-03-12",
+    "title": "Oracle Just Showed You the Physical Layer Thesis in One Number: $553 Billion",
+    "url": "https://youngbullinvests.substack.com/p/oracle-just-showed-you-the-physical"
+   },
+   {
+    "date": "2026-03-27",
+    "title": "The $600 Billion Blueprint",
+    "url": "https://youngbullinvests.substack.com/p/the-600-billion-blueprint"
+   }
+  ],
+  "AVAV": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   }
+  ],
+  "MRVL": [
+   {
+    "date": "2026-02-17",
+    "title": "4 AI Infrastructure Positions I Bought Today While the Market Bled",
+    "url": "https://youngbullinvests.substack.com/p/4-ai-infrastructure-positions-i"
+   }
+  ],
+  "ADBE": [
+   {
+    "date": "2026-02-17",
+    "title": "4 AI Infrastructure Positions I Bought Today While the Market Bled",
+    "url": "https://youngbullinvests.substack.com/p/4-ai-infrastructure-positions-i"
+   }
+  ],
+  "BN": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   }
+  ],
+  "COHR": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   }
+  ],
+  "MOD": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   }
+  ],
+  "MBLY": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   }
+  ],
+  "TSEM": [
+   {
+    "date": "2026-03-21",
+    "title": "$25,000 Hits My Account Monday. Here's Exactly Where It's Going.",
+    "url": "https://youngbullinvests.substack.com/p/25000-hits-my-account-monday-heres"
+   }
+  ],
+  "OKLO": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum sleeve.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   }
+  ],
+  "IREN": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum sleeve.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   }
+  ],
+  "OSS": [
+   {
+    "date": "2026-06-13",
+    "title": "I'm 17. One of My AI Stocks Is Up 180%. Here's My Whole Top Ten.",
+    "url": "https://youngbullinvests.substack.com/p/im-17-one-of-my-ai-stocks-is-up-180"
+   }
+  ],
+  "CC": [
+   {
+    "date": "2026-07-10",
+    "title": "Nvidia Just Panic-Bought $4 Billion of Lasers",
+    "url": "https://youngbullinvests.substack.com/p/nvidia-just-panic-bought-4-billion"
+   }
+  ],
+  "INV": [
+   {
+    "date": "2026-07-10",
+    "title": "Nvidia Just Panic-Bought $4 Billion of Lasers",
+    "url": "https://youngbullinvests.substack.com/p/nvidia-just-panic-bought-4-billion"
+   }
+  ],
+  "FN": [
+   {
+    "date": "2026-06-16",
+    "title": "I Asked My AI for Its Favorite Stock. It Said This One.",
+    "url": "https://youngbullinvests.substack.com/p/i-asked-my-ai-for-its-favorite-stock"
+   }
+  ],
+  "SKHY": [
+   {
+    "date": "2026-07-10",
+    "title": "SK Hynix Is the Anti-SpaceX IPO",
+    "url": "https://youngbullinvests.substack.com/p/sk-hynix-is-the-anti-spacex-ipo"
+   }
+  ],
+  "SITM": [
+   {
+    "date": "2026-06-20",
+    "title": "I Sold My Nokia for Two Stocks Nobody's Watching",
+    "url": "https://youngbullinvests.substack.com/p/i-sold-my-nokia-for-two-stocks"
+   }
+  ],
+  "QUBT": [
+   {
+    "date": "2026-04-30",
+    "title": "NBIS confirmed. XNDU is +236%. Now I'm building the quantum sleeve.",
+    "url": "https://youngbullinvests.substack.com/p/nbis-confirmed-xndu-is-236-now-im"
+   }
+  ]
+ }
+}

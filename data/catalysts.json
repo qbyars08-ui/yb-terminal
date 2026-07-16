@@ -1,0 +1,33 @@
+{
+ "_readme": "Hand-curated dated catalysts for the Terminal calendar. APPEND RULES for the 15:00 content shift: only add a row when the date is verified in a primary source or one of Quinn's published posts; a date you cannot verify STAYS OUT (blank beats fake). Fields: date (YYYY-MM-DD, required), t (ticker, may be empty for market-wide events), what (required, short), why (one line, Quinn's voice, no em dashes), receipt (URL to the post or filing that grounds it). Earnings dates come from the machine's earnings_calendar automatically; only add an earnings row here if you have a WHY worth reading. KNOWN GAPS to fill when verifiable: MU next earnings date (FQ ends late Aug, date not yet announced), SKHY ADS lockup expiry (check the F-1).",
+ "catalysts": [
+  {
+   "date": "2026-07-20",
+   "t": "CC",
+   "what": "EPA PFAS comment window closes",
+   "why": "The contrarian Chemours case leans on PFAS rules landing survivable. This is the day the public comment window shuts and the docket goes quiet.",
+   "receipt": "https://youngbullinvests.substack.com/p/nvidia-just-panic-bought-4-billion"
+  },
+  {
+   "date": "2026-07-22",
+   "t": "",
+   "what": "Young Bull goes paid",
+   "why": "Founding members lock $99 a year for life before the price goes to $199. The Terminal becomes a member perk.",
+   "receipt": "pricing.html"
+  },
+  {
+   "date": "2026-07-23",
+   "t": "LPKFF",
+   "what": "Earnings",
+   "why": "The glass-substrate drilling thesis gets its first print since the badge went STRESSED. Guidance on packaging demand is the tell.",
+   "receipt": ""
+  },
+  {
+   "date": "2026-07-23",
+   "t": "NOK",
+   "what": "Earnings",
+   "why": "First print since the re-entry. The pivot story either shows up in the numbers or it does not.",
+   "receipt": ""
+  }
+ ]
+}

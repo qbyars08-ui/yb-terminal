@@ -39,7 +39,7 @@
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral",
    "earnings": "2026-08-06"
   },
@@ -108,8 +108,8 @@
    "thesis": "Lidar + cameras + full perception stack for robotics. REV8 launched. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 8.4,
    "health": "INTACT",
-   "conviction": 60,
-   "stance": "bull"
+   "conviction": 59,
+   "stance": "neutral"
   },
   "PENG": {
    "layer": "Datacenters",
@@ -174,7 +174,7 @@
   "BE": {
    "layer": "Power & Grid",
    "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 56,
+   "conviction": 55,
    "stance": "neutral"
   },
   "BIRD": {
@@ -218,7 +218,7 @@
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 48,
+   "conviction": 47,
    "stance": "neutral"
   },
   "KTOS": {
@@ -286,7 +286,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 49,
+   "conviction": 51,
    "stance": "neutral"
   },
   "ON": {
@@ -413,7 +413,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "NET": {},
@@ -437,7 +437,7 @@
    "stance": "neutral"
   },
   "RTX": {
-   "conviction": 42,
+   "conviction": 45,
    "stance": "neutral"
   },
   "SBUX": {},

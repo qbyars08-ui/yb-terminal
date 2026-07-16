@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -111,10 +121,11 @@ footer {
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
 <h1>FN <span class="chip" style="font-size:11px">INTACT</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$486.65</b><span>Live</span></div><div class='stat'><b class='up'>+0.80%</b><span>Today</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">Don&#x27;t buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales</p><div style="margin-top:12px"><span class='chip'>Photonics</span><span class='chip'>pivot</span><span class='chip'>two decades of ultra-precision optical assembly nobody else wants to own + design-in switching costs</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>cpo-eats-discrete-transceivers</li><li>customer-concentration-shock</li><li>brand-insourcing</li><li>ai-capex-scare-derating</li><li>datacom-supply-chain-stall</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 46.0,46.5 88.0,46.5 130.0,46.5 172.0,58.0 214.0,55.4 256.0,55.4' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-07-01. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -131,5 +142,6 @@ reflect that date. The live numbers above are current.</div>
 <ul><li>Fiscal Q3 2026 (reported May 4): record revenue $1.214B, +39% Y/Y</li><li>EPS $3.72, +48% Y/Y</li><li>Optical communications 73% of the business at $889M</li><li>Stock around $636, market cap $22.8B</li><li>Trailing year: $4.24B revenue, growing ~30%</li><li>Gross margin 12%, operating margin 10%, return on equity 20%</li><li>Price to sales: FN 5x vs Coherent 12x, Lumentum 30x, AAOI 30x</li><li>Forward earnings ~37x (Coherent and Lumentum both above 50x); 54x trailing</li><li>Datacom +4% Y/Y last quarter (supply-constrained); telecom record, +55%</li><li>~$32M for ~14% stake in a Taiwan advanced wafer-level packaging firm (May 31)</li><li>CPO programs running with three customers</li><li>Two 800G datacom programs shipping direct to a hyperscaler, ramp through FY2027</li><li>Levels: 50-day around $662, 200-day near $506</li></ul>
 <h2>What Kills It</h2>
 <ul><li><b>cpo-eats-discrete-transceivers</b>: if optics move onto the chip package faster than expected, the discrete transceiver volume Fabrinet lives on shrinks, and the Taiwan stake is a hedge, not a guarantee.</li><li><b>customer-concentration-shock</b>: a handful of brands and hyperscalers drive most of the revenue, so one in-sourcing decision or one lost program leaves a mark.</li><li><b>brand-insourcing</b>: the moat depends on brands not wanting this work; if one decides the margin math flipped, volume walks.</li><li><b>ai-capex-scare-derating</b>: 54x trailing earnings on a stock that already tripled off its lows inside a year can drop 20% on any AI-capex scare.</li><li><b>datacom-supply-chain-stall</b>: the backlog thesis assumes lasers, memory, and ASICs loosen; if the input shortage drags, the AI leg keeps not driving the bus.</li></ul></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-06-16</span><a href='https://youngbullinvests.substack.com/p/i-asked-my-ai-for-its-favorite-stock' rel='noopener'>I Asked My AI for Its Favorite Stock. It Said This One.</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

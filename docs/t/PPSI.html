@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -111,10 +121,11 @@ footer {
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
 <h1>PPSI <span class="chip" style="font-size:11px">WATCHING</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$3.48</b><span>Live</span></div><div class='stat'><b class='up'>+0.29%</b><span>Today</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">The purest &#x27;AI ran out of power and the grid can&#x27;t keep up&#x27; bet I found, on-site megawatts in 6 months instead of years</p><div style="margin-top:12px"><span class='chip'>Power &amp; Grid</span><span class='chip'>pivot</span><span class='chip'>speed-to-power, pre-engineered modular on-site generation vs multi-year grid interconnect queue</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>cash-burn-dilution</li><li>prymus-orders-stall</li><li>margin-relapse</li><li>single-order-concentration</li><li>lumpy-microcap-revenue</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 46.0,34.0 88.0,34.0 130.0,34.0 172.0,58.0 214.0,56.7 256.0,56.7' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-07-01. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -128,5 +139,6 @@ reflect that date. The live numbers above are current.</div>
 <h2>What Kills It</h2>
 <p>1. <b>Cash burn and dilution.</b> Cash went from $41.6M to $15M and the company is loss-making. If PRYMUS revenue is slow, the next capital comes from printing shares at a $45M cap. 2. <b>PRYMUS orders stall.</b> The entire bull case is a promise that has produced exactly one $6M proof-point order so far. No second order by the volume-shipment window means the story was one customer, not a market. 3. <b>Margin relapse.</b> The Q1 bounce needs to hold as new systems ship. Another quarter near the FY2025 lows kills the &quot;stale bear case&quot; argument. 4. <b>Single-order concentration.</b> One logistics customer is the receipt. If that delivery slips or sours, there is nothing behind it yet. 5. <b>Lumpy microcap revenue.</b> $4.3M quarters that swing 37% mean any single print can gap this thing hard in either direction. Size accordingly.</p>
 <p>Full deep dive pending.</p></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-06-14</span><a href='https://youngbullinvests.substack.com/p/i-went-looking-for-the-next-100x' rel='noopener'>I Went Looking for the Next 100x. I Found 13 Tiny AI Stocks Hiding Under the GPU.</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

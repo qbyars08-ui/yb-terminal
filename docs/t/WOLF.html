@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -111,10 +121,11 @@ footer {
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
 <h1>WOLF <span class="chip" style="font-size:11px">INTACT</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$35.10</b><span>Live</span></div><div class='stat'><b class='up'>+2.30%</b><span>Today</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased</p><div style="margin-top:12px"><span class='chip'>Power &amp; Grid</span><span class='chip'>pivot</span><span class='chip'>largest SiC substrate maker + only major pure-play + vertical integration crystal-to-device + first 200mm fab</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>sic-overcapacity-price-war</li><li>ev-demand-air-pocket</li><li>china-capacity-flood</li><li>datacenter-leg-slips-past-2027</li><li>balance-sheet-relapse</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 46.0,33.6 88.0,33.6 130.0,33.6 172.0,58.0 214.0,54.6 256.0,54.6' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-07-01. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -131,5 +142,6 @@ reflect that date. The live numbers above are current.</div>
 <ul><li>Chapter 11: filed 2025-06-30, emerged 2025-09-29. Old shares canceled at ~0.0083 ratio, &lt;1% of new co. ~$4.6B debt eliminated, total debt -70% to ~$2B, maturities pushed to 2030.</li><li>Stock at entry write-up: ~$45, ~$2.2B cap, 52wk $8.05-$80.82, beta ~8. Position: $3,000, up ~20% since entry (noise, not thesis).</li><li>Substrate share: ~33.7% in 2024 (world&#x27;s largest; ~62% in 2021). Sells wafers to Infineon, ST, onsemi, ROHM.</li><li>Mohawk Valley: world&#x27;s first 200mm SiC fab (Apr 2022). Last 150mm Durham line shuts in 2026. 10kV SiC die commercial since March 2026.</li><li>800V physics: 1MW = ~18,519A at 54V vs 1,250A at 800V (14.8x less current, ~219x less I²R loss). NVIDIA: -45% copper, up to 200kg busbar per 1MW rack at 54V, ~5% efficiency gain, -30% TCO, -70% maintenance.</li><li>Rack power path: ~120kW today, 600kW next generation, 1MW on the 2027 roadmap. Kyber rack: 576 Rubin Ultra GPUs, full 800V production 2027.</li><li>SiC material: 3.26 eV bandgap vs 1.12 for silicon, ~10x breakdown field. Device ratings 650/1200/1700V, 3.3-10kV in development.</li><li>Market: SiC device market ~$10B by 2030 at ~20% CAGR, but overcapacity and price war through 2027-2028. China ~40% of wafer capacity. Autos ~70% of SiC demand.</li><li>AI-datacenter revenue: doubled over the past three quarters.</li><li>EV receipt: Taycan first 800V production car (Oct 2019), Hyundai/Kia E-GMP 800V, SiC inverters +5% range.</li></ul>
 <h2>What Kills It</h2>
 <ul><li><b>sic-overcapacity-price-war:</b> the SiC market is in a real downturn with overcapacity and a price war that forecasts say does not clear until 2027 or 2028.</li><li><b>ev-demand-air-pocket:</b> roughly 70 percent of SiC demand is still EVs, the exact market that already bankrupted this company once.</li><li><b>china-capacity-flood:</b> China holds about 40 percent of global wafer capacity and can keep prices pinned.</li><li><b>datacenter-leg-slips-past-2027:</b> the 800V ramp is a 2027 production story; if it slips, the new leg does not replace the EV hole in time.</li><li><b>balance-sheet-relapse:</b> the bankruptcy is proof this franchise can be nearly vaporized; a repeat of heavy burn into a soft market goes to zero again.</li></ul></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-06-20</span><a href='https://youngbullinvests.substack.com/p/i-sold-my-nokia-for-two-stocks' rel='noopener'>I Sold My Nokia for Two Stocks Nobody&#x27;s Watching</a></div><div class='receipt-row'><span class='receipt-date'>2026-07-09</span><a href='https://youngbullinvests.substack.com/p/this-isnt-a-crash-its-a-split-screen' rel='noopener'>This Isn&#x27;t a Crash. It&#x27;s a Split Screen.</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

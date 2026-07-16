@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -110,11 +120,12 @@ footer {
 }
 </style></head><body><main>
 <div class="sub" style="margin-bottom:16px"><a href="../">&larr; Terminal</a></div>
-<h1>SILC <span class="chip" style="font-size:11px">HELD</span></h1>
-<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 01:47 UTC.</div>
+<h1>SILC <span class="chip" style="font-size:11px">HELD</span> <span class='badge INTACT'>INTACT</span></h1>
+<div class="sub" style="margin-bottom:16px">Research page. Generated 2026-07-16 05:21 UTC.</div>
 <section><div class="stats"><div class='stat'><b>$41.40</b><span>Live</span></div><div class='stat'><b class='down'>-4.01%</b><span>Today</span></div><div class='stat'><b>$40.86</b><span>My avg cost</span></div><div class='stat'><b class='up'>+1.3%</b><span>My gain</span></div><div class='stat'><b>3.7%</b><span>Of book</span></div></div></section>
 <section><h2>Why I Own It</h2><p class="read">First AI-inference production order landing on a recovering core, a 5.4M-share float, net cash worth a quarter of the cap, and $0.55 of EPS torque per $10M of revenue</p><div style="margin-top:12px"><span class='chip'>Networking</span><span class='chip'>pivot</span><span class='chip'>design-win lock-in + re-qualification switching costs + FPGA field-updatable inference cards</span></div></section>
 <section><h2>What Kills The Thesis</h2><ul class='kill'><li>poc-fails-to-convert</li><li>customer-concentration-drawdown</li><li>recovery-stall-multiple-compression</li><li>micro-float-violence</li><li>israel-geopolitical-exposure</li></ul></section>
+<section><h2>Price History</h2><div class='sub' style='margin-bottom:8px'>From the Terminal's own daily snapshots, one point per trading day since July 1, 2026.</div><svg width='260' height='64' viewBox='0 0 260 64' role='img' aria-label='price history'><polyline points='4.0,14.0 29.2,39.2 54.4,39.2 79.6,39.2 104.8,14.2 130.0,14.2 155.2,14.2 180.4,37.9 205.6,30.6 230.8,58.0 256.0,58.0' fill='none' stroke='#ef4444' stroke-width='1.5'/></svg></section>
 <section><h2>The Research Note</h2>
 <div class="note">Written by me, last edited 2026-07-01. Prices and position sizes inside
 reflect that date. The live numbers above are current.</div>
@@ -130,5 +141,6 @@ reflect that date. The live numbers above are current.</div>
 <ul><li>2022 peak: $150.6M revenue, +$2.73 EPS. 2024 trough: $58.1M, -$2.28. 2025: $61.9M, -$2.01, 30.5% GM.</li><li>Q1 2026: $19.1M revenue, +33% Y/Y, -$0.41 EPS. Q2 core guided ~40% growth. FY26 guide: $82-83M.</li><li>Shares: ~5.7M out, float ~5.36M, down ~23% from 7.4M via buybacks. Short interest ~0.6%.</li><li>Balance sheet: ~$63-76M net cash, zero debt, ~25-29% of market cap.</li><li>Breakeven ~$90-100M revenue/yr. Above it: ~+$0.55 EPS per +$10M revenue at ~35% GM.</li><li>Management model: &gt;$3 EPS on $150-160M revenue.</li><li>Named design wins ~$10.4M/yr annualized: PQC FPGA NIC ~$3M/yr, Tier-1 cyber switch ~$5M/yr, streaming ~$2.4M/yr (~$12M over five years).</li><li>AI inference: first production order 2026-06-30, PoC completes H2 2026, potential tens of thousands of units at multi-thousand-dollar ASPs = ~$90-150M revenue event. 2026 inference revenue: multi-million. Significant revenue: probably 2027.</li><li>Model to 2028: bear ~$18-28, base ~$35-48, bull ~$100-150. $100 path: ~$200M revenue at ~15% net margin = ~$30M NI = ~$5.25 EPS at ~19x.</li><li>Stock ran ~$13 to nearly $53 in six months, ~$45.55 at the 6/30 note. Top 3 customers ~28% of revenue, one ~14%. Sell-side: Hold, ~$28 target.</li><li>Position: ~4% of book. Catalyst: Q2 earnings, late July, first call after the production-order news.</li></ul>
 <h2>What Kills It</h2>
 <ul><li><b>poc-fails-to-convert:</b> the whole crazy case hangs on an unnamed customer&#x27;s proof of concept that does not even finish until H2 2026, and a PoC can simply die.</li><li><b>customer-concentration-drawdown:</b> top three customers are ~28% of revenue and a single drawdown is the exact failure mode that already blew this company up once.</li><li><b>recovery-stall-multiple-compression:</b> stall the core and the multiple compresses back to the high teens or low $20s, a 50-70 percent drawdown with the 2023-24 meltdown as the template.</li><li><b>micro-float-violence:</b> a 5.4M-share float means a bad print can take it down 20 percent in a session.</li><li><b>israel-geopolitical-exposure:</b> an Israeli operation with geopolitical and currency baggage, and mostly North American, tariff-exposed revenue.</li></ul></div></section>
+<section><h2>The Receipts</h2><div class='sub' style='margin-bottom:10px'>Every post that covered this name, in order. What was said and when, checkable against what happened.</div><div class='receipt-row'><span class='receipt-date'>2026-07-01</span><a href='https://youngbullinvests.substack.com/p/is-silicom-a-100-stock' rel='noopener'>Is Silicom a $100 Stock?</a></div></section>
 <footer>Young Bull. Not advice, it is my book, my research, my machine.</footer>
 </main></body></html>

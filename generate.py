@@ -16,12 +16,16 @@ from pathlib import Path
 
 import yfinance as yf
 
+from calendar_yb import (MEMBERS_DAYS, PUBLIC_DAYS, build_calendar,
+                         load_catalysts)
 from clientjs import TOOLS_JS, TRACKER_JS, TRACKER_POPULAR, VIZ_SECTION
-from desknote import desk_note_html, load_desk_note
+from desknote import (archive_note, desk_note_html, load_desk_note,
+                      load_note_archive, notes_page_html, rss_xml)
 from missionlog import load_weekly_counts, mission_log_html
 from research import (CSS, TICKERS_DIR, build_research, list_research_tickers,
                       parse_frontmatter)
-from sections import (EXTRA_CSS, SITE_BASE, cards_html, og_tags,
+from sections import (EXTRA_CSS, SITE_BASE, calendar_members_html,
+                      calendar_public_html, cards_html, og_tags,
                       pricing_page_html, request_line_html, scanner_html,
                       tape_html)
 from tape import build_tape, load_scout
@@ -197,11 +201,22 @@ def members_token():
     return token
 
 
+NOTES_LINKS = """
+<section>
+  <h2>Desk Note Archive <span class="chip" style="border-color:var(--gold);color:var(--gold)">Members</span></h2>
+  <div class="sub">The last 30 notes the desk filed live at
+  <a href="notes.html">the archive</a>. Add <a href="feed.xml">the members RSS feed</a>
+  to your reader and the daily note lands there on its own. The feed URL is part of
+  your membership, treat it like a key.</div>
+</section>
+"""
+
+
 # ── Main render ──────────────────────────────────────────────────
 
 def render(snap, rows, stats, generated_at, pages, quotes, moves,
            tape_section="", cards_section="", tools_section="",
-           desk_section="", members_extras=""):
+           desk_section="", members_extras="", calendar_section=""):
     # Book table rows
     tr = []
     for r in sorted(rows, key=lambda x: -(x["weight"] or 0)):
@@ -294,6 +309,8 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
 
 {tape_section}
 
+{calendar_section}
+
 <section id="book">
   <h2>The Book</h2>
   <div class="sub" style="margin-bottom:12px">Holdings as of {escape(str(snap.get("as_of", "?")))}.
@@ -382,6 +399,14 @@ def build_extras(rows, quotes, generated_at, pages):
     ctx = {"metas": metas, "committee": committee,
            "catalysts": catalysts, "healths": healths}
     return tape_html(tape), cards_html(cards, pages), ctx
+
+
+def load_receipts():
+    try:
+        data = json.loads((DATA_DIR / "receipts.json").read_text(encoding="utf-8"))
+        return data.get("receipts", {})
+    except (OSError, ValueError):
+        return {}
 
 
 def load_history():
@@ -510,9 +535,14 @@ def main():
     (OUT_DIR / "prices.json").write_text(
         json.dumps(quotes, indent=1, allow_nan=False), encoding="utf-8")
 
-    # Build per-ticker research pages
+    # Build per-ticker research pages (with badge, sparkline, receipts)
     rows_by_ticker = {r["t"]: r for r in rows}
-    pages = build_research(OUT_DIR, quotes, rows_by_ticker, generated_at)
+    today = generated_at[:10]
+    hist = merge_history(load_history(), quotes, today)
+    healths = {r["t"]: health_badge(r.get("price"), r.get("cost")) for r in rows}
+    receipts = load_receipts()
+    pages = build_research(OUT_DIR, quotes, rows_by_ticker, generated_at,
+                           healths=healths, hist=hist, receipts=receipts)
 
     # Load existing moves
     moves = load_moves()
@@ -531,8 +561,6 @@ def main():
                              quotes)
     (OUT_DIR / "tools-data.json").write_text(
         json.dumps(tools, indent=1, allow_nan=False), encoding="utf-8")
-    today = generated_at[:10]
-    hist = merge_history(load_history(), quotes, today)
     hist_json = json.dumps(hist, indent=1, allow_nan=False)
     (DATA_DIR / "history.json").write_text(hist_json, encoding="utf-8")
     (OUT_DIR / "history.json").write_text(hist_json, encoding="utf-8")
@@ -541,18 +569,28 @@ def main():
     # Desk note (agent-written, may be absent or stale: rendered honestly)
     # + members-only sections. Each degrades to blank alone.
     note = load_desk_note()
+    archive_note(note)
     desk_public = desk_note_html(note, today)
     desk_members = desk_note_html(note, today, members=True)
     members_extras = (mission_log_html(load_weekly_counts(today), today)
-                      + request_line_html())
+                      + request_line_html() + NOTES_LINKS)
+
+    # Catalyst calendar: public week, members quarter
+    curated = load_catalysts()
+    earnings = ctx.get("catalysts", {})
+    cal_public = calendar_public_html(
+        build_calendar(curated, earnings, today, PUBLIC_DAYS))
+    cal_members = calendar_members_html(
+        build_calendar(curated, earnings, today, MEMBERS_DAYS), pages)
 
     # Render index, then gate it: ship fully consistent or not at all
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                   tape_section, cards_section, tools_section,
-                  desk_section=desk_public)
+                  desk_section=desk_public, calendar_section=cal_public)
     m_html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                     tape_section, cards_section, tools_section,
-                    desk_section=desk_members, members_extras=members_extras)
+                    desk_section=desk_members, members_extras=members_extras,
+                    calendar_section=cal_members)
     problems = validate_output(html, rows, pages) + validate_output(
         m_html, rows, pages)
     if problems:
@@ -562,13 +600,19 @@ def main():
     write_page(OUT_DIR / "index.html", html)
 
     # Pricing page
-    write_page(OUT_DIR / "pricing.html", pricing_page_html(CSS))
+    write_page(OUT_DIR / "pricing.html",
+               pricing_page_html(CSS, load_weekly_counts(today)))
 
     # Members mirror (unlisted URL for paid subs)
     token = members_token()
     members_dir = OUT_DIR / "members" / token
     members_dir.mkdir(parents=True, exist_ok=True)
     write_page(members_dir / "index.html", members_html(m_html))
+    archive = load_note_archive()
+    write_page(members_dir / "notes.html", notes_page_html(archive, CSS, "feed.xml"))
+    members_base = f"{SITE_BASE}members/{token}/"
+    (members_dir / "feed.xml").write_text(rss_xml(archive, members_base),
+                                          encoding="utf-8")
 
     # Sitemap for the public pages (members path deliberately absent)
     urls = ["", "pricing.html"] + [f"t/{t}.html" for t in sorted(pages)]

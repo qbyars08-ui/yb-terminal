@@ -100,6 +100,16 @@ footer {
 .body table { margin: 10px 0; }
 .body code { color: var(--gold); font-size: 13px; }
 .kill li { color: var(--red); }
+.badge { display:inline-block; border-radius:5px; padding:2px 8px; font-size:11px;
+         font-weight:700; letter-spacing:1px; vertical-align:middle; }
+.badge.INTACT { color:var(--green); border:1px solid var(--green); }
+.badge.STRESSED { color:var(--gold); border:1px solid var(--gold); }
+.badge.BROKEN { color:var(--red); border:1px solid var(--red); }
+.receipt-row { display:flex; gap:12px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+.receipt-row:last-child { border-bottom:none; }
+.receipt-date { font-family:var(--mono); color:var(--dim); font-size:12px;
+                flex-shrink:0; }
 
 @media (max-width: 600px) {
   td:nth-child(3), th:nth-child(3) { display: none; }
@@ -233,6 +243,21 @@ footer {
   }
   .tagline b { color: var(--bright); }
 
+  /* Catalyst calendar */
+  .cal-item { display:flex; gap:12px; padding:8px 0; border-bottom:1px solid var(--line);
+              font-size:13px; align-items:baseline; }
+  .cal-item:last-child { border-bottom:none; }
+  .cal-date { font-family:var(--mono); color:var(--gold); flex-shrink:0; width:44px;
+              font-size:12px; }
+  .cal-body { flex:1; }
+  .cal-why { color:var(--dim); font-size:12px; margin-top:2px; line-height:1.5; }
+  .cal-receipt { font-size:11px; border:1px solid var(--border); border-radius:5px;
+                 padding:1px 7px; margin-left:6px; }
+  .cal-day { margin-bottom:14px; }
+  .cal-dayhead { font-family:var(--mono); font-size:11px; color:var(--dim);
+                 letter-spacing:1px; border-bottom:1px solid var(--border);
+                 padding-bottom:4px; margin-bottom:2px; }
+
   /* Pro tools: visualizer + scanner */
   .viz-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
               gap:16px; }
@@ -299,15 +324,24 @@ Paid subscribers are the reason it exists and the first to get whatever it build
 next.</li>
 </ul></section>
 
+<section><h2>What Members Got This Week</h2><div class='sub' style='margin-bottom:10px'>Straight from the machine's own action log, last 7 days. Counts, not promises.</div><div class='stats'><div class='stat'><b>1</b><span>desk notes filed</span></div><div class='stat'><b>13</b><span>pipelines self-healed</span></div><div class='stat'><b>1</b><span>morning briefings compiled</span></div><div class='stat'><b>76</b><span>health alerts triaged</span></div></div></section>
+
 <section><h2>The price</h2>
 <div class="stats">
   <div class="stat"><b>$99/yr</b><span>Founding, locked for life</span></div>
   <div class="stat"><b>$199/yr</b><span>Standard, after founding closes</span></div>
 </div>
-<p class="read" style="margin-top:10px">Founding members lock in $99 a year for life
-before the price goes up. That is the whole pitch. No tiers inside tiers, no upsells.
-<a href="https://youngbullinvests.substack.com/subscribe" rel="noopener">Subscribe on
-Substack</a> and the Terminal link lands in your welcome email on the 22nd.</p></section>
+<p class="read" style="margin-top:10px;margin-bottom:16px">Founding members lock in
+$99 a year for life before the price goes up. That is the whole pitch. No tiers
+inside tiers, no upsells. The Terminal members link lands in your welcome email
+on the 22nd.</p>
+<a href="https://youngbullinvests.substack.com/subscribe" rel="noopener" class="cta-btn">Subscribe on Substack</a></section>
+
+<section><h2>From Me</h2>
+<p class="read">I built this machine because I could not afford a Bloomberg and
+refused to invest blind. $99 is what it costs to sit at the same desk I sit at,
+with my real book, my receipts, and the staff that never sleeps. If that is not
+worth $8.25 a month, do not buy it, the free posts stay free.</p></section>
 
 <footer>Young Bull Terminal. Not advice, it is my book and my machine. Questions?
 Reply to any post, I read everything.</footer>
