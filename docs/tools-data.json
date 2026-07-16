@@ -39,7 +39,7 @@
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
-   "conviction": 54,
+   "conviction": 53,
    "stance": "neutral",
    "earnings": "2026-08-06"
   },
@@ -218,7 +218,7 @@
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 45,
+   "conviction": 48,
    "stance": "neutral"
   },
   "KTOS": {
@@ -230,13 +230,13 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 50,
+   "conviction": 49,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 54,
+   "conviction": 53,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
@@ -255,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 54,
+   "conviction": 52,
    "stance": "neutral"
   },
   "MOD": {
@@ -292,7 +292,7 @@
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 54,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
@@ -413,7 +413,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 51,
+   "conviction": 52,
    "stance": "neutral"
   },
   "NET": {},
@@ -437,7 +437,7 @@
    "stance": "neutral"
   },
   "RTX": {
-   "conviction": 45,
+   "conviction": 42,
    "stance": "neutral"
   },
   "SBUX": {},
