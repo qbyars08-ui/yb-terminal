@@ -6,6 +6,11 @@ computed; missing values render as blanks or are skipped entirely.
 
 from html import escape
 
+# Canonical public base. Domain parked for now (TLS saga, 2026-07-15); when
+# youngbullinvests.com comes back, change this ONE line and re-add docs/CNAME
+# in the same commit that flips DNS to GitHub Pages.
+SITE_BASE = "https://qbyars08-ui.github.io/yb-terminal/"
+
 FAVICON = ("<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www."
            "w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' "
            "fill='%23c8952e'/></svg>\">")
@@ -13,7 +18,7 @@ FAVICON = ("<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns='http://www.
 
 def og_tags(title, description, path=""):
     """Minimal OpenGraph + twitter card block for a public page."""
-    url = f"https://youngbullinvests.com/{path}"
+    url = f"{SITE_BASE}{path}"
     return (f'<meta property="og:title" content="{escape(title)}">\n'
             f'<meta property="og:description" content="{escape(description)}">\n'
             f'<meta property="og:url" content="{url}">\n'

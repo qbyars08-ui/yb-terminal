@@ -18,8 +18,8 @@ import yfinance as yf
 
 from research import (CSS, TICKERS_DIR, build_research, list_research_tickers,
                       parse_frontmatter)
-from sections import (EXTRA_CSS, cards_html, og_tags, pricing_page_html,
-                      scanner_html, tape_html)
+from sections import (EXTRA_CSS, SITE_BASE, cards_html, og_tags,
+                      pricing_page_html, scanner_html, tape_html)
 from tape import build_tape, load_scout
 from thesis import (build_cards, de_dash, fetch_catalysts, fetch_committee,
                     health_badge)
@@ -786,7 +786,7 @@ def main():
     urls = ["", "pricing.html"] + [f"t/{t}.html" for t in sorted(pages)]
     sitemap = ("<?xml version='1.0' encoding='UTF-8'?>\n"
                "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>\n"
-               + "".join(f"<url><loc>https://youngbullinvests.com/{u}</loc></url>\n"
+               + "".join(f"<url><loc>{SITE_BASE}{u}</loc></url>\n"
                          for u in urls)
                + "</urlset>\n")
     (OUT_DIR / "sitemap.xml").write_text(sitemap, encoding="utf-8")

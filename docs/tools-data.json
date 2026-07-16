@@ -39,7 +39,7 @@
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral",
    "earnings": "2026-08-06"
   },
@@ -156,9 +156,8 @@
   "ASML": {
    "layer": "Compute",
    "thesis": "EUV lithography monopoly, EUR 38.8B backlog, irreplaceable",
-   "conviction": 57,
-   "stance": "neutral",
-   "earnings": "2026-07-15"
+   "conviction": 58,
+   "stance": "neutral"
   },
   "AVAV": {
    "layer": "Space",
@@ -169,7 +168,7 @@
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 68,
+   "conviction": 69,
    "stance": "bull"
   },
   "BE": {
@@ -206,57 +205,57 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 50,
+   "conviction": 49,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 41,
+   "conviction": 42,
    "stance": "neutral"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 50,
+   "conviction": 47,
    "stance": "neutral"
   },
   "KTOS": {
    "layer": "Space",
    "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 41,
+   "conviction": 43,
    "stance": "neutral"
   },
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 52,
+   "conviction": 54,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
    "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 45,
+   "conviction": 47,
    "stance": "neutral"
   },
   "LWLG": {
    "layer": "Networking",
    "thesis": "Electro-optic polymer modulators, 200G+ capable",
-   "conviction": 56,
+   "conviction": 52,
    "stance": "neutral"
   },
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 56,
+   "conviction": 53,
    "stance": "neutral"
   },
   "MOD": {
@@ -281,7 +280,7 @@
   "NVDA": {
    "layer": "Compute",
    "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue",
-   "conviction": 55,
+   "conviction": 54,
    "stance": "neutral"
   },
   "OKLO": {
@@ -397,14 +396,14 @@
    "stance": "neutral"
   },
   "IONQ": {
-   "conviction": 41,
+   "conviction": 43,
    "stance": "neutral"
   },
   "IWM": {},
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 49,
+   "conviction": 45,
    "stance": "neutral"
   },
   "MA": {},
@@ -434,11 +433,11 @@
   },
   "QQQ": {},
   "RGTI": {
-   "conviction": 39,
-   "stance": "bear"
+   "conviction": 40,
+   "stance": "neutral"
   },
   "RTX": {
-   "conviction": 42,
+   "conviction": 45,
    "stance": "neutral"
   },
   "SBUX": {},
