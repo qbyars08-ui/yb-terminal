@@ -429,6 +429,20 @@ no opinion worth guessing at.</div>
 </section>"""
 
 
+def request_line_html():
+    """Members-only pointer to the Request Line. Requests really do feed the
+    agent queue: Quinn dispatches research missions from them."""
+    chat = "https://youngbullinvests.substack.com/chat"
+    return (f"<section id='request-line'><h2>The Request Line</h2>"
+            f"<div class='sub' style='margin-bottom:10px'>Want a name run through "
+            f"the machine? Drop a ticker or a question in the subscriber chat, or "
+            f"reply to any post. Member requests feed my agent queue directly: I "
+            f"dispatch research missions from them, and the answers come back as "
+            f"Request Line posts and research pages here.</div>"
+            f"<a class='cta-btn' href='{chat}' target='_blank' "
+            f"rel='noopener'>Drop a request in the chat</a></section>")
+
+
 def record_rows_html(rows):
     out = []
     for r in rows:

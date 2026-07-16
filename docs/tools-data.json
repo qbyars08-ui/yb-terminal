@@ -218,7 +218,7 @@
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 47,
+   "conviction": 45,
    "stance": "neutral"
   },
   "KTOS": {
@@ -255,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral"
   },
   "MOD": {
@@ -292,7 +292,7 @@
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 52,
+   "conviction": 54,
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
@@ -413,7 +413,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "NET": {},
