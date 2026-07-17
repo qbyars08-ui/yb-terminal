@@ -155,9 +155,7 @@
   "ADBE": {},
   "ASML": {
    "layer": "Compute",
-   "thesis": "EUV lithography monopoly, EUR 38.8B backlog, irreplaceable",
-   "conviction": 55,
-   "stance": "neutral"
+   "thesis": "EUV lithography monopoly, EUR 38.8B backlog, irreplaceable"
   },
   "AVAV": {
    "layer": "Space",
@@ -223,9 +221,7 @@
   },
   "KTOS": {
    "layer": "Space",
-   "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 43,
-   "stance": "neutral"
+   "thesis": "Autonomous combat drones, Valkyrie program of record"
   },
   "LITE": {
    "layer": "Networking",
@@ -260,15 +256,11 @@
   },
   "MOD": {
    "layer": "DataCenter",
-   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation",
-   "conviction": 46,
-   "stance": "neutral"
+   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation"
   },
   "MRVL": {
    "layer": "Compute",
-   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
-   "conviction": 52,
-   "stance": "neutral"
+   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
   },
   "NOW": {
    "layer": "Software",
@@ -298,9 +290,7 @@
   },
   "PANW": {
    "layer": "DataCenter",
-   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B",
-   "conviction": 58,
-   "stance": "neutral"
+   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B"
   },
   "PLTR": {
    "layer": "Software",
@@ -331,9 +321,7 @@
   },
   "TSEM": {
    "layer": "Networking",
-   "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 44,
-   "stance": "neutral"
+   "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout"
   },
   "VRT": {
    "layer": "DataCenter",
@@ -374,10 +362,7 @@
   "CVX": {},
   "DDOG": {},
   "DE": {},
-  "DELL": {
-   "conviction": 42,
-   "stance": "neutral"
-  },
+  "DELL": {},
   "DIS": {},
   "F": {},
   "GE": {
@@ -423,10 +408,7 @@
   "ORCL": {},
   "PEP": {},
   "PYPL": {},
-  "QBTS": {
-   "conviction": 47,
-   "stance": "neutral"
-  },
+  "QBTS": {},
   "QCOM": {
    "conviction": 45,
    "stance": "neutral"
