@@ -5,7 +5,7 @@
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
    "health": "INTACT",
-   "conviction": 65,
+   "conviction": 64,
    "stance": "bull"
   },
   "ANET": {
@@ -53,9 +53,7 @@
   },
   "IQMX": {
    "held": 3.1,
-   "health": "INTACT",
-   "conviction": 59,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "LPKFF": {
    "layer": "Photonics",
@@ -69,7 +67,7 @@
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 46,
+   "conviction": 45,
    "stance": "neutral"
   },
   "MU": {
@@ -211,8 +209,8 @@
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 32,
-   "stance": "bear"
+   "conviction": 40,
+   "stance": "neutral"
   },
   "INV": {},
   "IREN": {
@@ -223,39 +221,37 @@
   },
   "KTOS": {
    "layer": "Space",
-   "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 41,
-   "stance": "neutral"
+   "thesis": "Autonomous combat drones, Valkyrie program of record"
   },
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 54,
+   "conviction": 55,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 54,
+   "conviction": 46,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
    "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 47,
+   "conviction": 48,
    "stance": "neutral"
   },
   "LWLG": {
    "layer": "Networking",
    "thesis": "Electro-optic polymer modulators, 200G+ capable",
-   "conviction": 52,
+   "conviction": 50,
    "stance": "neutral"
   },
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 56,
+   "conviction": 55,
    "stance": "neutral"
   },
   "MOD": {
@@ -279,9 +275,7 @@
   },
   "NVDA": {
    "layer": "Compute",
-   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue",
-   "conviction": 53,
-   "stance": "neutral"
+   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue"
   },
   "OKLO": {
    "layer": "Power",
@@ -311,7 +305,7 @@
   "POET": {
    "layer": "Networking",
    "thesis": "Silicon photonics for optical interconnects, TSMC partnership",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral"
   },
   "PPSI": {
@@ -356,10 +350,7 @@
   },
   "AAPL": {},
   "ABNB": {},
-  "AMD": {
-   "conviction": 53,
-   "stance": "neutral"
-  },
+  "AMD": {},
   "AMZN": {
    "conviction": 52,
    "stance": "neutral"
@@ -381,12 +372,12 @@
   "DIS": {},
   "F": {},
   "GE": {
-   "conviction": 47,
+   "conviction": 49,
    "stance": "neutral"
   },
   "GM": {},
   "GOOGL": {
-   "conviction": 52,
+   "conviction": 50,
    "stance": "neutral"
   },
   "HON": {},
@@ -403,7 +394,7 @@
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 44,
+   "conviction": 41,
    "stance": "neutral"
   },
   "MA": {},
@@ -413,7 +404,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 50,
+   "conviction": 49,
    "stance": "neutral"
   },
   "NET": {},
@@ -423,21 +414,18 @@
   "ORCL": {},
   "PEP": {},
   "PYPL": {},
-  "QBTS": {
-   "conviction": 47,
-   "stance": "neutral"
-  },
+  "QBTS": {},
   "QCOM": {
-   "conviction": 46,
+   "conviction": 49,
    "stance": "neutral"
   },
   "QQQ": {},
   "RGTI": {
-   "conviction": 39,
-   "stance": "bear"
+   "conviction": 40,
+   "stance": "neutral"
   },
   "RTX": {
-   "conviction": 43,
+   "conviction": 44,
    "stance": "neutral"
   },
   "SBUX": {},
