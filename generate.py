@@ -19,8 +19,9 @@ import yfinance as yf
 from calendar_yb import (MEMBERS_DAYS, PUBLIC_DAYS, build_calendar,
                          load_catalysts)
 from clientjs import TOOLS_JS, TRACKER_JS, TRACKER_POPULAR, VIZ_SECTION
-from desknote import (archive_note, desk_note_html, load_desk_note,
-                      load_note_archive, notes_page_html, rss_xml)
+from desknote import (archive_note, desk_note_html, first_sentence,
+                      load_desk_note, load_note_archive,
+                      notes_page_html, rss_xml)
 from missionlog import load_weekly_counts, mission_log_html
 from research import (CSS, TICKERS_DIR, build_research, list_research_tickers,
                       parse_frontmatter)
@@ -32,7 +33,9 @@ from tape import build_tape, load_scout
 from thesis import (build_cards, de_dash, fetch_catalysts, fetch_committee,
                     health_badge)
 from gate import encrypt_payload, gate_page_html
-from thesis import SECRETS, parse_env
+from signals import (badge_transitions, conviction_deltas,
+                     merge_snapshot, today_block_html)
+from thesis import SECRETS, load_json, parse_env
 from track import load_calls, receipts_from_calls
 
 OUT_DIR = Path(__file__).parent / "docs"
@@ -399,7 +402,8 @@ def build_extras(rows, quotes, generated_at, pages):
     tape = build_tape(rows, metas, healths, scout)
     cards = build_cards(rows, metas, committee, receipts, catalysts)
     ctx = {"metas": metas, "committee": committee,
-           "catalysts": catalysts, "healths": healths}
+           "catalysts": catalysts, "healths": healths,
+           "tape_top": tape[0] if tape else None}
     return tape_html(tape), cards_html(cards, pages), ctx
 
 
@@ -557,6 +561,22 @@ def main():
         print(f"  WARN: extras failed, shipping core page only: {e}")
         tape_section, cards_section, ctx = "", "", {}
 
+    # Signal histories: one badge + conviction snapshot per refresh,
+    # then transitions and deltas fall out of the diffs (blank day one)
+    badge_hist = merge_snapshot(
+        load_json(DATA_DIR / "badge-history.json", {}),
+        ctx.get("healths", {}), today)
+    (DATA_DIR / "badge-history.json").write_text(
+        json.dumps(badge_hist, indent=1), encoding="utf-8")
+    conv_now = {t: c["conviction"] for t, c in ctx.get("committee", {}).items()
+                if c.get("conviction") is not None}
+    conv_hist = merge_snapshot(
+        load_json(DATA_DIR / "conviction-history.json", {}), conv_now, today)
+    (DATA_DIR / "conviction-history.json").write_text(
+        json.dumps(conv_hist, indent=1), encoding="utf-8")
+    badge_moves = badge_transitions(badge_hist, 7, today)
+    conv_deltas = conviction_deltas(conv_hist, 7, today)
+
     # Pro tools: coverage data + our own snapshot history + scanner
     tools = build_tools_data(rows, ctx.get("metas", {}), ctx.get("committee", {}),
                              ctx.get("catalysts", {}), ctx.get("healths", {}),
@@ -566,7 +586,8 @@ def main():
     hist_json = json.dumps(hist, indent=1, allow_nan=False)
     (DATA_DIR / "history.json").write_text(hist_json, encoding="utf-8")
     (OUT_DIR / "history.json").write_text(hist_json, encoding="utf-8")
-    tools_section = VIZ_SECTION + scanner_html(tools["tickers"], quotes, pages)
+    tools_section = VIZ_SECTION + scanner_html(tools["tickers"], quotes, pages,
+                                           conv_deltas=conv_deltas)
 
     # Desk note (agent-written, may be absent or stale: rendered honestly)
     # + members-only sections. Each degrades to blank alone.
@@ -582,8 +603,15 @@ def main():
     earnings = ctx.get("catalysts", {})
     cal_public = calendar_public_html(
         build_calendar(curated, earnings, today, PUBLIC_DAYS))
-    cal_members = calendar_members_html(
-        build_calendar(curated, earnings, today, MEMBERS_DAYS), pages)
+    cal_entries = build_calendar(curated, earnings, today, MEMBERS_DAYS)
+    cal_members = calendar_members_html(cal_entries, pages)
+    upcoming = [e for e in cal_entries if e["date"] >= today]
+    today_html = today_block_html(
+        ctx.get("tape_top"),
+        upcoming[0] if upcoming else None,
+        badge_moves,
+        first_sentence(note["body"]) if note else "",
+        stats["day"] if rows else None)
 
     # Render index, then gate it: ship fully consistent or not at all
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
@@ -591,7 +619,8 @@ def main():
                   desk_section=desk_public, calendar_section=cal_public)
     m_html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                     tape_section, cards_section, tools_section,
-                    desk_section=desk_members, members_extras=members_extras,
+                    desk_section=today_html + desk_members,
+                    members_extras=members_extras,
                     calendar_section=cal_members)
     problems = validate_output(html, rows, pages) + validate_output(
         m_html, rows, pages)

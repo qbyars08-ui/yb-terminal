@@ -158,6 +158,16 @@ EXTRA_CSS = """
   }
   .tagline b { color: var(--bright); }
 
+  /* Today at the desk (members triage) */
+  #today h2 span { font-size:13px; }
+  .today-row { display:flex; gap:10px; padding:7px 0; font-size:13px;
+               border-bottom:1px solid var(--line); align-items:baseline; }
+  .today-row:last-child { border-bottom:none; }
+  .today-tag { font-family:var(--mono); font-size:10px; letter-spacing:1px;
+               flex-shrink:0; width:72px; color:var(--dim); }
+  .today-tag.gold { color:var(--gold); }
+  .today-tag.down { color:var(--red); } .today-tag.up { color:var(--green); }
+
   /* Catalyst calendar */
   .cal-item { display:flex; gap:12px; padding:8px 0; border-bottom:1px solid var(--line);
               font-size:13px; align-items:baseline; }
@@ -436,7 +446,7 @@ Reply to any post, I read everything.</footer>
 </main></body></html>"""
 
 
-def scanner_html(tools_tickers, quotes, pages):
+def scanner_html(tools_tickers, quotes, pages, conv_deltas=None):
     """Server-rendered coverage scanner. One row per name the machine has
     real data on; filters and sorting are client-side over these rows."""
     covered = {t: d for t, d in tools_tickers.items() if d}
@@ -458,6 +468,10 @@ def scanner_html(tools_tickers, quotes, pages):
         conv = ""
         if d.get("conviction") is not None:
             conv = f"{int(d['conviction'])} {escape(d.get('stance') or '')}".strip()
+            delta = (conv_deltas or {}).get(t)
+            if delta:
+                dc = "up" if delta > 0 else "down"
+                conv += f" <span class='{dc}'>{delta:+d} 7d</span>"
         price = f"${q['price']:,.2f}" if q.get("price") is not None else "-"
         rows.append(
             f"<tr data-layer=\"{escape(d.get('layer') or '')}\" "
