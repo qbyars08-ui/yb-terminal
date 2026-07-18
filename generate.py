@@ -25,7 +25,7 @@ from desknote import (archive_note, desk_note_html, first_sentence,
 from missionlog import load_weekly_counts, mission_log_html
 from research import (CSS, TICKERS_DIR, build_research, list_research_tickers,
                       parse_frontmatter)
-from sections import (EXTRA_CSS, SITE_BASE, calendar_members_html,
+from sections import (EXTRA_CSS, SITE_BASE, calendar_members_html, wire_html,
                       calendar_public_html, cards_html, og_tags,
                       pricing_page_html, request_line_html, scanner_html,
                       tape_html)
@@ -221,7 +221,8 @@ NOTES_LINKS = """
 
 def render(snap, rows, stats, generated_at, pages, quotes, moves,
            tape_section="", cards_section="", tools_section="",
-           desk_section="", members_extras="", calendar_section=""):
+           desk_section="", members_extras="", calendar_section="",
+           wire_section=""):
     # Book table rows
     tr = []
     for r in sorted(rows, key=lambda x: -(x["weight"] or 0)):
@@ -231,7 +232,6 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
         tr.append(
             f"<tr><td class='tk'>{link}</td>"
             f"<td>{fmt(r['weight'], '.1f')}%</td>"
-            f"<td>${fmt(r['cost'], ',.2f')}</td>"
             f"<td>${fmt(r['price'], ',.2f')}</td>"
             f"<td class='{cls(r['change'])}'>{fmt(r['change'], '+.2f')}%</td>"
             f"<td class='{cls(r['gain'])}'>{fmt(r['gain'], '+.1f')}%</td></tr>")
@@ -314,6 +314,8 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
 
 {tape_section}
 
+{wire_section}
+
 {calendar_section}
 
 <section id="book">
@@ -322,7 +324,7 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
   Real money, real entries. Prices refresh daily.</div>
   <div style="overflow-x:auto">
   <table><thead><tr>
-    <th>Ticker</th><th>Weight</th><th>Avg cost</th><th>Price</th><th>Today</th><th>Gain</th>
+    <th>Ticker</th><th>Weight</th><th>Price</th><th>Today</th><th>Gain</th>
   </tr></thead><tbody>{''.join(tr)}</tbody></table>
   </div>
 </section>
@@ -403,7 +405,7 @@ def build_extras(rows, quotes, generated_at, pages):
     cards = build_cards(rows, metas, committee, receipts, catalysts)
     ctx = {"metas": metas, "committee": committee,
            "catalysts": catalysts, "healths": healths,
-           "tape_top": tape[0] if tape else None}
+           "tape_top": tape[0] if tape else None, "scout": scout}
     return tape_html(tape), cards_html(cards, pages), ctx
 
 
@@ -614,14 +616,17 @@ def main():
         stats["day"] if rows else None)
 
     # Render index, then gate it: ship fully consistent or not at all
+    scout_items = ctx.get("scout") or []
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                   tape_section, cards_section, tools_section,
-                  desk_section=desk_public, calendar_section=cal_public)
+                  desk_section=desk_public, calendar_section=cal_public,
+                  wire_section=wire_html(scout_items, 4))
     m_html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                     tape_section, cards_section, tools_section,
                     desk_section=today_html + desk_members,
                     members_extras=members_extras,
-                    calendar_section=cal_members)
+                    calendar_section=cal_members,
+                    wire_section=wire_html(scout_items, 12))
     problems = validate_output(html, rows, pages) + validate_output(
         m_html, rows, pages)
     if problems:

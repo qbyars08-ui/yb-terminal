@@ -69,7 +69,7 @@
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 46,
+   "conviction": 45,
    "stance": "neutral"
   },
   "MU": {
@@ -91,8 +91,8 @@
   "NOK": {
    "held": 2.9,
    "health": "STRESSED",
-   "conviction": 59,
-   "stance": "neutral",
+   "conviction": 60,
+   "stance": "bull",
    "earnings": "2026-07-23"
   },
   "OSS": {
@@ -124,7 +124,7 @@
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
    "health": "STRESSED",
-   "conviction": 64,
+   "conviction": 63,
    "stance": "bull",
    "earnings": "2026-08-06"
   },
@@ -211,14 +211,14 @@
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 39,
-   "stance": "bear"
+   "conviction": 40,
+   "stance": "neutral"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 48,
+   "conviction": 47,
    "stance": "neutral"
   },
   "KTOS": {
@@ -255,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 55,
+   "conviction": 56,
    "stance": "neutral"
   },
   "MOD": {
@@ -286,7 +286,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 48,
+   "conviction": 50,
    "stance": "neutral"
   },
   "ON": {
@@ -326,7 +326,7 @@
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 45,
+   "conviction": 46,
    "stance": "neutral"
   },
   "TSEM": {
@@ -381,7 +381,7 @@
   "DIS": {},
   "F": {},
   "GE": {
-   "conviction": 49,
+   "conviction": 48,
    "stance": "neutral"
   },
   "GM": {},
@@ -392,7 +392,7 @@
   "HON": {},
   "HOOD": {},
   "INTC": {
-   "conviction": 41,
+   "conviction": 40,
    "stance": "neutral"
   },
   "IONQ": {
@@ -409,11 +409,11 @@
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 46,
+   "conviction": 50,
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "NET": {},
@@ -444,7 +444,7 @@
   "SCHD": {},
   "SHOP": {},
   "SMCI": {
-   "conviction": 46,
+   "conviction": 48,
    "stance": "neutral"
   },
   "SNOW": {},

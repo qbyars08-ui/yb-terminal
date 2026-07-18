@@ -6,9 +6,9 @@ computed; missing values render as blanks or are skipped entirely.
 
 from html import escape
 
-# Canonical public base: the Terminal lives on its own subdomain (apex is
-# the main site). One line to change if it ever moves again.
-SITE_BASE = "https://terminal.youngbullinvests.com/"
+# Canonical public base: the Terminal IS youngbullinvests.com (Quinn retired
+# the old site 07-18). One line to change if it ever moves again.
+SITE_BASE = "https://youngbullinvests.com/"
 
 # Stripe Payment Links. QUINN: mint these in the Stripe Dashboard (steps in
 # the session report), paste the two URLs here, and the buy buttons appear on
@@ -166,6 +166,20 @@ EXTRA_CSS = """
                flex-shrink:0; width:72px; color:var(--dim); }
   .today-tag.gold { color:var(--gold); }
   .today-tag.down { color:var(--red); } .today-tag.up { color:var(--green); }
+
+  /* The Wire */
+  .wire-row { display:flex; gap:10px; padding:7px 0; font-size:13px;
+              border-bottom:1px solid var(--line); align-items:baseline; }
+  .wire-row:last-child { border-bottom:none; }
+  .wire-row a { color:var(--text); }
+  .wire-row a:hover { color:var(--gold); }
+  .wire-src { font-family:var(--mono); font-size:10px; letter-spacing:1px;
+              color:var(--dim); flex-shrink:0; width:88px; text-transform:uppercase;
+              overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .wire-src.gold { color:var(--gold); }
+  .wire-odds-head { font-family:var(--mono); font-size:10px; letter-spacing:2px;
+                    color:var(--gold); text-transform:uppercase; margin:12px 0 2px;
+                    border-bottom:1px solid var(--border); padding-bottom:4px; }
 
   /* Catalyst calendar */
   .cal-item { display:flex; gap:12px; padding:8px 0; border-bottom:1px solid var(--line);
@@ -443,6 +457,34 @@ on the 22nd.</p>
 <footer>Young Bull Terminal. Not advice, it is my book and my machine. Questions?
 Reply to any post, I read everything.</footer>
 </main></body></html>"""
+
+
+def wire_html(items, limit):
+    """The Wire: what the desk's scout is reading right now, scored against
+    the Physical Layer beats, plus the odds board (prediction-market implied
+    probabilities). Real headlines, real links, or nothing at all."""
+    if not items:
+        return ""
+    odds = [i for i in items if i.get("source") == "Polymarket"]
+    news = [i for i in items if i.get("source") != "Polymarket"][:limit]
+    if not news and not odds:
+        return ""
+    rows = "".join(
+        f"<div class='wire-row'><span class='wire-src'>{escape(i['source'])}</span>"
+        f"<a href='{escape(i['url'])}' rel='noopener'>{escape(i['title'])}</a></div>"
+        for i in news)
+    odds_rows = ""
+    if odds:
+        odds_rows = ("<div class='wire-odds-head'>The odds board</div>" + "".join(
+            f"<div class='wire-row'><span class='wire-src gold'>ODDS</span>"
+            f"<a href='{escape(i['url'])}' rel='noopener'>{escape(i['title'])}</a></div>"
+            for i in odds[:5]))
+    return (f"<section id='wire'><h2>The Wire</h2>"
+            f"<div class='sub' style='margin-bottom:8px'>What the desk's scout is "
+            f"reading, scored against the Physical Layer beats. The odds rows are "
+            f"prediction-market implied probabilities, the closest thing to "
+            f"tomorrow's consensus you can read today.</div>"
+            f"{rows}{odds_rows}</section>")
 
 
 def scanner_html(tools_tickers, quotes, pages, conv_deltas=None):

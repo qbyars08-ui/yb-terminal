@@ -259,8 +259,7 @@ def render_ticker_page(ticker, meta, body_html, quote, row, generated_at,
         stats.append(f"<div class='stat'><b>${price:,.2f}</b><span>Live</span></div>")
         stats.append(f"<div class='stat'><b class='{c(change)}'>{change:+.2f}%</b><span>Today</span></div>")
     if row:
-        if row.get("cost"):
-            stats.append(f"<div class='stat'><b>${row['cost']:,.2f}</b><span>My avg cost</span></div>")
+
         if row.get("gain") is not None:
             stats.append(f"<div class='stat'><b class='{c(row['gain'])}'>{row['gain']:+.1f}%</b><span>My gain</span></div>")
         if row.get("weight"):
