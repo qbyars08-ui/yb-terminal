@@ -277,15 +277,16 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Young Bull</title>
 <meta name="description" content="A 17-year-old's real money portfolio in the Physical Layer of AI. Every position public. Track your own book alongside mine.">
-{og_tags("Young Bull", "Real money. Every position public. A 17-year-old's book in the Physical Layer of AI.")}
+{og_tags("Young Bull Terminal", "Real money. Every position public. A 17-year-old's book in the Physical Layer of AI.", "terminal.html")}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23c8952e'/></svg>">
 <style>{CSS}{EXTRA_CSS}</style>
 </head><body>
 
 <nav class="yb-nav">
   <div class="yb-nav-inner">
-    <a href="#" class="brand">Young Bull</a>
+    <a href="index.html" class="brand">Young Bull</a>
     <div class="yb-nav-links">
+      <a href="index.html">Desk</a>
       <a href="#book">Book</a>
       <a href="#research">Research</a>
       <a href="#track">Track</a>
@@ -502,6 +503,8 @@ def members_html(html):
            .replace("href='t/", "href='../../t/")
            .replace('href="t/', 'href="../../t/')
            .replace('href="pricing.html"', 'href="../../pricing.html"')
+           .replace('href="index.html"', 'href="../../index.html"')
+           .replace('href="terminal.html"', 'href="../../terminal.html"')
            .replace("href='pricing.html'", "href='../../pricing.html'")
            .replace("fetch('prices.json')", "fetch('../../prices.json')")
            .replace("fetch('tools-data.json')", "fetch('../../tools-data.json')")
@@ -667,7 +670,7 @@ def main():
         for p in problems:
             print(f"VALIDATION: {p}", file=sys.stderr)
         sys.exit(1)  # refresh.sh keeps the previous good site
-    write_page(OUT_DIR / "index.html", html)
+    write_page(OUT_DIR / "terminal.html", html)
 
     # Pricing page
     write_page(OUT_DIR / "pricing.html",
@@ -702,7 +705,7 @@ def main():
                                           encoding="utf-8")
 
     # Sitemap for the public pages (members path deliberately absent)
-    urls = ["", "pricing.html"] + [f"t/{t}.html" for t in sorted(pages)]
+    urls = ["", "terminal.html", "pricing.html"] + [f"t/{t}.html" for t in sorted(pages)]
     sitemap = ("<?xml version='1.0' encoding='UTF-8'?>\n"
                "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>\n"
                + "".join(f"<url><loc>{SITE_BASE}{u}</loc></url>\n"

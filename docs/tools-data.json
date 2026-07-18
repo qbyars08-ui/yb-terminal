@@ -162,13 +162,13 @@
   "AVAV": {
    "layer": "Space",
    "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%",
-   "conviction": 41,
+   "conviction": 42,
    "stance": "neutral"
   },
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 67,
+   "conviction": 64,
    "stance": "bull"
   },
   "BE": {
@@ -255,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 56,
+   "conviction": 55,
    "stance": "neutral"
   },
   "MOD": {
@@ -286,7 +286,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 50,
+   "conviction": 48,
    "stance": "neutral"
   },
   "ON": {
@@ -375,7 +375,7 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 46,
+   "conviction": 45,
    "stance": "neutral"
   },
   "DIS": {},
@@ -409,7 +409,7 @@
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "MSFT": {
@@ -433,18 +433,18 @@
   },
   "QQQ": {},
   "RGTI": {
-   "conviction": 39,
-   "stance": "bear"
+   "conviction": 40,
+   "stance": "neutral"
   },
   "RTX": {
-   "conviction": 41,
+   "conviction": 43,
    "stance": "neutral"
   },
   "SBUX": {},
   "SCHD": {},
   "SHOP": {},
   "SMCI": {
-   "conviction": 49,
+   "conviction": 48,
    "stance": "neutral"
   },
   "SNOW": {},
