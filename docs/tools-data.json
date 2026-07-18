@@ -62,7 +62,7 @@
    "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
    "held": 1.6,
    "health": "BROKEN",
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral",
    "earnings": "2026-07-23"
   },
@@ -149,7 +149,7 @@
    "thesis": "Only public photonic quantum pure-play. Room-temperature qubits on fiber. DARPA + Lockheed + AMD customers. 5-year thesis.",
    "held": 6.1,
    "health": "INTACT",
-   "conviction": 59,
+   "conviction": 58,
    "stance": "neutral"
   },
   "ADBE": {},
@@ -162,13 +162,13 @@
   "AVAV": {
    "layer": "Space",
    "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%",
-   "conviction": 42,
+   "conviction": 41,
    "stance": "neutral"
   },
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 64,
+   "conviction": 67,
    "stance": "bull"
   },
   "BE": {
@@ -180,20 +180,20 @@
   "BIRD": {
    "layer": "Other",
    "thesis": "Allbirds consumer brand, pending exit",
-   "conviction": 34,
+   "conviction": 35,
    "stance": "bear"
   },
   "BN": {
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 37,
+   "conviction": 38,
    "stance": "bear"
   },
   "CC": {},
   "CEG": {
    "layer": "Power",
    "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
-   "conviction": 61,
+   "conviction": 60,
    "stance": "bull"
   },
   "COHR": {
@@ -205,14 +205,14 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 50,
+   "conviction": 47,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 40,
-   "stance": "neutral"
+   "conviction": 38,
+   "stance": "bear"
   },
   "INV": {},
   "IREN": {
@@ -255,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 55,
+   "conviction": 56,
    "stance": "neutral"
   },
   "MOD": {
@@ -286,7 +286,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 48,
+   "conviction": 50,
    "stance": "neutral"
   },
   "ON": {
@@ -375,13 +375,13 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "DIS": {},
   "F": {},
   "GE": {
-   "conviction": 48,
+   "conviction": 43,
    "stance": "neutral"
   },
   "GM": {},
@@ -409,7 +409,7 @@
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 50,
+   "conviction": 48,
    "stance": "neutral"
   },
   "MSFT": {
@@ -433,8 +433,8 @@
   },
   "QQQ": {},
   "RGTI": {
-   "conviction": 40,
-   "stance": "neutral"
+   "conviction": 39,
+   "stance": "bear"
   },
   "RTX": {
    "conviction": 43,
@@ -444,7 +444,7 @@
   "SCHD": {},
   "SHOP": {},
   "SMCI": {
-   "conviction": 48,
+   "conviction": 49,
    "stance": "neutral"
   },
   "SNOW": {},

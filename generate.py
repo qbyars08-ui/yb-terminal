@@ -705,7 +705,9 @@ def main():
                                           encoding="utf-8")
 
     # Sitemap for the public pages (members path deliberately absent)
-    urls = ["", "terminal.html", "pricing.html"] + [f"t/{t}.html" for t in sorted(pages)]
+    urls = (["", "terminal.html", "pricing.html", "about.html",
+             "reports.html", "research.html", "members.html"]
+            + [f"t/{t}.html" for t in sorted(pages)])
     sitemap = ("<?xml version='1.0' encoding='UTF-8'?>\n"
                "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>\n"
                + "".join(f"<url><loc>{SITE_BASE}{u}</loc></url>\n"

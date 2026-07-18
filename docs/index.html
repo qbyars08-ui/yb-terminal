@@ -19,12 +19,12 @@
     </div>
     <nav class="nav">
       <a href="index.html" class="active">Desk</a>
-      <a href="https://qbyars08-ui.github.io/yb-desk/research.html">Research</a>
-      <a href="https://qbyars08-ui.github.io/yb-desk/reports.html">Reports</a>
+      <a href="research.html">Research</a>
+      <a href="reports.html">Reports</a>
       <a href="terminal.html">Terminal</a>
       <a href="pricing.html">Pricing</a>
-      <a href="https://qbyars08-ui.github.io/yb-desk/members.html">Members</a>
-      <a href="https://qbyars08-ui.github.io/yb-desk/about.html">How it works</a>
+      <a href="members.html">Members</a>
+      <a href="about.html">How it works</a>
       <a href="https://github.com/qbyars08-ui/yb-desk" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </div>
@@ -37,7 +37,7 @@
       <a class="btn" href="#desk" id="hero-build-btn">Build your desk</a>
       <a class="btn ghost" href="#book">See Quinn's book</a>
     </div>
-    <p class="hint" style="margin:10px 0 0">Founding membership is $99 a year, locked for good, until July 22. <a href="https://qbyars08-ui.github.io/yb-desk/members.html">What members get</a>.</p>
+    <p class="hint" style="margin:10px 0 0">Founding membership is $99 a year, locked for good, until July 22. <a href="members.html">What members get</a>.</p>
   </div>
 </section>
 
@@ -217,7 +217,7 @@
     <div class="cta">
       <h3>Task an agent</h3>
       <p>Want the research agent to dig into a name? Ask on the Research page and the brief lands back on this site, usually within 15 minutes. Free, no account needed.</p>
-      <a class="btn" id="task-agent-link" href="https://qbyars08-ui.github.io/yb-desk/research.html">Task the desk</a>
+      <a class="btn" id="task-agent-link" href="research.html">Task the desk</a>
     </div>
   </section>
 
@@ -322,7 +322,7 @@
     }
     blocks.push('<div class="detail-block"><div class="lab">Latest news</div>' +
       '<div class="dd-news" data-news-ticker="' + D.esc(String(p.t).toUpperCase()) + '"><p class="dim" style="margin:0">Open to load headlines...</p></div></div>');
-    blocks.push('<div class="detail-block"><div class="body"><a href="https://qbyars08-ui.github.io/yb-desk/ticker.html?t=' + encodeURIComponent(p.t) + '">Open the ' + D.esc(p.t) + ' page: chart, next earnings, latest brief</a></div></div>');
+    blocks.push('<div class="detail-block"><div class="body"><a href="ticker.html?t=' + encodeURIComponent(p.t) + '">Open the ' + D.esc(p.t) + ' page: chart, next earnings, latest brief</a></div></div>');
     return '<tr class="detail-row" hidden><td colspan="' + colspan + '"><div class="detail-inner">' +
       blocks.join("") + '</div></td></tr>';
   }
@@ -570,7 +570,7 @@
         }
       }
       return '<span class="watch-chip">' +
-        '<a class="wt-ticker" href="https://qbyars08-ui.github.io/yb-desk/ticker.html?t=' + encodeURIComponent(t) + '">' + D.esc(t) + '</a>' +
+        '<a class="wt-ticker" href="ticker.html?t=' + encodeURIComponent(t) + '">' + D.esc(t) + '</a>' +
         priceHtml + dayHtml + targetHtml +
         '<button type="button" class="wt-remove" data-watch-remove="' + idx + '" title="Remove">&times;</button>' +
         '</span>';
@@ -816,7 +816,7 @@
     blocks.push(noteBlockHtml(t));
     blocks.push('<div class="detail-block"><div class="lab">Latest news</div>' +
       '<div class="dd-news" data-news-ticker="' + D.esc(t) + '"><p class="dim" style="margin:0">Open to load headlines...</p></div></div>');
-    blocks.push('<div class="detail-block"><div class="body"><a href="https://qbyars08-ui.github.io/yb-desk/ticker.html?t=' + encodeURIComponent(t) +
+    blocks.push('<div class="detail-block"><div class="body"><a href="ticker.html?t=' + encodeURIComponent(t) +
       '">Open the full ' + D.esc(t) + ' page</a></div></div>');
 
     return '<tr class="detail-row" hidden><td colspan="9"><div class="detail-inner">' +
@@ -1041,7 +1041,7 @@
       var label = d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
       var soon = days >= 0 && days <= 7;
       return '<span class="watch-chip">' +
-        '<a class="wt-ticker" href="https://qbyars08-ui.github.io/yb-desk/ticker.html?t=' + encodeURIComponent(x.t) + '">' + D.esc(x.t) + '</a>' +
+        '<a class="wt-ticker" href="ticker.html?t=' + encodeURIComponent(x.t) + '">' + D.esc(x.t) + '</a>' +
         '<span class="wt-price">' + D.esc(label) + '</span>' +
         '<span class="wt-day ' + (soon ? "loss" : "faint") + '">' + (days >= 0 ? "in " + days + "d" : "today") + '</span>' +
         '</span>';
@@ -1261,7 +1261,7 @@
     wrap.innerHTML = '<div class="scan-grid">' + scans.map(function (s) {
       var rows = s.rows.slice(0, 6).map(function (r) {
         return '<tr>' +
-          '<td class="l"><a class="ticker" href="https://qbyars08-ui.github.io/yb-desk/ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a></td>' +
+          '<td class="l"><a class="ticker" href="ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a></td>' +
           '<td>' + D.fmtPrice(r.price) + '</td>' +
           '<td><span class="' + D.pctClass(r.changePct) + '">' + D.fmtPct(r.changePct) + '</span></td>' +
           '<td>' + (s.id === "volume" ? D.esc(String(r.relVol)) + "x vol" : s.id === "oversold" ? "RSI " + D.esc(String(r.rsi)) : (r.cap ? D.esc(r.cap) : "-")) + '</td>' +
@@ -1810,7 +1810,7 @@
           lastCell = dayCell = mvCell = plCell = plPctCell = '<span class="faint">-</span>';
         }
         return '<tr>' +
-          '<td class="l"><a class="ticker" href="https://qbyars08-ui.github.io/yb-desk/ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a></td>' +
+          '<td class="l"><a class="ticker" href="ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a></td>' +
           '<td>' + D.fmtPrice(r.shares) + '</td>' +
           '<td>' + D.fmtPrice(r.costBasis) + '</td>' +
           '<td>' + lastCell + '</td>' +
