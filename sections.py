@@ -6,10 +6,9 @@ computed; missing values render as blanks or are skipped entirely.
 
 from html import escape
 
-# Canonical public base. Domain parked for now (TLS saga, 2026-07-15); when
-# youngbullinvests.com comes back, change this ONE line and re-add docs/CNAME
-# in the same commit that flips DNS to GitHub Pages.
-SITE_BASE = "https://qbyars08-ui.github.io/yb-terminal/"
+# Canonical public base: the Terminal lives on its own subdomain (apex is
+# the main site). One line to change if it ever moves again.
+SITE_BASE = "https://terminal.youngbullinvests.com/"
 
 # Stripe Payment Links. QUINN: mint these in the Stripe Dashboard (steps in
 # the session report), paste the two URLs here, and the buy buttons appear on

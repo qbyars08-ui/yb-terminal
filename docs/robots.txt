@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: /yb-terminal/members/
-Sitemap: https://qbyars08-ui.github.io/yb-terminal/sitemap.xml
+Disallow: /members/
+Sitemap: https://terminal.youngbullinvests.com/sitemap.xml

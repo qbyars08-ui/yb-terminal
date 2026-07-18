@@ -4,7 +4,9 @@
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 64,
+   "stance": "bull"
   },
   "ANET": {
    "layer": "Networking",
@@ -227,7 +229,9 @@
   },
   "LITE": {
    "layer": "Networking",
-   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal"
+   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
+   "conviction": 55,
+   "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
@@ -398,7 +402,10 @@
   "IWM": {},
   "JPM": {},
   "KO": {},
-  "LMT": {},
+  "LMT": {
+   "conviction": 45,
+   "stance": "neutral"
+  },
   "MA": {},
   "MCD": {},
   "META": {
