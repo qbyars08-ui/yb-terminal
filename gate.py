@@ -77,30 +77,42 @@ body { background:var(--bg); color:var(--text); font:14px/1.6 var(--mono);
 .gate .foot a { color:var(--gold); text-decoration:none; }
 """
 
-GATE_JS = """
+from gate_fallback import FALLBACK_JS
+
+GATE_JS = FALLBACK_JS + """
 var P='__YB_GATE_PAYLOAD__', K='yb-members-pass';
 function b64(s){var b=atob(s),a=new Uint8Array(b.length);
   for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
 async function unlock(pass,fromStore){
   var err=document.getElementById('err');
   try{
-    var blob=b64(P),salt=blob.slice(0,16),ct=blob.slice(16);
-    var mat=await crypto.subtle.importKey('raw',
-      new TextEncoder().encode(pass),'PBKDF2',false,['deriveBits']);
-    var bits=await crypto.subtle.deriveBits(
-      {name:'PBKDF2',salt:salt,iterations:200000,hash:'SHA-256'},mat,384);
-    var kb=new Uint8Array(bits);
-    var key=await crypto.subtle.importKey('raw',kb.slice(0,32),
-      {name:'AES-CBC'},false,['decrypt']);
-    var pt=await crypto.subtle.decrypt(
-      {name:'AES-CBC',iv:kb.slice(32,48)},key,ct);
-    var html=new TextDecoder().decode(pt);
+    var blob=b64(P),salt=blob.slice(0,16),ct=blob.slice(16),html;
+    if(window.crypto&&crypto.subtle){
+      var mat=await crypto.subtle.importKey('raw',
+        new TextEncoder().encode(pass),'PBKDF2',false,['deriveBits']);
+      var bits=await crypto.subtle.deriveBits(
+        {name:'PBKDF2',salt:salt,iterations:200000,hash:'SHA-256'},mat,384);
+      var kb=new Uint8Array(bits);
+      var key=await crypto.subtle.importKey('raw',kb.slice(0,32),
+        {name:'AES-CBC'},false,['decrypt']);
+      var pt=await crypto.subtle.decrypt(
+        {name:'AES-CBC',iv:kb.slice(32,48)},key,ct);
+      html=new TextDecoder().decode(pt);
+    }else{
+      // plain-http fallback: same math in pure JS, takes a few seconds
+      err.textContent='Unlocking, give it a few seconds...';
+      await new Promise(function(r){setTimeout(r,30);});
+      var pt2=YBF.decrypt(pass,salt,ct);
+      if(!pt2) throw 0;
+      html=new TextDecoder().decode(pt2);
+    }
     if(html.slice(0,9).toLowerCase()!=='<!doctype') throw 0;
     localStorage.setItem(K,pass);
     document.open();document.write(html);document.close();
   }catch(e){
     localStorage.removeItem(K);
     if(!fromStore) err.textContent='That passcode did not unlock the desk. Check the welcome email.';
+    else err.textContent='';
   }
 }
 window.ybGo=function(){

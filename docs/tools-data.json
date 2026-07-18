@@ -5,7 +5,7 @@
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
    "health": "INTACT",
-   "conviction": 64,
+   "conviction": 65,
    "stance": "bull"
   },
   "ANET": {
@@ -62,14 +62,14 @@
    "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
    "held": 1.6,
    "health": "BROKEN",
-   "conviction": 51,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-07-23"
   },
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 45,
+   "conviction": 46,
    "stance": "neutral"
   },
   "MU": {
@@ -149,7 +149,7 @@
    "thesis": "Only public photonic quantum pure-play. Room-temperature qubits on fiber. DARPA + Lockheed + AMD customers. 5-year thesis.",
    "held": 6.1,
    "health": "INTACT",
-   "conviction": 58,
+   "conviction": 59,
    "stance": "neutral"
   },
   "ADBE": {},
@@ -180,13 +180,13 @@
   "BIRD": {
    "layer": "Other",
    "thesis": "Allbirds consumer brand, pending exit",
-   "conviction": 35,
+   "conviction": 34,
    "stance": "bear"
   },
   "BN": {
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 38,
+   "conviction": 37,
    "stance": "bear"
   },
   "CC": {},
@@ -205,26 +205,26 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 47,
+   "conviction": 50,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 38,
+   "conviction": 32,
    "stance": "bear"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 47,
+   "conviction": 49,
    "stance": "neutral"
   },
   "KTOS": {
    "layer": "Space",
    "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 43,
+   "conviction": 41,
    "stance": "neutral"
   },
   "LITE": {
@@ -375,13 +375,13 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 44,
+   "conviction": 46,
    "stance": "neutral"
   },
   "DIS": {},
   "F": {},
   "GE": {
-   "conviction": 43,
+   "conviction": 47,
    "stance": "neutral"
   },
   "GM": {},
@@ -396,20 +396,20 @@
    "stance": "neutral"
   },
   "IONQ": {
-   "conviction": 43,
+   "conviction": 40,
    "stance": "neutral"
   },
   "IWM": {},
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 48,
+   "conviction": 50,
    "stance": "neutral"
   },
   "MSFT": {
@@ -428,7 +428,7 @@
    "stance": "neutral"
   },
   "QCOM": {
-   "conviction": 49,
+   "conviction": 46,
    "stance": "neutral"
   },
   "QQQ": {},
@@ -444,7 +444,7 @@
   "SCHD": {},
   "SHOP": {},
   "SMCI": {
-   "conviction": 49,
+   "conviction": 48,
    "stance": "neutral"
   },
   "SNOW": {},

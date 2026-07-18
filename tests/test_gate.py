@@ -50,6 +50,7 @@ class TestGatePage(unittest.TestCase):
         self.assertIn("AES-CBC", shell)
         self.assertIn("200000", shell)           # iterations must match python
         self.assertIn("localStorage", shell)     # passcode remembered
+        self.assertIn("YBF", shell)              # pure-JS fallback for http
 
     def test_shell_has_no_em_dash_and_is_titled(self):
         shell = self.shell()
