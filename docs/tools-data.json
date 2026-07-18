@@ -230,7 +230,7 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 55,
+   "conviction": 54,
    "stance": "neutral"
   },
   "LLY": {
@@ -326,7 +326,7 @@
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 46,
+   "conviction": 45,
    "stance": "neutral"
   },
   "TSEM": {
@@ -396,7 +396,7 @@
    "stance": "neutral"
   },
   "IONQ": {
-   "conviction": 44,
+   "conviction": 43,
    "stance": "neutral"
   },
   "IWM": {},
@@ -409,7 +409,7 @@
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 50,
+   "conviction": 49,
    "stance": "neutral"
   },
   "MSFT": {
@@ -428,7 +428,7 @@
    "stance": "neutral"
   },
   "QCOM": {
-   "conviction": 46,
+   "conviction": 49,
    "stance": "neutral"
   },
   "QQQ": {},
@@ -444,7 +444,7 @@
   "SCHD": {},
   "SHOP": {},
   "SMCI": {
-   "conviction": 48,
+   "conviction": 49,
    "stance": "neutral"
   },
   "SNOW": {},

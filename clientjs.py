@@ -18,7 +18,7 @@ TRACKER_POPULAR = [
     "SCHD", "O", "KO", "PEP", "MCD", "SBUX", "NKE",
 ]
 
-TRACKER_JS = """
+TRACKER_JS = r"""
 (function(){
   var K='yb-portfolio', prices={};
   var pos = JSON.parse(localStorage.getItem(K)||'[]');
@@ -75,6 +75,85 @@ TRACKER_JS = """
     localStorage.setItem(K,JSON.stringify(pos));
     render();
   };
+  function say(m){ var el=document.getElementById('tracker-msg');
+    if(el){ el.textContent=m; setTimeout(function(){el.textContent='';},4000); } }
+  window.ybExport=function(){
+    if(!pos.length){ say('nothing to export yet'); return; }
+    var csv='ticker,shares,cost_basis\n'+pos.map(function(p){
+      return p.t+','+p.shares+','+p.cost;}).join('\n');
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+    a.download='yb-desk.csv'; a.click();
+  };
+  window.ybImport=function(){ document.getElementById('csv-file').click(); };
+  document.getElementById('csv-file').addEventListener('change',function(e){
+    var f=e.target.files[0]; if(!f) return;
+    var rd=new FileReader();
+    rd.onload=function(){
+      var lines=String(rd.result).trim().split(/\r?\n/);
+      if((lines[0]||'').replace(/\s/g,'')!=='ticker,shares,cost_basis'){
+        say('header must be exactly: ticker,shares,cost_basis'); return; }
+      var added=0;
+      lines.slice(1).forEach(function(ln){
+        var c=ln.split(','); var t=(c[0]||'').trim().toUpperCase();
+        var s=parseFloat(c[1]), cb=parseFloat(c[2]);
+        if(t&&s>0&&cb>0){ pos.push({t:t,shares:s,cost:cb}); added++; }
+      });
+      localStorage.setItem(K,JSON.stringify(pos)); render();
+      say(added+' positions imported');
+    };
+    rd.readAsText(f); e.target.value='';
+  });
+  window.ybShare=function(){
+    if(!pos.length){ say('add a position first'); return; }
+    var url=location.origin+location.pathname+'#d='
+      +btoa(unescape(encodeURIComponent(JSON.stringify(pos))));
+    (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject())
+      .then(function(){ say('desk link copied'); },
+            function(){ prompt('copy your desk link:', url); });
+  };
+  if(location.hash.indexOf('#d=')===0){
+    try{
+      var shared=JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(3)))));
+      if(Array.isArray(shared)&&shared.length&&confirm(
+        'Load the shared desk ('+shared.length+' positions)? Replaces this browser\'s desk.')){
+        pos=shared.filter(function(p){return p&&p.t&&p.shares>0&&p.cost>0;});
+        localStorage.setItem(K,JSON.stringify(pos));
+      }
+      history.replaceState(null,'',location.pathname);
+    }catch(err){}
+  }
+  var WK='yb-watchlist';
+  var watch=JSON.parse(localStorage.getItem(WK)||'[]');
+  function renderWatch(){
+    var el=document.getElementById('watch-list'); if(!el) return;
+    if(!watch.length){ el.innerHTML=''; return; }
+    el.innerHTML=watch.map(function(w,i){
+      var q=prices[w.t]||{}, pr=q.price;
+      var hit=pr&&w.target&&pr<=w.target;
+      var px=pr?('$'+pr.toFixed(2)):'no live quote';
+      var tgt=w.target?(' | target $'+w.target.toFixed(2)+(hit?' HIT':'')):'';
+      return '<div class="wire-row'+(hit?' watch-hit':'')+'">'
+        +'<span class="tk" style="width:56px;flex-shrink:0">'+esc(w.t)+'</span>'
+        +'<span style="flex:1">'+px+esc(tgt)+'</span>'
+        +'<button class="btn-rm" onclick="ybUnwatch('+i+')">x</button></div>';
+    }).join('');
+  }
+  window.ybWatch=function(){
+    var t=document.getElementById('watch-ticker').value.trim().toUpperCase();
+    var tg=parseFloat(document.getElementById('watch-target').value);
+    if(!t) return;
+    watch.push({t:t, target:(tg>0?tg:null)});
+    localStorage.setItem(WK,JSON.stringify(watch));
+    document.getElementById('watch-ticker').value='';
+    document.getElementById('watch-target').value='';
+    renderWatch();
+  };
+  window.ybUnwatch=function(i){
+    watch.splice(i,1); localStorage.setItem(WK,JSON.stringify(watch)); renderWatch();
+  };
+  var _origRender=render;
+  render=function(){ _origRender(); renderWatch(); };
   document.querySelectorAll('.tracker-form input').forEach(function(el){
     el.addEventListener('keydown',function(e){ if(e.key==='Enter') ybAdd(); });
   });

@@ -32,6 +32,8 @@ from sections import (EXTRA_CSS, SITE_BASE, calendar_members_html, wire_html,
 from tape import build_tape, load_scout
 from thesis import (build_cards, de_dash, fetch_catalysts, fetch_committee,
                     health_badge)
+from desk_import import (fetch_desk_json, market_scan_html,
+                         proving_ground_html)
 from gate import encrypt_payload, gate_page_html
 from signals import (badge_transitions, conviction_deltas,
                      merge_snapshot, today_block_html)
@@ -222,15 +224,21 @@ NOTES_LINKS = """
 def render(snap, rows, stats, generated_at, pages, quotes, moves,
            tape_section="", cards_section="", tools_section="",
            desk_section="", members_extras="", calendar_section="",
-           wire_section=""):
+           wire_section="", book_metas=None):
     # Book table rows
     tr = []
+    metas = book_metas or {}
     for r in sorted(rows, key=lambda x: -(x["weight"] or 0)):
         t = r["t"]
         link = (f"<a href='t/{escape(t)}.html'>{escape(t)}</a>"
                 if t in pages else escape(t))
+        m = metas.get(t) or {}
+        sleeve = escape(str(m.get("sleeve") or "")).upper()
+        layer = escape(de_dash(str(m.get("layer") or "")))
         tr.append(
             f"<tr><td class='tk'>{link}</td>"
+            f"<td class='dim' style='font-size:11px'>{sleeve}</td>"
+            f"<td class='dim' style='font-size:11px'>{layer}</td>"
             f"<td>{fmt(r['weight'], '.1f')}%</td>"
             f"<td>${fmt(r['price'], ',.2f')}</td>"
             f"<td class='{cls(r['change'])}'>{fmt(r['change'], '+.2f')}%</td>"
@@ -324,7 +332,7 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
   Real money, real entries. Prices refresh daily.</div>
   <div style="overflow-x:auto">
   <table><thead><tr>
-    <th>Ticker</th><th>Weight</th><th>Price</th><th>Today</th><th>Gain</th>
+    <th>Ticker</th><th>Sleeve</th><th>Layer</th><th>Weight</th><th>Price</th><th>Today</th><th>Gain</th>
   </tr></thead><tbody>{''.join(tr)}</tbody></table>
   </div>
 </section>
@@ -350,6 +358,16 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
     <div class="field"><label>Avg cost</label><input id="add-cost" type="number" placeholder="125.00" min="0" step="any"></div>
     <button class="btn-gold" onclick="ybAdd()">Add</button>
   </div>
+  <div class="tracker-tools">
+    <button class="scan-chip" onclick="ybImport()">Import CSV</button>
+    <button class="scan-chip" onclick="ybExport()">Export CSV</button>
+    <button class="scan-chip" onclick="ybShare()">Share desk</button>
+    <input type="file" id="csv-file" accept=".csv" style="display:none">
+    <span class="sub" id="tracker-msg"></span>
+  </div>
+  <div class="sub" style="margin-bottom:10px">CSV header: ticker,shares,cost_basis.
+  Share desk copies a link that carries your positions to any device, still
+  never touching a server.</div>
   <div id="tracker-summary"></div>
   <div id="tracker-empty" class="tracker-empty">
     No positions yet. Add a ticker above to start tracking your book.
@@ -359,6 +377,15 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
     <th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Price</th><th>Gain</th><th></th>
   </tr></thead><tbody></tbody></table>
   </div>
+  <h3 style="margin-top:18px">Watching</h3>
+  <div class="sub" style="margin-bottom:8px">Tickers you track without a position.
+  Optional target: the row goes gold when price crosses under it.</div>
+  <div class="tracker-form">
+    <div class="field"><label>Ticker</label><input id="watch-ticker" placeholder="OKLO" autocomplete="off" spellcheck="false"></div>
+    <div class="field"><label>Target buy, optional</label><input id="watch-target" type="number" placeholder="40.00" min="0" step="any"></div>
+    <button class="btn-gold" onclick="ybWatch()">Watch</button>
+  </div>
+  <div id="watch-list"></div>
 </section>
 
 {tools_section}
@@ -617,16 +644,23 @@ def main():
 
     # Render index, then gate it: ship fully consistent or not at all
     scout_items = ctx.get("scout") or []
+    scan_feed = fetch_desk_json("scan.json")
+    bt_feed = fetch_desk_json("backtests.json")
+    scan_public = market_scan_html(scan_feed, members=False, today=today)
+    scan_members = (market_scan_html(scan_feed, members=True, today=today)
+                    + proving_ground_html(bt_feed, today=today))
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                   tape_section, cards_section, tools_section,
                   desk_section=desk_public, calendar_section=cal_public,
-                  wire_section=wire_html(scout_items, 4))
+                  wire_section=wire_html(scout_items, 4) + scan_public,
+                  book_metas=ctx.get("metas"))
     m_html = render(snap, rows, stats, generated_at, pages, quotes, moves,
                     tape_section, cards_section, tools_section,
                     desk_section=today_html + desk_members,
                     members_extras=members_extras,
                     calendar_section=cal_members,
-                    wire_section=wire_html(scout_items, 12))
+                    wire_section=wire_html(scout_items, 12) + scan_members,
+                    book_metas=ctx.get("metas"))
     problems = validate_output(html, rows, pages) + validate_output(
         m_html, rows, pages)
     if problems:

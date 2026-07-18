@@ -167,6 +167,19 @@ EXTRA_CSS = """
   .today-tag.gold { color:var(--gold); }
   .today-tag.down { color:var(--red); } .today-tag.up { color:var(--green); }
 
+  /* Tracker tools + watchlist */
+  .tracker-tools { display:flex; gap:6px; align-items:center; flex-wrap:wrap;
+                   margin-bottom:8px; }
+  .watch-hit { border-left:2px solid var(--gold); padding-left:8px; }
+  .watch-hit .tk { color:var(--gold); }
+
+  /* Market scan + proving ground */
+  .scan-head { font-family:var(--mono); font-size:12px; color:var(--bright);
+               letter-spacing:1px; text-transform:uppercase; margin-top:14px; }
+  .scan-head:first-of-type { margin-top:0; }
+  .stale { color:var(--red); font-size:11px; letter-spacing:1px; }
+  .dim { color:var(--dim); }
+
   /* The Wire */
   .wire-row { display:flex; gap:10px; padding:7px 0; font-size:13px;
               border-bottom:1px solid var(--line); align-items:baseline; }
