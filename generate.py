@@ -31,6 +31,8 @@ from sections import (EXTRA_CSS, SITE_BASE, calendar_members_html,
 from tape import build_tape, load_scout
 from thesis import (build_cards, de_dash, fetch_catalysts, fetch_committee,
                     health_badge)
+from gate import encrypt_payload, gate_page_html
+from thesis import SECRETS, parse_env
 from track import load_calls, receipts_from_calls
 
 OUT_DIR = Path(__file__).parent / "docs"
@@ -607,9 +609,26 @@ def main():
     token = members_token()
     members_dir = OUT_DIR / "members" / token
     members_dir.mkdir(parents=True, exist_ok=True)
-    write_page(members_dir / "index.html", members_html(m_html))
     archive = load_note_archive()
-    write_page(members_dir / "notes.html", notes_page_html(archive, CSS, "feed.xml"))
+    notes_html_full = notes_page_html(archive, CSS, "feed.xml")
+    try:
+        members_pass = parse_env(SECRETS.read_text(encoding="utf-8")).get(
+            "MEMBERS_PASS", "")
+    except OSError:
+        members_pass = ""
+    if members_pass:
+        # repo is public: the members pages ship encrypted, passcode goes
+        # out in the paid welcome email, browser decrypts locally
+        write_page(members_dir / "index.html", gate_page_html(
+            encrypt_payload(members_html(m_html), members_pass),
+            "Young Bull Members"))
+        write_page(members_dir / "notes.html", gate_page_html(
+            encrypt_payload(notes_html_full, members_pass),
+            "Desk Notes | Young Bull Members"))
+    else:
+        print("WARN: MEMBERS_PASS missing, members pages shipping UNLOCKED")
+        write_page(members_dir / "index.html", members_html(m_html))
+        write_page(members_dir / "notes.html", notes_html_full)
     members_base = f"{SITE_BASE}members/{token}/"
     (members_dir / "feed.xml").write_text(rss_xml(archive, members_base),
                                           encoding="utf-8")
