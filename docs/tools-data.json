@@ -4,9 +4,7 @@
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
-   "health": "INTACT",
-   "conviction": 65,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "ANET": {
    "layer": "Networking",
@@ -22,6 +20,8 @@
    "thesis": "IP toll on every non-x86 AI chip, v9 royalty rate 2x v8, hyperscaler share approaching 50%, royalty annuity model",
    "held": 5.2,
    "health": "INTACT",
+   "conviction": 70,
+   "stance": "bull",
    "earnings": "2026-07-29"
   },
   "ASTS": {
@@ -58,14 +58,12 @@
    "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
    "held": 1.6,
    "health": "BROKEN",
-   "conviction": 52,
-   "stance": "neutral",
    "earnings": "2026-07-23"
   },
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 45,
+   "conviction": 46,
    "stance": "neutral"
   },
   "MU": {
@@ -87,8 +85,8 @@
   "NOK": {
    "held": 2.9,
    "health": "STRESSED",
-   "conviction": 59,
-   "stance": "neutral",
+   "conviction": 60,
+   "stance": "bull",
    "earnings": "2026-07-23"
   },
   "OSS": {
@@ -128,7 +126,9 @@
    "layer": "Networking",
    "thesis": "First AI-inference production order landing on a recovering core, a 5.4M-share float, net cash worth a quarter of the cap, and $0.55 of EPS torque per $10M of revenue",
    "held": 3.7,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 62,
+   "stance": "bull"
   },
   "WYY": {
    "layer": "Adjacent Tech",
@@ -156,31 +156,29 @@
   "AVAV": {
    "layer": "Space",
    "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%",
-   "conviction": 41,
+   "conviction": 42,
    "stance": "neutral"
   },
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 67,
+   "conviction": 64,
    "stance": "bull"
   },
   "BE": {
    "layer": "Power & Grid",
    "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 57,
+   "conviction": 58,
    "stance": "neutral"
   },
   "BIRD": {
    "layer": "Other",
-   "thesis": "Allbirds consumer brand, pending exit",
-   "conviction": 34,
-   "stance": "bear"
+   "thesis": "Allbirds consumer brand, pending exit"
   },
   "BN": {
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 36,
+   "conviction": 37,
    "stance": "bear"
   },
   "CC": {},
@@ -212,7 +210,7 @@
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 48,
+   "conviction": 47,
    "stance": "neutral"
   },
   "KTOS": {
@@ -223,9 +221,7 @@
   },
   "LITE": {
    "layer": "Networking",
-   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 54,
-   "stance": "neutral"
+   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal"
   },
   "LLY": {
    "layer": "Pharma",
@@ -284,20 +280,18 @@
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 50,
-   "stance": "neutral",
    "earnings": "2026-08-03"
   },
   "PANW": {
    "layer": "DataCenter",
    "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B",
-   "conviction": 54,
+   "conviction": 57,
    "stance": "neutral"
   },
   "PLTR": {
    "layer": "Software",
    "thesis": "AI software platform, 82% gross margins, government + commercial",
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "POET": {
@@ -324,7 +318,7 @@
   "TSEM": {
    "layer": "Networking",
    "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 46,
+   "conviction": 45,
    "stance": "neutral"
   },
   "VRT": {
@@ -352,10 +346,7 @@
    "conviction": 53,
    "stance": "neutral"
   },
-  "AMZN": {
-   "conviction": 51,
-   "stance": "neutral"
-  },
+  "AMZN": {},
   "BA": {},
   "BRK-B": {},
   "CAT": {},
@@ -372,10 +363,13 @@
   },
   "DIS": {},
   "F": {},
-  "GE": {},
+  "GE": {
+   "conviction": 48,
+   "stance": "neutral"
+  },
   "GM": {},
   "GOOGL": {
-   "conviction": 51,
+   "conviction": 52,
    "stance": "neutral"
   },
   "HON": {},
@@ -384,27 +378,21 @@
    "conviction": 40,
    "stance": "neutral"
   },
-  "IONQ": {
-   "conviction": 43,
-   "stance": "neutral"
-  },
+  "IONQ": {},
   "IWM": {},
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 47,
+   "conviction": 50,
    "stance": "neutral"
   },
-  "MSFT": {
-   "conviction": 48,
-   "stance": "neutral"
-  },
+  "MSFT": {},
   "NET": {},
   "NFLX": {},
   "NKE": {},
@@ -417,13 +405,13 @@
    "stance": "neutral"
   },
   "QCOM": {
-   "conviction": 46,
+   "conviction": 49,
    "stance": "neutral"
   },
   "QQQ": {},
   "RGTI": {
-   "conviction": 39,
-   "stance": "bear"
+   "conviction": 40,
+   "stance": "neutral"
   },
   "RTX": {
    "conviction": 41,
