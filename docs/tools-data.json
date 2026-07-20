@@ -13,6 +13,8 @@
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
    "health": "INTACT",
+   "conviction": 60,
+   "stance": "bull",
    "earnings": "2026-08-04"
   },
   "ARM": {
@@ -46,7 +48,7 @@
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
    "health": "INTACT",
-   "conviction": 56,
+   "conviction": 57,
    "stance": "neutral"
   },
   "IQMX": {
@@ -82,7 +84,9 @@
    "layer": "Datacenters",
    "thesis": "GPU cloud infrastructure with $19.4B Microsoft + $27B Meta backlog. ~$46B locked, total backlog approaching $50B.",
    "held": 9.8,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 67,
+   "stance": "bull"
   },
   "NOK": {
    "held": 2.9,
@@ -164,7 +168,7 @@
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 66,
+   "conviction": 67,
    "stance": "bull"
   },
   "BE": {
@@ -176,7 +180,7 @@
   "BIRD": {
    "layer": "Other",
    "thesis": "Allbirds consumer brand, pending exit",
-   "conviction": 35,
+   "conviction": 34,
    "stance": "bear"
   },
   "BN": {
@@ -201,12 +205,14 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 51,
+   "conviction": 50,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
-   "thesis": "Telehealth GLP-1 compound, DTC platform"
+   "thesis": "Telehealth GLP-1 compound, DTC platform",
+   "conviction": 40,
+   "stance": "neutral"
   },
   "INV": {},
   "IREN": {
@@ -224,7 +230,7 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 54,
+   "conviction": 55,
    "stance": "neutral"
   },
   "LLY": {
@@ -249,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 56,
+   "conviction": 55,
    "stance": "neutral"
   },
   "MOD": {
@@ -279,12 +285,14 @@
   },
   "OKLO": {
    "layer": "Power",
-   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors"
+   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
+   "conviction": 48,
+   "stance": "neutral"
   },
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 54,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
@@ -367,7 +375,7 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 46,
+   "conviction": 43,
    "stance": "neutral"
   },
   "DIS": {},
@@ -387,12 +395,15 @@
    "conviction": 40,
    "stance": "neutral"
   },
-  "IONQ": {},
+  "IONQ": {
+   "conviction": 43,
+   "stance": "neutral"
+  },
   "IWM": {},
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 44,
+   "conviction": 45,
    "stance": "neutral"
   },
   "MA": {},
@@ -402,7 +413,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "NET": {},
@@ -426,7 +437,7 @@
    "stance": "neutral"
   },
   "RTX": {
-   "conviction": 43,
+   "conviction": 41,
    "stance": "neutral"
   },
   "SBUX": {},

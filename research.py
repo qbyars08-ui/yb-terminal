@@ -15,23 +15,23 @@ TICKERS_DIR = Path.home() / "Quinn/YOUNG-BULL/Research/Tickers"
 
 CSS = """
 :root {
-  --bg: #0b0a07;
-  --surface: #121009;
-  --border: #292313;
-  --text: #c9c3b2;
-  --bright: #f0ead9;
-  --dim: #6e6650;
-  --gold: #f0b429;
-  --green: #22c55e;
-  --red: #ef4444;
-  --line: #292313;
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --border: #dde4ef;
+  --text: #22304a;
+  --bright: #0f1c33;
+  --dim: #5d6d88;
+  --gold: #1d63ed;
+  --green: #0f7a3d;
+  --red: #d3323c;
+  --line: #e7ecf4;
   --mono: 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; }
 body {
   background: var(--bg); color: var(--text);
-  font: 13.5px/1.65 var(--mono); padding: 0;
+  font: 14px/1.65 var(--sans); padding: 0;
   -webkit-font-smoothing: antialiased;
 }
 main { max-width: 860px; margin: 0 auto; padding: 24px 16px 80px; }
@@ -70,10 +70,10 @@ th {
   padding: 8px; border-bottom: 1px solid var(--border);
 }
 th:not(:first-child) { text-align: right; }
-td { padding: 9px 8px; border-bottom: 1px solid rgba(41, 35, 19, 0.5); }
+td { padding: 9px 8px; border-bottom: 1px solid rgba(221, 228, 239, 0.7); }
 td:not(:first-child) { text-align: right; font-family: var(--mono); }
 tr:last-child td { border-bottom: none; }
-tr:hover td { background: rgba(41, 35, 19, 0.4); }
+tr:hover td { background: rgba(29, 99, 237, 0.05); }
 .tk { color: var(--gold); font-weight: 700; font-family: var(--mono); }
 .up { color: var(--green); } .down { color: var(--red); }
 .chip {

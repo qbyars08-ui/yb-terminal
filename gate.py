@@ -53,8 +53,8 @@ def decrypt_html(payload, passphrase):
 
 
 GATE_CSS = """
-:root { --bg:#0b0a07; --surface:#12100b; --border:#2a2415; --text:#c8c2b4;
-        --bright:#efe9da; --dim:#6b6350; --gold:#f0b429; --red:#ef4444;
+:root { --bg:#f7f9fc; --surface:#ffffff; --border:#dde4ef; --text:#22304a;
+        --bright:#0f1c33; --dim:#5d6d88; --gold:#1d63ed; --red:#d3323c;
         --mono:'SF Mono','JetBrains Mono',Menlo,Consolas,monospace; }
 * { box-sizing:border-box; margin:0; }
 body { background:var(--bg); color:var(--text); font:14px/1.6 var(--mono);
@@ -69,7 +69,7 @@ body { background:var(--bg); color:var(--text); font:14px/1.6 var(--mono);
               color:var(--bright); font:16px var(--mono); letter-spacing:2px;
               padding:13px 14px; border-radius:6px; text-transform:uppercase; }
 .gate input:focus { outline:none; border-color:var(--gold); }
-.gate button { width:100%; margin-top:10px; background:var(--gold); color:var(--bg);
+.gate button { width:100%; margin-top:10px; background:var(--gold); color:#ffffff;
                border:none; font:700 13px var(--mono); letter-spacing:2px;
                text-transform:uppercase; padding:13px; border-radius:6px; cursor:pointer; }
 .gate .err { color:var(--red); font-size:12px; margin-top:10px; min-height:18px; }

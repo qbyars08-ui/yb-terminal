@@ -2,21 +2,21 @@
    dark charcoal, gold accent, mono numbers, bordered grids */
 
 :root {
-  --bg: #1a1a1a;
-  --bg-panel: #202020;
-  --bg-panel-2: #242424;
-  --bg-row-hover: #262626;
-  --bg-input: #171717;
-  --border: #333333;
-  --border-strong: #444444;
-  --gold: #d4a843;
-  --gold-dim: #8a7233;
-  --text: #e8e6e0;
-  --text-dim: #9a988f;
-  --text-faint: #6a6862;
-  --gain: #4caf7d;
-  --loss: #d15b5b;
-  --flat: #9a988f;
+  --bg: #f7f9fc;
+  --bg-panel: #ffffff;
+  --bg-panel-2: #f2f5fa;
+  --bg-row-hover: #eef3fc;
+  --bg-input: #ffffff;
+  --border: #dde4ef;
+  --border-strong: #c5d0e2;
+  --gold: #1d63ed;
+  --gold-dim: #6f97e8;
+  --text: #22304a;
+  --text-dim: #5d6d88;
+  --text-faint: #8794a9;
+  --gain: #0f7a3d;
+  --loss: #d3323c;
+  --flat: #5d6d88;
   --pill-bg: #2b2b2b;
   --spark-primary: #d4a843;
   --spark-muted: #6a6862;

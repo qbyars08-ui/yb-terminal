@@ -52,7 +52,7 @@ def rows(n_priced, n_total):
 
 
 GOOD = ("<html><head></head><body><div class='hero-grid'></div>"
-        "<section id='book'></section><section id='track'></section>"
+        "<section id='book'></section>"
         "<section id='research'></section>"
         "<a href='t/T0.html'>x</a><a href='pricing.html'>p</a></body></html>")
 
@@ -93,9 +93,9 @@ class TestValidateOutput(unittest.TestCase):
         self.assertTrue(any("GONE" in p for p in probs))
 
     def test_missing_section_fails(self):
-        html = GOOD.replace("id='track'", "id='nottrack'")
+        html = GOOD.replace("id='book'", "id='notbook'")
         probs = validate_output(html, rows(19, 19), pages={"T0"})
-        self.assertTrue(any("track" in p for p in probs))
+        self.assertTrue(any("book" in p for p in probs))
 
 
 if __name__ == "__main__":

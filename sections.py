@@ -54,7 +54,7 @@ EXTRA_CSS = """
   /* Nav */
   .yb-nav {
     position: sticky; top: 0; z-index: 10;
-    background: rgba(11, 10, 7, 0.92);
+    background: rgba(247, 249, 252, 0.92);
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 0 16px;

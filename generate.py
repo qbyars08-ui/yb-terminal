@@ -18,7 +18,7 @@ import yfinance as yf
 
 from calendar_yb import (MEMBERS_DAYS, PUBLIC_DAYS, build_calendar,
                          load_catalysts)
-from clientjs import TOOLS_JS, TRACKER_JS, TRACKER_POPULAR, VIZ_SECTION
+from clientjs import TRACKER_POPULAR
 from desknote import (archive_note, desk_note_html, first_sentence,
                       load_desk_note, load_note_archive,
                       notes_page_html, rss_xml)
@@ -222,7 +222,7 @@ NOTES_LINKS = """
 # ── Main render ──────────────────────────────────────────────────
 
 def render(snap, rows, stats, generated_at, pages, quotes, moves,
-           tape_section="", cards_section="", tools_section="",
+           tape_section="", cards_section="",
            desk_section="", members_extras="", calendar_section="",
            wire_section="", book_metas=None):
     # Book table rows
@@ -289,7 +289,6 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
       <a href="index.html">Desk</a>
       <a href="#book">Book</a>
       <a href="#research">Research</a>
-      <a href="#track">Track</a>
       <a href="pricing.html">Pricing</a>
       <a href="{SUBSTACK}" target="_blank" rel="noopener" class="ext">Substack &rarr;</a>
     </div>
@@ -349,47 +348,6 @@ def render(snap, rows, stats, generated_at, pages, quotes, moves,
 
 {members_extras}
 
-<section id="track">
-  <h2>Track Your Book</h2>
-  <div class="sub" style="margin-bottom:16px">Add your positions below. Everything stays
-  in your browser, nothing is sent anywhere. Live prices cover our research universe plus the most-traded US names and ETFs. Anything else still tracks, just without a live quote.</div>
-  <div class="tracker-form">
-    <div class="field"><label>Ticker</label><input id="add-ticker" placeholder="NVDA" autocomplete="off" spellcheck="false"></div>
-    <div class="field"><label>Shares</label><input id="add-shares" type="number" placeholder="10" min="0" step="any"></div>
-    <div class="field"><label>Avg cost</label><input id="add-cost" type="number" placeholder="125.00" min="0" step="any"></div>
-    <button class="btn-gold" onclick="ybAdd()">Add</button>
-  </div>
-  <div class="tracker-tools">
-    <button class="scan-chip" onclick="ybImport()">Import CSV</button>
-    <button class="scan-chip" onclick="ybExport()">Export CSV</button>
-    <button class="scan-chip" onclick="ybShare()">Share desk</button>
-    <input type="file" id="csv-file" accept=".csv" style="display:none">
-    <span class="sub" id="tracker-msg"></span>
-  </div>
-  <div class="sub" style="margin-bottom:10px">CSV header: ticker,shares,cost_basis.
-  Share desk copies a link that carries your positions to any device, still
-  never touching a server.</div>
-  <div id="tracker-summary"></div>
-  <div id="tracker-empty" class="tracker-empty">
-    No positions yet. Add a ticker above to start tracking your book.
-  </div>
-  <div style="overflow-x:auto">
-  <table id="tracker-table" style="display:none"><thead><tr>
-    <th>Ticker</th><th>Shares</th><th>Avg cost</th><th>Price</th><th>Gain</th><th></th>
-  </tr></thead><tbody></tbody></table>
-  </div>
-  <h3 style="margin-top:18px">Watching</h3>
-  <div class="sub" style="margin-bottom:8px">Tickers you track without a position.
-  Optional target: the row goes gold when price crosses under it.</div>
-  <div class="tracker-form">
-    <div class="field"><label>Ticker</label><input id="watch-ticker" placeholder="OKLO" autocomplete="off" spellcheck="false"></div>
-    <div class="field"><label>Target buy, optional</label><input id="watch-target" type="number" placeholder="40.00" min="0" step="any"></div>
-    <button class="btn-gold" onclick="ybWatch()">Watch</button>
-  </div>
-  <div id="watch-list"></div>
-</section>
-
-{tools_section}
 
 <section id="research">
   <h2>Research Library</h2>
@@ -411,8 +369,7 @@ Generated {escape(generated_at)}.</footer>
 
 </main>
 
-<script>{TRACKER_JS}</script>
-<script>{TOOLS_JS}</script>
+
 </body></html>"""
 
 
@@ -514,7 +471,7 @@ def members_html(html):
 
 
 MIN_QUOTE_COVERAGE = 0.9
-REQUIRED_MARKS = ("hero-grid", "id='book'", "id='track'", "id='research'")
+REQUIRED_MARKS = ("hero-grid", "id='book'", "id='research'")
 
 
 def validate_output(html, rows, pages):
@@ -618,8 +575,6 @@ def main():
     hist_json = json.dumps(hist, indent=1, allow_nan=False)
     (DATA_DIR / "history.json").write_text(hist_json, encoding="utf-8")
     (OUT_DIR / "history.json").write_text(hist_json, encoding="utf-8")
-    tools_section = VIZ_SECTION + scanner_html(tools["tickers"], quotes, pages,
-                                           conv_deltas=conv_deltas)
 
     # Desk note (agent-written, may be absent or stale: rendered honestly)
     # + members-only sections. Each degrades to blank alone.
@@ -653,12 +608,12 @@ def main():
     scan_members = (market_scan_html(scan_feed, members=True, today=today)
                     + proving_ground_html(bt_feed, today=today))
     html = render(snap, rows, stats, generated_at, pages, quotes, moves,
-                  tape_section, cards_section, tools_section,
+                  tape_section, cards_section,
                   desk_section=desk_public, calendar_section=cal_public,
                   wire_section=wire_html(scout_items, 4) + scan_public,
                   book_metas=ctx.get("metas"))
     m_html = render(snap, rows, stats, generated_at, pages, quotes, moves,
-                    tape_section, cards_section, tools_section,
+                    tape_section, cards_section,
                     desk_section=today_html + desk_members,
                     members_extras=members_extras,
                     calendar_section=cal_members,
