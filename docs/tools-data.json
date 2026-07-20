@@ -4,9 +4,7 @@
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
-   "health": "INTACT",
-   "conviction": 65,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "ANET": {
    "layer": "Networking",
@@ -69,7 +67,7 @@
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 46,
+   "conviction": 45,
    "stance": "neutral"
   },
   "MU": {
@@ -149,7 +147,7 @@
    "thesis": "Only public photonic quantum pure-play. Room-temperature qubits on fiber. DARPA + Lockheed + AMD customers. 5-year thesis.",
    "held": 6.1,
    "health": "INTACT",
-   "conviction": 59,
+   "conviction": 58,
    "stance": "neutral"
   },
   "ADBE": {},
@@ -168,13 +166,13 @@
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 67,
+   "conviction": 66,
    "stance": "bull"
   },
   "BE": {
    "layer": "Power & Grid",
    "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 58,
+   "conviction": 59,
    "stance": "neutral"
   },
   "BIRD": {
@@ -230,7 +228,7 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 55,
+   "conviction": 54,
    "stance": "neutral"
   },
   "LLY": {
@@ -266,15 +264,11 @@
   },
   "MRVL": {
    "layer": "Compute",
-   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
-   "conviction": 53,
-   "stance": "neutral"
+   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
   },
   "NOW": {
    "layer": "Software",
    "thesis": "Enterprise automation platform, AI agents for IT",
-   "conviction": 61,
-   "stance": "bull",
    "earnings": "2026-07-22"
   },
   "NVDA": {
@@ -286,7 +280,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 48,
+   "conviction": 50,
    "stance": "neutral"
   },
   "ON": {
@@ -350,9 +344,7 @@
   },
   "WOLF": {
    "layer": "Power & Grid",
-   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
-   "conviction": 37,
-   "stance": "bear"
+   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased"
   },
   "AAPL": {},
   "ABNB": {},
@@ -375,7 +367,7 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 43,
+   "conviction": 46,
    "stance": "neutral"
   },
   "DIS": {},
@@ -385,10 +377,7 @@
    "stance": "neutral"
   },
   "GM": {},
-  "GOOGL": {
-   "conviction": 52,
-   "stance": "neutral"
-  },
+  "GOOGL": {},
   "HON": {},
   "HOOD": {},
   "INTC": {
@@ -403,13 +392,13 @@
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 50,
+   "conviction": 49,
    "stance": "neutral"
   },
   "MSFT": {
@@ -437,7 +426,7 @@
    "stance": "neutral"
   },
   "RTX": {
-   "conviction": 41,
+   "conviction": 43,
    "stance": "neutral"
   },
   "SBUX": {},
@@ -452,10 +441,7 @@
   "SPOT": {},
   "SPY": {},
   "TSLA": {},
-  "TSM": {
-   "conviction": 53,
-   "stance": "neutral"
-  },
+  "TSM": {},
   "TXN": {},
   "UBER": {},
   "UNH": {},
