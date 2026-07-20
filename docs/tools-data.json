@@ -13,7 +13,7 @@
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
    "health": "INTACT",
-   "conviction": 61,
+   "conviction": 60,
    "stance": "bull",
    "earnings": "2026-08-04"
   },
@@ -39,6 +39,8 @@
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
+   "conviction": 57,
+   "stance": "neutral",
    "earnings": "2026-08-06"
   },
   "CRDO": {
@@ -66,7 +68,9 @@
   },
   "LUMN": {
    "held": 3.4,
-   "health": "BROKEN"
+   "health": "BROKEN",
+   "conviction": 46,
+   "stance": "neutral"
   },
   "MU": {
    "layer": "Compute & Memory",
@@ -87,7 +91,7 @@
   "NOK": {
    "held": 2.9,
    "health": "STRESSED",
-   "conviction": 61,
+   "conviction": 60,
    "stance": "bull",
    "earnings": "2026-07-23"
   },
@@ -128,13 +132,17 @@
    "layer": "Networking",
    "thesis": "First AI-inference production order landing on a recovering core, a 5.4M-share float, net cash worth a quarter of the cap, and $0.55 of EPS torque per $10M of revenue",
    "held": 3.7,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 60,
+   "stance": "bull"
   },
   "WYY": {
    "layer": "Adjacent Tech",
    "thesis": "A $126M certified federal-identity microcap riding the zero-trust mandate, up from under $3 to $13 and still uncovered",
    "held": 7.1,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 51,
+   "stance": "neutral"
   },
   "XNDU": {
    "layer": "Physics",
@@ -154,7 +162,7 @@
   "AVAV": {
    "layer": "Space",
    "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%",
-   "conviction": 41,
+   "conviction": 42,
    "stance": "neutral"
   },
   "AVGO": {
@@ -178,7 +186,7 @@
   "BN": {
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 37,
+   "conviction": 35,
    "stance": "bear"
   },
   "CC": {},
@@ -191,7 +199,7 @@
   "COHR": {
    "layer": "Networking",
    "thesis": "25% optical transceiver market share, NVIDIA $2B partnership",
-   "conviction": 51,
+   "conviction": 50,
    "stance": "neutral"
   },
   "FN": {
@@ -203,8 +211,8 @@
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 40,
-   "stance": "neutral"
+   "conviction": 37,
+   "stance": "bear"
   },
   "INV": {},
   "IREN": {
@@ -222,24 +230,26 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 54,
+   "conviction": 55,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 53,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
-   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue."
+   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
+   "conviction": 46,
+   "stance": "neutral"
   },
   "LWLG": {
    "layer": "Networking",
    "thesis": "Electro-optic polymer modulators, 200G+ capable",
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "MBLY": {
@@ -275,20 +285,18 @@
   },
   "OKLO": {
    "layer": "Power",
-   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 51,
-   "stance": "neutral"
+   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors"
   },
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
+   "conviction": 52,
+   "stance": "neutral",
    "earnings": "2026-08-03"
   },
   "PANW": {
    "layer": "DataCenter",
-   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B",
-   "conviction": 55,
-   "stance": "neutral"
+   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B"
   },
   "PLTR": {
    "layer": "Software",
@@ -299,7 +307,7 @@
   "POET": {
    "layer": "Networking",
    "thesis": "Silicon photonics for optical interconnects, TSMC partnership",
-   "conviction": 54,
+   "conviction": 56,
    "stance": "neutral"
   },
   "PPSI": {
@@ -325,9 +333,7 @@
   },
   "VRT": {
    "layer": "DataCenter",
-   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play",
-   "conviction": 49,
-   "stance": "neutral"
+   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play"
   },
   "VST": {
    "layer": "Power & Grid",
@@ -362,10 +368,7 @@
   "CVX": {},
   "DDOG": {},
   "DE": {},
-  "DELL": {
-   "conviction": 43,
-   "stance": "neutral"
-  },
+  "DELL": {},
   "DIS": {},
   "F": {},
   "GE": {
@@ -383,15 +386,12 @@
    "conviction": 42,
    "stance": "neutral"
   },
-  "IONQ": {
-   "conviction": 43,
-   "stance": "neutral"
-  },
+  "IONQ": {},
   "IWM": {},
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 44,
+   "conviction": 45,
    "stance": "neutral"
   },
   "MA": {},
@@ -401,7 +401,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "NET": {},
