@@ -4,7 +4,9 @@
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 64,
+   "stance": "bull"
   },
   "ANET": {
    "layer": "Networking",
@@ -67,7 +69,7 @@
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 45,
+   "conviction": 46,
    "stance": "neutral"
   },
   "MU": {
@@ -147,7 +149,7 @@
    "thesis": "Only public photonic quantum pure-play. Room-temperature qubits on fiber. DARPA + Lockheed + AMD customers. 5-year thesis.",
    "held": 6.1,
    "health": "INTACT",
-   "conviction": 58,
+   "conviction": 59,
    "stance": "neutral"
   },
   "ADBE": {},
@@ -172,7 +174,7 @@
   "BE": {
    "layer": "Power & Grid",
    "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 59,
+   "conviction": 58,
    "stance": "neutral"
   },
   "BIRD": {
@@ -228,20 +230,20 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 54,
+   "conviction": 53,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 54,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
    "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 47,
+   "conviction": 46,
    "stance": "neutral"
   },
   "LWLG": {
@@ -253,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 55,
+   "conviction": 54,
    "stance": "neutral"
   },
   "MOD": {
@@ -264,11 +266,15 @@
   },
   "MRVL": {
    "layer": "Compute",
-   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
+   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
+   "conviction": 53,
+   "stance": "neutral"
   },
   "NOW": {
    "layer": "Software",
    "thesis": "Enterprise automation platform, AI agents for IT",
+   "conviction": 61,
+   "stance": "bull",
    "earnings": "2026-07-22"
   },
   "NVDA": {
@@ -344,7 +350,9 @@
   },
   "WOLF": {
    "layer": "Power & Grid",
-   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased"
+   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
+   "conviction": 37,
+   "stance": "bear"
   },
   "AAPL": {},
   "ABNB": {},
@@ -377,7 +385,10 @@
    "stance": "neutral"
   },
   "GM": {},
-  "GOOGL": {},
+  "GOOGL": {
+   "conviction": 52,
+   "stance": "neutral"
+  },
   "HON": {},
   "HOOD": {},
   "INTC": {
@@ -398,7 +409,7 @@
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "MSFT": {
@@ -441,7 +452,10 @@
   "SPOT": {},
   "SPY": {},
   "TSLA": {},
-  "TSM": {},
+  "TSM": {
+   "conviction": 53,
+   "stance": "neutral"
+  },
   "TXN": {},
   "UBER": {},
   "UNH": {},
