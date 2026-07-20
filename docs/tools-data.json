@@ -5,7 +5,7 @@
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
    "health": "INTACT",
-   "conviction": 64,
+   "conviction": 65,
    "stance": "bull"
   },
   "ANET": {
@@ -22,7 +22,7 @@
    "thesis": "IP toll on every non-x86 AI chip, v9 royalty rate 2x v8, hyperscaler share approaching 50%, royalty annuity model",
    "held": 5.2,
    "health": "INTACT",
-   "conviction": 70,
+   "conviction": 69,
    "stance": "bull",
    "earnings": "2026-07-29"
   },
@@ -47,14 +47,12 @@
    "layer": "Networking",
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
-   "health": "INTACT",
-   "conviction": 59,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "IQMX": {
    "held": 3.1,
    "health": "INTACT",
-   "conviction": 58,
+   "conviction": 59,
    "stance": "neutral"
   },
   "LPKFF": {
@@ -162,19 +160,19 @@
   "AVAV": {
    "layer": "Space",
    "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%",
-   "conviction": 42,
+   "conviction": 43,
    "stance": "neutral"
   },
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 69,
+   "conviction": 67,
    "stance": "bull"
   },
   "BE": {
    "layer": "Power & Grid",
    "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 54,
+   "conviction": 55,
    "stance": "neutral"
   },
   "BIRD": {
@@ -186,7 +184,7 @@
   "BN": {
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 35,
+   "conviction": 36,
    "stance": "bear"
   },
   "CC": {},
@@ -230,20 +228,18 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 55,
+   "conviction": 54,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 52,
-   "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
    "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 46,
+   "conviction": 47,
    "stance": "neutral"
   },
   "LWLG": {
@@ -280,12 +276,14 @@
   "NVDA": {
    "layer": "Compute",
    "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral"
   },
   "OKLO": {
    "layer": "Power",
-   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors"
+   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
+   "conviction": 51,
+   "stance": "neutral"
   },
   "ON": {
    "layer": "Compute",
@@ -328,12 +326,14 @@
   "TSEM": {
    "layer": "Networking",
    "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "VRT": {
    "layer": "DataCenter",
-   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play"
+   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play",
+   "conviction": 49,
+   "stance": "neutral"
   },
   "VST": {
    "layer": "Power & Grid",
@@ -355,7 +355,7 @@
    "stance": "neutral"
   },
   "AMZN": {
-   "conviction": 54,
+   "conviction": 53,
    "stance": "neutral"
   },
   "BA": {},
@@ -368,7 +368,10 @@
   "CVX": {},
   "DDOG": {},
   "DE": {},
-  "DELL": {},
+  "DELL": {
+   "conviction": 46,
+   "stance": "neutral"
+  },
   "DIS": {},
   "F": {},
   "GE": {
@@ -386,7 +389,10 @@
    "conviction": 42,
    "stance": "neutral"
   },
-  "IONQ": {},
+  "IONQ": {
+   "conviction": 43,
+   "stance": "neutral"
+  },
   "IWM": {},
   "JPM": {},
   "KO": {},
@@ -396,10 +402,7 @@
   },
   "MA": {},
   "MCD": {},
-  "META": {
-   "conviction": 51,
-   "stance": "neutral"
-  },
+  "META": {},
   "MSFT": {
    "conviction": 51,
    "stance": "neutral"
@@ -412,7 +415,7 @@
   "PEP": {},
   "PYPL": {},
   "QBTS": {
-   "conviction": 47,
+   "conviction": 46,
    "stance": "neutral"
   },
   "QCOM": {

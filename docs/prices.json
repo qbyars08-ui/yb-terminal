@@ -320,8 +320,8 @@
   "changePct": -1.55
  },
  "IWM": {
-  "price": 292.35,
-  "changePct": -0.57
+  "price": 292.31,
+  "changePct": -0.59
  },
  "JPM": {
   "price": 338.87,
@@ -456,7 +456,7 @@
   "changePct": 0.56
  },
  "VOO": {
-  "price": 682.2,
+  "price": 682.21,
   "changePct": -0.14
  },
  "VTI": {
