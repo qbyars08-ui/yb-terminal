@@ -5,7 +5,7 @@
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
    "health": "INTACT",
-   "conviction": 65,
+   "conviction": 64,
    "stance": "bull"
   },
   "ANET": {
@@ -47,7 +47,9 @@
    "layer": "Networking",
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 60,
+   "stance": "bull"
   },
   "IQMX": {
    "held": 3.1,
@@ -160,19 +162,19 @@
   "AVAV": {
    "layer": "Space",
    "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%",
-   "conviction": 43,
+   "conviction": 42,
    "stance": "neutral"
   },
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
    "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 67,
+   "conviction": 68,
    "stance": "bull"
   },
   "BE": {
    "layer": "Power & Grid",
    "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 55,
+   "conviction": 54,
    "stance": "neutral"
   },
   "BIRD": {
@@ -203,14 +205,14 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 50,
+   "conviction": 49,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 37,
-   "stance": "bear"
+   "conviction": 40,
+   "stance": "neutral"
   },
   "INV": {},
   "IREN": {
@@ -234,12 +236,14 @@
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
+   "conviction": 52,
+   "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
    "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 47,
+   "conviction": 46,
    "stance": "neutral"
   },
   "LWLG": {
@@ -251,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 54,
+   "conviction": 55,
    "stance": "neutral"
   },
   "MOD": {
@@ -288,13 +292,15 @@
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 52,
+   "conviction": 53,
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
   "PANW": {
    "layer": "DataCenter",
-   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B"
+   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B",
+   "conviction": 55,
+   "stance": "neutral"
   },
   "PLTR": {
    "layer": "Software",
@@ -320,38 +326,38 @@
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 42,
+   "conviction": 43,
    "stance": "neutral"
   },
   "TSEM": {
    "layer": "Networking",
    "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 44,
+   "conviction": 45,
    "stance": "neutral"
   },
   "VRT": {
    "layer": "DataCenter",
    "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play",
-   "conviction": 49,
+   "conviction": 42,
    "stance": "neutral"
   },
   "VST": {
    "layer": "Power & Grid",
    "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "conviction": 58,
-   "stance": "neutral",
+   "conviction": 63,
+   "stance": "bull",
    "earnings": "2026-08-06"
   },
   "WOLF": {
    "layer": "Power & Grid",
    "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
-   "conviction": 38,
+   "conviction": 37,
    "stance": "bear"
   },
   "AAPL": {},
   "ABNB": {},
   "AMD": {
-   "conviction": 55,
+   "conviction": 48,
    "stance": "neutral"
   },
   "AMZN": {
@@ -369,7 +375,7 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 46,
+   "conviction": 43,
    "stance": "neutral"
   },
   "DIS": {},
@@ -390,21 +396,24 @@
    "stance": "neutral"
   },
   "IONQ": {
-   "conviction": 43,
+   "conviction": 42,
    "stance": "neutral"
   },
   "IWM": {},
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "MA": {},
   "MCD": {},
-  "META": {},
-  "MSFT": {
+  "META": {
    "conviction": 51,
+   "stance": "neutral"
+  },
+  "MSFT": {
+   "conviction": 50,
    "stance": "neutral"
   },
   "NET": {},
@@ -428,7 +437,7 @@
    "stance": "neutral"
   },
   "RTX": {
-   "conviction": 41,
+   "conviction": 44,
    "stance": "neutral"
   },
   "SBUX": {},
