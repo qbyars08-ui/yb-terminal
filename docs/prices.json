@@ -103,6 +103,10 @@
   "price": 42.15,
   "changePct": -0.57
  },
+ "CC": {
+  "price": 17.92,
+  "changePct": 4.31
+ },
  "CEG": {
   "price": 262.22,
   "changePct": 3.44
