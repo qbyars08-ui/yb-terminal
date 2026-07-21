@@ -257,7 +257,7 @@
     quotesTried: {},    // tickers we already asked the live tape for (loop guard)
     sharedView: null    // decoded {positions, watchlist} from a #d= link, while viewing read-only
   };
-  var QUOTES_API = "https://youngbullinvests.com/api/quotes?tickers=";
+  var QUOTES_API = "https://young-bull-site.vercel.app/api/quotes?tickers=";
   var QUOTES_CACHE_KEY = "ybdesk.quotes.v1";
   var QUOTES_TTL_MS = 5 * 60 * 1000;
 
@@ -965,7 +965,7 @@
 
   // ---- News: lazy per-ticker headlines for expandable rows. Fetched the
   // first time a row opens, cached for the session so re-opening is instant.
-  var NEWS_API = "https://youngbullinvests.com/api/ticker-news?tickers=";
+  var NEWS_API = "https://young-bull-site.vercel.app/api/ticker-news?tickers=";
   var newsCache = {}; // ticker -> array of items, or "pending"
 
   function timeAgo(iso) {
@@ -1017,7 +1017,7 @@
   // ---- Earnings ahead: next scheduled report date per desk/watchlist name.
   // One fetch per distinct ticker set per session (12h cache matches the
   // API's edge cache). Dates only, no estimates: dates are facts.
-  var EARNINGS_API = "https://youngbullinvests.com/api/earnings-calendar?tickers=";
+  var EARNINGS_API = "https://young-bull-site.vercel.app/api/earnings-calendar?tickers=";
   var EARNINGS_CACHE_KEY = "ybdesk.earnings.v1";
   var EARNINGS_TTL_MS = 12 * 60 * 60 * 1000;
   var earningsLastKey = null;

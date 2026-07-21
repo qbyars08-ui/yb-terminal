@@ -30,7 +30,9 @@
    "layer": "Adjacent Tech",
    "thesis": "Satellite direct-to-cell connectivity. Q1 2026 missed revenue 60% (FY guide reaffirmed). 50 sh held. Adjacent Tech sleeve.",
    "held": 7.5,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 60,
+   "stance": "bull"
   },
   "CIFR": {
    "layer": "Datacenters",
@@ -46,7 +48,7 @@
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
    "health": "INTACT",
-   "conviction": 59,
+   "conviction": 58,
    "stance": "neutral"
   },
   "IQMX": {
@@ -60,14 +62,14 @@
    "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
    "held": 1.6,
    "health": "BROKEN",
-   "conviction": 55,
+   "conviction": 56,
    "stance": "neutral",
    "earnings": "2026-07-23"
   },
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 47,
+   "conviction": 46,
    "stance": "neutral"
   },
   "MU": {
@@ -89,7 +91,7 @@
   "NOK": {
    "held": 2.9,
    "health": "STRESSED",
-   "conviction": 62,
+   "conviction": 61,
    "stance": "bull",
    "earnings": "2026-07-23"
   },
@@ -122,7 +124,7 @@
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
    "health": "STRESSED",
-   "conviction": 64,
+   "conviction": 63,
    "stance": "bull",
    "earnings": "2026-08-06"
   },
@@ -177,7 +179,9 @@
   },
   "BIRD": {
    "layer": "Other",
-   "thesis": "Allbirds consumer brand, pending exit"
+   "thesis": "Allbirds consumer brand, pending exit",
+   "conviction": 33,
+   "stance": "bear"
   },
   "BN": {
    "layer": "Power",
@@ -195,7 +199,7 @@
   "COHR": {
    "layer": "Networking",
    "thesis": "25% optical transceiver market share, NVIDIA $2B partnership",
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "FN": {
@@ -207,14 +211,14 @@
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 36,
+   "conviction": 39,
    "stance": "bear"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 50,
+   "conviction": 47,
    "stance": "neutral"
   },
   "KTOS": {
@@ -226,13 +230,13 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 53,
+   "conviction": 51,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
@@ -251,7 +255,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 55,
+   "conviction": 53,
    "stance": "neutral"
   },
   "MOD": {
@@ -282,7 +286,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 55,
+   "conviction": 52,
    "stance": "neutral"
   },
   "ON": {
@@ -322,13 +326,13 @@
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 43,
+   "conviction": 44,
    "stance": "neutral"
   },
   "TSEM": {
    "layer": "Networking",
    "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 48,
+   "conviction": 47,
    "stance": "neutral"
   },
   "VRT": {
@@ -340,7 +344,7 @@
   "VST": {
    "layer": "Power & Grid",
    "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "conviction": 57,
+   "conviction": 58,
    "stance": "neutral",
    "earnings": "2026-08-06"
   },
@@ -371,7 +375,7 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 44,
+   "conviction": 46,
    "stance": "neutral"
   },
   "DIS": {},
@@ -391,6 +395,10 @@
    "conviction": 42,
    "stance": "neutral"
   },
+  "IONQ": {
+   "conviction": 43,
+   "stance": "neutral"
+  },
   "IWM": {},
   "JPM": {},
   "KO": {},
@@ -400,8 +408,14 @@
   },
   "MA": {},
   "MCD": {},
-  "META": {},
-  "MSFT": {},
+  "META": {
+   "conviction": 50,
+   "stance": "neutral"
+  },
+  "MSFT": {
+   "conviction": 49,
+   "stance": "neutral"
+  },
   "NET": {},
   "NFLX": {},
   "NKE": {},
@@ -409,7 +423,10 @@
   "ORCL": {},
   "PEP": {},
   "PYPL": {},
-  "QBTS": {},
+  "QBTS": {
+   "conviction": 47,
+   "stance": "neutral"
+  },
   "QCOM": {
    "conviction": 45,
    "stance": "neutral"
@@ -420,14 +437,14 @@
    "stance": "neutral"
   },
   "RTX": {
-   "conviction": 40,
+   "conviction": 42,
    "stance": "neutral"
   },
   "SBUX": {},
   "SCHD": {},
   "SHOP": {},
   "SMCI": {
-   "conviction": 50,
+   "conviction": 48,
    "stance": "neutral"
   },
   "SNOW": {},
