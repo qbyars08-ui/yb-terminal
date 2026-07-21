@@ -5,7 +5,7 @@
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
    "health": "INTACT",
-   "conviction": 67,
+   "conviction": 66,
    "stance": "bull"
   },
   "ANET": {
@@ -13,7 +13,7 @@
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
    "health": "INTACT",
-   "conviction": 60,
+   "conviction": 61,
    "stance": "bull",
    "earnings": "2026-08-04"
   },
@@ -22,7 +22,7 @@
    "thesis": "IP toll on every non-x86 AI chip, v9 royalty rate 2x v8, hyperscaler share approaching 50%, royalty annuity model",
    "held": 5.2,
    "health": "INTACT",
-   "conviction": 70,
+   "conviction": 69,
    "stance": "bull",
    "earnings": "2026-07-29"
   },
@@ -30,26 +30,20 @@
    "layer": "Adjacent Tech",
    "thesis": "Satellite direct-to-cell connectivity. Q1 2026 missed revenue 60% (FY guide reaffirmed). 50 sh held. Adjacent Tech sleeve.",
    "held": 7.5,
-   "health": "INTACT",
-   "conviction": 60,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "CIFR": {
    "layer": "Datacenters",
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
-   "conviction": 56,
-   "stance": "neutral",
    "earnings": "2026-08-06"
   },
   "CRDO": {
    "layer": "Networking",
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
-   "health": "INTACT",
-   "conviction": 59,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "IQMX": {
    "held": 3.1,
@@ -62,7 +56,7 @@
    "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
    "held": 1.6,
    "health": "BROKEN",
-   "conviction": 56,
+   "conviction": 55,
    "stance": "neutral",
    "earnings": "2026-07-23"
   },
@@ -100,14 +94,16 @@
    "thesis": "The rugged box for AI in the field: 55% revenue growth, 1.8x book-to-bill, zero debt, turning itself into a defense-AI supplier in real time",
    "held": 5.1,
    "health": "STRESSED",
-   "conviction": 61,
+   "conviction": 60,
    "stance": "bull"
   },
   "OUST": {
    "layer": "Adjacent Tech",
    "thesis": "Lidar + cameras + full perception stack for robotics. REV8 launched. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 8.4,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 61,
+   "stance": "bull"
   },
   "PENG": {
    "layer": "Datacenters",
@@ -122,7 +118,7 @@
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
    "health": "STRESSED",
-   "conviction": 63,
+   "conviction": 64,
    "stance": "bull",
    "earnings": "2026-08-06"
   },
@@ -138,7 +134,9 @@
    "layer": "Adjacent Tech",
    "thesis": "A $126M certified federal-identity microcap riding the zero-trust mandate, up from under $3 to $13 and still uncovered",
    "held": 7.1,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 51,
+   "stance": "neutral"
   },
   "XNDU": {
    "layer": "Physics",
@@ -169,9 +167,7 @@
   },
   "BE": {
    "layer": "Power & Grid",
-   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 58,
-   "stance": "neutral"
+   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet"
   },
   "BIRD": {
    "layer": "Other",
@@ -182,14 +178,13 @@
   "BN": {
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 36,
+   "conviction": 35,
    "stance": "bear"
   },
-  "CC": {},
   "CEG": {
    "layer": "Power",
    "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
-   "conviction": 61,
+   "conviction": 60,
    "stance": "bull"
   },
   "COHR": {
@@ -201,20 +196,20 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 49,
+   "conviction": 48,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 39,
+   "conviction": 38,
    "stance": "bear"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 48,
+   "conviction": 47,
    "stance": "neutral"
   },
   "KTOS": {
@@ -226,13 +221,13 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 53,
+   "conviction": 54,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 53,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
@@ -250,20 +245,16 @@
   },
   "MBLY": {
    "layer": "Auto",
-   "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 54,
-   "stance": "neutral"
+   "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash"
   },
   "MOD": {
    "layer": "DataCenter",
-   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation",
-   "conviction": 48,
-   "stance": "neutral"
+   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation"
   },
   "MRVL": {
    "layer": "Compute",
    "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
-   "conviction": 54,
+   "conviction": 53,
    "stance": "neutral"
   },
   "NOW": {
@@ -282,7 +273,7 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 51,
+   "conviction": 53,
    "stance": "neutral"
   },
   "ON": {
@@ -322,14 +313,12 @@
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 44,
+   "conviction": 43,
    "stance": "neutral"
   },
   "TSEM": {
    "layer": "Networking",
-   "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 47,
-   "stance": "neutral"
+   "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout"
   },
   "VRT": {
    "layer": "DataCenter",
@@ -371,14 +360,20 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 46,
+   "conviction": 43,
    "stance": "neutral"
   },
   "DIS": {},
   "F": {},
-  "GE": {},
+  "GE": {
+   "conviction": 47,
+   "stance": "neutral"
+  },
   "GM": {},
-  "GOOGL": {},
+  "GOOGL": {
+   "conviction": 51,
+   "stance": "neutral"
+  },
   "HON": {},
   "HOOD": {},
   "INTC": {
@@ -392,14 +387,17 @@
   "IWM": {},
   "JPM": {},
   "KO": {},
-  "LMT": {},
-  "MA": {},
-  "MCD": {},
-  "META": {
-   "conviction": 50,
+  "LMT": {
+   "conviction": 43,
    "stance": "neutral"
   },
-  "MSFT": {},
+  "MA": {},
+  "MCD": {},
+  "META": {},
+  "MSFT": {
+   "conviction": 48,
+   "stance": "neutral"
+  },
   "NET": {},
   "NFLX": {},
   "NKE": {},
@@ -416,10 +414,13 @@
    "stance": "neutral"
   },
   "QQQ": {},
-  "RGTI": {},
-  "RTX": {
-   "conviction": 42,
+  "RGTI": {
+   "conviction": 40,
    "stance": "neutral"
+  },
+  "RTX": {
+   "conviction": 39,
+   "stance": "bear"
   },
   "SBUX": {},
   "SCHD": {},
