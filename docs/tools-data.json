@@ -48,8 +48,8 @@
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
    "health": "INTACT",
-   "conviction": 60,
-   "stance": "bull"
+   "conviction": 59,
+   "stance": "neutral"
   },
   "IQMX": {
    "held": 3.1,
@@ -192,9 +192,7 @@
   "CC": {},
   "CEG": {
    "layer": "Power",
-   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
-   "conviction": 60,
-   "stance": "bull"
+   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand"
   },
   "COHR": {
    "layer": "Networking",
@@ -205,7 +203,7 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "HIMS": {
@@ -229,9 +227,7 @@
   },
   "LITE": {
    "layer": "Networking",
-   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 54,
-   "stance": "neutral"
+   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal"
   },
   "LLY": {
    "layer": "Pharma",
@@ -255,7 +251,7 @@
   "MBLY": {
    "layer": "Auto",
    "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 55,
+   "conviction": 54,
    "stance": "neutral"
   },
   "MOD": {
@@ -279,9 +275,7 @@
   },
   "NVDA": {
    "layer": "Compute",
-   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue",
-   "conviction": 54,
-   "stance": "neutral"
+   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue"
   },
   "OKLO": {
    "layer": "Power",
@@ -292,7 +286,7 @@
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 53,
+   "conviction": 51,
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
@@ -326,38 +320,36 @@
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 43,
+   "conviction": 42,
    "stance": "neutral"
   },
   "TSEM": {
    "layer": "Networking",
    "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "VRT": {
    "layer": "DataCenter",
-   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play",
-   "conviction": 42,
-   "stance": "neutral"
+   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play"
   },
   "VST": {
    "layer": "Power & Grid",
    "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "conviction": 63,
-   "stance": "bull",
+   "conviction": 58,
+   "stance": "neutral",
    "earnings": "2026-08-06"
   },
   "WOLF": {
    "layer": "Power & Grid",
    "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
-   "conviction": 37,
+   "conviction": 38,
    "stance": "bear"
   },
   "AAPL": {},
   "ABNB": {},
   "AMD": {
-   "conviction": 48,
+   "conviction": 55,
    "stance": "neutral"
   },
   "AMZN": {
@@ -375,7 +367,7 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 43,
+   "conviction": 41,
    "stance": "neutral"
   },
   "DIS": {},
@@ -413,7 +405,7 @@
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 50,
+   "conviction": 51,
    "stance": "neutral"
   },
   "NET": {},
