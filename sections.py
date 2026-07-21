@@ -200,6 +200,9 @@ EXTRA_CSS = """
   .cal-item:last-child { border-bottom:none; }
   .cal-date { font-family:var(--mono); color:var(--gold); flex-shrink:0; width:44px;
               font-size:12px; }
+  .cal-days { font-family:var(--mono); font-size:10px; color:var(--dim);
+              border:1px solid var(--border); border-radius:5px; padding:1px 6px;
+              flex-shrink:0; white-space:nowrap; }
   .cal-body { flex:1; }
   .cal-why { color:var(--dim); font-size:12px; margin-top:2px; line-height:1.5; }
   .cal-receipt { font-size:11px; border:1px solid var(--border); border-radius:5px;
@@ -579,6 +582,14 @@ def request_line_html():
             f"rel='noopener'>Drop a request in the chat</a></section>")
 
 
+def _cal_days_chip(days):
+    """Plain-language countdown. None (unwindowed entry) renders nothing."""
+    if days is None:
+        return ""
+    label = "today" if days == 0 else "tomorrow" if days == 1 else f"in {days}d"
+    return f"<span class='cal-days'>{label}</span>"
+
+
 def _cal_row(e, pages):
     tick = ""
     if e["t"]:
@@ -590,7 +601,7 @@ def _cal_row(e, pages):
         receipt = (f" <a class='cal-receipt' href='{escape(e['receipt'])}' "
                    f"rel='noopener'>receipt</a>")
     return (f"<div class='cal-item'><span class='cal-date'>{escape(e['date'][5:])}"
-            f"</span><span class='cal-body'>{tick} "
+            f"</span>{_cal_days_chip(e.get('days'))}<span class='cal-body'>{tick} "
             f"<span>{escape(e['what'])}</span>{receipt}{why}</span></div>")
 
 

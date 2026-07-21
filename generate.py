@@ -18,6 +18,7 @@ import yfinance as yf
 
 from calendar_yb import (MEMBERS_DAYS, PUBLIC_DAYS, build_calendar,
                          load_catalysts)
+from earnings_fmp import fetch_fmp_earnings, merge_earnings
 from clientjs import TRACKER_POPULAR
 from desknote import (archive_note, desk_note_html, first_sentence,
                       load_desk_note, load_note_archive,
@@ -585,9 +586,12 @@ def main():
     members_extras = (mission_log_html(load_weekly_counts(today), today)
                       + request_line_html() + NOTES_LINKS)
 
-    # Catalyst calendar: public week, members quarter
+    # Catalyst calendar: public week, members quarter. Earnings dates are
+    # the in-house Supabase table first, FMP filling coverage-universe gaps
+    # (no key on disk = Supabase only, stated in the refresh log).
     curated = load_catalysts()
-    earnings = ctx.get("catalysts", {})
+    earnings = merge_earnings(ctx.get("catalysts", {}),
+                              fetch_fmp_earnings(set(tools["tickers"]), today))
     cal_public = calendar_public_html(
         build_calendar(curated, earnings, today, PUBLIC_DAYS))
     cal_entries = build_calendar(curated, earnings, today, MEMBERS_DAYS)

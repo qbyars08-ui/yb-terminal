@@ -1,12 +1,12 @@
 {
- "_readme": "Hand-curated dated catalysts for the Terminal calendar. APPEND RULES for the 15:00 content shift: only add a row when the date is verified in a primary source or one of Quinn's published posts; a date you cannot verify STAYS OUT (blank beats fake). Fields: date (YYYY-MM-DD, required), t (ticker, may be empty for market-wide events), what (required, short), why (one line, Quinn's voice, no em dashes), receipt (URL to the post or filing that grounds it). Earnings dates come from the machine's earnings_calendar automatically; only add an earnings row here if you have a WHY worth reading. KNOWN GAPS to fill when verifiable: MU next earnings date (FQ ends late Aug, date not yet announced), SKHY ADS lockup expiry (check the F-1).",
+ "_readme": "Hand-curated dated catalysts for the Terminal calendar. APPEND RULES for the 15:00 content shift: only add a row when the date is verified in a primary source (company IR press release, SEC filing, Federal Register) or one of Quinn's published posts; a date you cannot verify STAYS OUT (blank beats fake). Aggregator 'expected' earnings dates are ESTIMATES, not dates. Fields: date (YYYY-MM-DD, required), t (ticker, may be empty for market-wide events), what (required, short), why (one line, Quinn's voice, no em dashes), receipt (URL to the post, filing, or press release that grounds it). Earnings dates come from the machine's calendar automatically; only add an earnings row here if you have a WHY worth reading. KNOWN GAPS to fill when verifiable: MU FQ4 earnings date (NOT announced as of 2026-07-20 per investors.micron.com; aggregators guess late Sept, unverified, STAYS OUT until Micron's press release), NVDA Q2 FY27 date (not company-confirmed yet), RKLB / ASTS / CRDO / NBIS dates (aggregator estimates only).",
  "catalysts": [
   {
    "date": "2026-07-20",
    "t": "CC",
    "what": "EPA PFAS comment window closes",
-   "why": "The contrarian Chemours case leans on PFAS rules landing survivable. This is the day the public comment window shuts and the docket goes quiet.",
-   "receipt": "https://youngbullinvests.substack.com/p/nvidia-just-panic-bought-4-billion"
+   "why": "The contrarian Chemours case leans on PFAS rules landing survivable. Both dockets shut today, the rescission rule and the PFOA PFOS deadline extension, and the agency goes quiet to write the finals.",
+   "receipt": "https://www.epa.gov/sdwa/proposed-pfas-rescission-rule"
   },
   {
    "date": "2026-07-22",
@@ -25,9 +25,79 @@
   {
    "date": "2026-07-23",
    "t": "NOK",
-   "what": "Earnings",
+   "what": "Earnings, Q2 and half-year report",
    "why": "First print since the re-entry. The pivot story either shows up in the numbers or it does not.",
-   "receipt": ""
+   "receipt": "https://www.nokia.com/newsroom/nokia-to-publish-second-quarter-and-half-year-2026-financial-report-on-23-july-2026/"
+  },
+  {
+   "date": "2026-07-29",
+   "t": "ARM",
+   "what": "Earnings, FQ1 2027, after close",
+   "why": "Royalty rates against a softening handset tape. The licensing pipeline is the number that moves the physical-layer names downstream.",
+   "receipt": "https://newsroom.arm.com/news/arm-announces-earnings-release-date-for-first-quarter-fiscal-year-ended-2027"
+  },
+  {
+   "date": "2026-07-29",
+   "t": "VRT",
+   "what": "Earnings, Q2, before open",
+   "why": "Vertiv is the purest read on data center buildout pace. Orders and backlog here set the tone for every cooling and power name on the book.",
+   "receipt": "https://investors.vertiv.com/news/news-details/2026/Vertiv-Announces-Date-of-Second-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+  },
+  {
+   "date": "2026-08-04",
+   "t": "AMD",
+   "what": "Earnings, Q2, after close",
+   "why": "The MI-series ramp is the second source story for AI compute. Data center segment growth is the only line that matters.",
+   "receipt": "https://www.amd.com/en/newsroom/press-releases/2026-7-8-amd-to-report-fiscal-second-quarter-2026-financial.html"
+  },
+  {
+   "date": "2026-08-04",
+   "t": "ANET",
+   "what": "Earnings, Q2, after close",
+   "why": "The networking layer's report card. AI backend wins versus white box pressure decides whether the premium multiple holds.",
+   "receipt": "https://www.businesswire.com/news/home/20260707716090/en/Arista-Networks-to-Announce-Q2-2026-Financial-Results-on-Tuesday-August-4-2026"
+  },
+  {
+   "date": "2026-08-04",
+   "t": "LUMN",
+   "what": "Earnings, Q2, after close",
+   "why": "The fiber turnaround print. PCF deal flow and debt progress are what keep the position thesis alive.",
+   "receipt": "https://www.businesswire.com/news/home/20260714638238/en/Lumen-Technologies-to-Hold-Second-Quarter-2026-Earnings-Conference-Call"
+  },
+  {
+   "date": "2026-08-05",
+   "t": "SITM",
+   "what": "Earnings, Q2, after close",
+   "why": "Precision timing rides every AI networking box. Watch the comms and datacenter split for confirmation the design wins are converting.",
+   "receipt": "https://investor.sitime.com/news-releases/news-release-details/sitime-corporation-announce-second-quarter-2026-financial"
+  },
+  {
+   "date": "2026-08-06",
+   "t": "OUST",
+   "what": "Earnings, Q2, after close",
+   "why": "Software attach rate on the lidar base is the whole story now. Gross margin trajectory tells you if the physical AI thesis is compounding.",
+   "receipt": "https://investors.ouster.com/news-releases/news-release-details/ouster-announces-date-second-quarter-2026-earnings-call"
+  },
+  {
+   "date": "2026-08-06",
+   "t": "CEG",
+   "what": "Earnings, Q2, call 10:00 ET",
+   "why": "The nuclear-to-datacenter power story reports. New PPA announcements move the whole power layer.",
+   "receipt": "https://investors.constellationenergy.com/events/event-details/q2-2026-constellation-energy-corporation-earnings-conference-call"
+  },
+  {
+   "date": "2026-10-07",
+   "t": "SKHY",
+   "what": "IPO lockup expires, 90 days from prospectus",
+   "why": "The 424B4 sets a 90 day restricted period from the July 9 prospectus. Company shares come unlocked here; the memory supercycle thesis meets its first real supply test.",
+   "receipt": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526299963/d32785d424b4.htm"
+  },
+  {
+   "date": "2026-09-01",
+   "t": "CC",
+   "what": "EPA PFAS rescission final rule window opens",
+   "why": "EPA's own Unified Agenda targets September 2026 for the final rescission rule. A target, not a promise, but it is the only future date the agency has put on paper for the Chemours overhang.",
+   "receipt": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=2040-AG53"
   }
  ]
 }

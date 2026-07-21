@@ -87,5 +87,49 @@ class TestBuildCalendar(unittest.TestCase):
         self.assertEqual(len(cal), 1)
 
 
+
+class TestCountdown(unittest.TestCase):
+    """Every calendar entry carries days-until so the page can render a
+    countdown without re-deriving dates client-side."""
+
+    def test_days_until_attached(self):
+        cal = build_calendar(
+            [{"date": "2026-07-16", "t": "A", "what": "today", "why": "", "receipt": ""},
+             {"date": "2026-07-17", "t": "B", "what": "tomorrow", "why": "", "receipt": ""},
+             {"date": "2026-07-28", "t": "C", "what": "later", "why": "", "receipt": ""}],
+            {}, "2026-07-16", days=92)
+        self.assertEqual([e["days"] for e in cal], [0, 1, 12])
+
+    def test_earnings_rows_get_days_too(self):
+        cal = build_calendar([], {"ARM": {"date": "2026-07-29", "label": "earnings"}},
+                             "2026-07-16", days=92)
+        self.assertEqual(cal[0]["days"], 13)
+
+
+
+class TestCountdownRendering(unittest.TestCase):
+    """The page shows a plain-language countdown chip per entry."""
+
+    def _cal(self):
+        from sections import calendar_public_html
+        return calendar_public_html(build_calendar(
+            [{"date": "2026-07-16", "t": "A", "what": "prints", "why": "", "receipt": ""},
+             {"date": "2026-07-17", "t": "B", "what": "prints", "why": "", "receipt": ""},
+             {"date": "2026-07-21", "t": "C", "what": "prints", "why": "", "receipt": ""}],
+            {}, "2026-07-16", days=7))
+
+    def test_countdown_chip_text(self):
+        html = self._cal()
+        self.assertIn("today", html)
+        self.assertIn("tomorrow", html)
+        self.assertIn("in 5d", html)
+
+    def test_chip_absent_when_days_missing(self):
+        from sections import _cal_row
+        row = _cal_row({"date": "2026-07-16", "t": "A", "what": "x",
+                        "why": "", "receipt": ""}, frozenset())
+        self.assertNotIn("cal-days", row)
+
+
 if __name__ == "__main__":
     unittest.main()

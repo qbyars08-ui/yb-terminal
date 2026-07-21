@@ -70,6 +70,7 @@ def build_calendar(curated, earnings, today, days):
             continue
         entries.append({"date": d, "t": t, "what": "Earnings",
                         "why": "", "receipt": ""})
-    windowed = [e for e in entries
+    windowed = [{**e, "days": (date.fromisoformat(e["date"]) - start).days}
+                for e in entries
                 if start <= date.fromisoformat(e["date"]) <= end]
     return sorted(windowed, key=lambda e: (e["date"], e["t"]))
