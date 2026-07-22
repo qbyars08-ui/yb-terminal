@@ -77,7 +77,7 @@
    "thesis": "HBM is the AI bottleneck, sold out through 2026, only US-domiciled supplier of three globally",
    "held": 12.9,
    "health": "INTACT",
-   "conviction": 66,
+   "conviction": 67,
    "stance": "bull"
   },
   "NBIS": {
@@ -108,8 +108,8 @@
    "thesis": "Lidar + cameras + full perception stack for robotics. REV8 launched. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 8.4,
    "health": "INTACT",
-   "conviction": 59,
-   "stance": "neutral"
+   "conviction": 60,
+   "stance": "bull"
   },
   "PENG": {
    "layer": "Datacenters",
@@ -192,9 +192,7 @@
   "CC": {},
   "CEG": {
    "layer": "Power",
-   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
-   "conviction": 63,
-   "stance": "bull"
+   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand"
   },
   "COHR": {
    "layer": "Networking",
@@ -218,14 +216,12 @@
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 48,
+   "conviction": 49,
    "stance": "neutral"
   },
   "KTOS": {
    "layer": "Space",
-   "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 43,
-   "stance": "neutral"
+   "thesis": "Autonomous combat drones, Valkyrie program of record"
   },
   "LITE": {
    "layer": "Networking",
@@ -266,7 +262,9 @@
   },
   "MRVL": {
    "layer": "Compute",
-   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
+   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
+   "conviction": 54,
+   "stance": "neutral"
   },
   "NOW": {
    "layer": "Software",
@@ -277,20 +275,18 @@
   },
   "NVDA": {
    "layer": "Compute",
-   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue",
-   "conviction": 55,
-   "stance": "neutral"
+   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue"
   },
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 53,
+   "conviction": 51,
    "stance": "neutral"
   },
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 56,
+   "conviction": 54,
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
@@ -308,7 +304,9 @@
   },
   "POET": {
    "layer": "Networking",
-   "thesis": "Silicon photonics for optical interconnects, TSMC partnership"
+   "thesis": "Silicon photonics for optical interconnects, TSMC partnership",
+   "conviction": 53,
+   "stance": "neutral"
   },
   "PPSI": {
    "layer": "Power & Grid",
@@ -340,13 +338,13 @@
   "VST": {
    "layer": "Power & Grid",
    "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "conviction": 55,
-   "stance": "neutral",
    "earnings": "2026-08-06"
   },
   "WOLF": {
    "layer": "Power & Grid",
-   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased"
+   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
+   "conviction": 37,
+   "stance": "bear"
   },
   "AAPL": {},
   "ABNB": {},
@@ -386,7 +384,7 @@
   "HON": {},
   "HOOD": {},
   "INTC": {
-   "conviction": 40,
+   "conviction": 41,
    "stance": "neutral"
   },
   "IONQ": {
@@ -397,17 +395,14 @@
   "JPM": {},
   "KO": {},
   "LMT": {
-   "conviction": 46,
+   "conviction": 45,
    "stance": "neutral"
   },
   "MA": {},
   "MCD": {},
-  "META": {
-   "conviction": 51,
-   "stance": "neutral"
-  },
+  "META": {},
   "MSFT": {
-   "conviction": 49,
+   "conviction": 50,
    "stance": "neutral"
   },
   "NET": {},

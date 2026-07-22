@@ -280,8 +280,8 @@
   "changePct": 3.48
  },
  "DELL": {
-  "price": 441.87,
-  "changePct": 9.33
+  "price": 441.8,
+  "changePct": 9.32
  },
  "DIS": {
   "price": 95.87,
@@ -320,7 +320,7 @@
   "changePct": -2.34
  },
  "IWM": {
-  "price": 293.77,
+  "price": 293.79,
   "changePct": -0.93
  },
  "JPM": {
@@ -428,8 +428,8 @@
   "changePct": -3.87
  },
  "SPY": {
-  "price": 747.47,
-  "changePct": -0.11
+  "price": 747.41,
+  "changePct": -0.12
  },
  "TSLA": {
   "price": 374.01,
