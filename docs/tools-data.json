@@ -39,8 +39,6 @@
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
-   "conviction": 56,
-   "stance": "neutral",
    "earnings": "2026-08-06"
   },
   "CRDO": {
@@ -63,13 +61,12 @@
    "held": 1.6,
    "health": "BROKEN",
    "conviction": 51,
-   "stance": "neutral",
-   "earnings": "2026-07-23"
+   "stance": "neutral"
   },
   "LUMN": {
    "held": 3.4,
    "health": "BROKEN",
-   "conviction": 45,
+   "conviction": 44,
    "stance": "neutral"
   },
   "MU": {
@@ -92,24 +89,21 @@
    "held": 2.9,
    "health": "STRESSED",
    "conviction": 59,
-   "stance": "neutral",
-   "earnings": "2026-07-23"
+   "stance": "neutral"
   },
   "OSS": {
    "layer": "Datacenters",
    "thesis": "The rugged box for AI in the field: 55% revenue growth, 1.8x book-to-bill, zero debt, turning itself into a defense-AI supplier in real time",
    "held": 5.1,
-   "health": "STRESSED",
-   "conviction": 59,
-   "stance": "neutral"
+   "health": "STRESSED"
   },
   "OUST": {
    "layer": "Adjacent Tech",
    "thesis": "Lidar + cameras + full perception stack for robotics. REV8 launched. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 8.4,
    "health": "INTACT",
-   "conviction": 60,
-   "stance": "bull"
+   "conviction": 59,
+   "stance": "neutral"
   },
   "PENG": {
    "layer": "Datacenters",
@@ -124,7 +118,7 @@
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
    "health": "STRESSED",
-   "conviction": 64,
+   "conviction": 63,
    "stance": "bull",
    "earnings": "2026-08-06"
   },
@@ -149,7 +143,7 @@
    "thesis": "Only public photonic quantum pure-play. Room-temperature qubits on fiber. DARPA + Lockheed + AMD customers. 5-year thesis.",
    "held": 6.1,
    "health": "INTACT",
-   "conviction": 59,
+   "conviction": 58,
    "stance": "neutral"
   },
   "ADBE": {},
@@ -179,21 +173,19 @@
   },
   "BIRD": {
    "layer": "Other",
-   "thesis": "Allbirds consumer brand, pending exit",
-   "conviction": 33,
-   "stance": "bear"
+   "thesis": "Allbirds consumer brand, pending exit"
   },
   "BN": {
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 36,
+   "conviction": 37,
    "stance": "bear"
   },
   "CC": {},
   "CEG": {
    "layer": "Power",
    "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand",
-   "conviction": 61,
+   "conviction": 60,
    "stance": "bull"
   },
   "COHR": {
@@ -205,38 +197,36 @@
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 48,
+   "conviction": 49,
    "stance": "neutral"
   },
   "HIMS": {
    "layer": "Pharma",
    "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 39,
-   "stance": "bear"
+   "conviction": 42,
+   "stance": "neutral"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 47,
+   "conviction": 48,
    "stance": "neutral"
   },
   "KTOS": {
    "layer": "Space",
-   "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 44,
-   "stance": "neutral"
+   "thesis": "Autonomous combat drones, Valkyrie program of record"
   },
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 51,
+   "conviction": 52,
    "stance": "neutral"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 54,
+   "conviction": 55,
    "stance": "neutral",
    "earnings": "2026-08-05"
   },
@@ -260,19 +250,17 @@
   },
   "MOD": {
    "layer": "DataCenter",
-   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation",
-   "conviction": 46,
-   "stance": "neutral"
+   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation"
   },
   "MRVL": {
    "layer": "Compute",
-   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
+   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
+   "conviction": 52,
+   "stance": "neutral"
   },
   "NOW": {
    "layer": "Software",
-   "thesis": "Enterprise automation platform, AI agents for IT",
-   "conviction": 61,
-   "stance": "bull"
+   "thesis": "Enterprise automation platform, AI agents for IT"
   },
   "NVDA": {
    "layer": "Compute",
@@ -283,20 +271,20 @@
   "OKLO": {
    "layer": "Power",
    "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 45,
+   "conviction": 52,
    "stance": "neutral"
   },
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 50,
+   "conviction": 52,
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
   "PANW": {
    "layer": "DataCenter",
    "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B",
-   "conviction": 53,
+   "conviction": 55,
    "stance": "neutral"
   },
   "PLTR": {
@@ -321,31 +309,33 @@
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 44,
+   "conviction": 42,
    "stance": "neutral"
   },
   "TSEM": {
    "layer": "Networking",
    "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 48,
+   "conviction": 44,
    "stance": "neutral"
   },
   "VRT": {
    "layer": "DataCenter",
    "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play",
-   "conviction": 49,
+   "conviction": 43,
    "stance": "neutral"
   },
   "VST": {
    "layer": "Power & Grid",
    "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "conviction": 58,
-   "stance": "neutral",
+   "conviction": 63,
+   "stance": "bull",
    "earnings": "2026-08-06"
   },
   "WOLF": {
    "layer": "Power & Grid",
-   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased"
+   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
+   "conviction": 36,
+   "stance": "bear"
   },
   "AAPL": {},
   "ABNB": {},
@@ -353,7 +343,10 @@
    "conviction": 53,
    "stance": "neutral"
   },
-  "AMZN": {},
+  "AMZN": {
+   "conviction": 51,
+   "stance": "neutral"
+  },
   "BA": {},
   "BRK-B": {},
   "CAT": {},
@@ -385,7 +378,10 @@
    "conviction": 40,
    "stance": "neutral"
   },
-  "IONQ": {},
+  "IONQ": {
+   "conviction": 43,
+   "stance": "neutral"
+  },
   "IWM": {},
   "JPM": {},
   "KO": {},
@@ -423,10 +419,7 @@
    "conviction": 39,
    "stance": "bear"
   },
-  "RTX": {
-   "conviction": 43,
-   "stance": "neutral"
-  },
+  "RTX": {},
   "SBUX": {},
   "SCHD": {},
   "SHOP": {},
@@ -440,8 +433,8 @@
   "SPY": {},
   "TSLA": {},
   "TSM": {
-   "conviction": 53,
-   "stance": "neutral"
+   "conviction": 39,
+   "stance": "bear"
   },
   "TXN": {},
   "UBER": {},
