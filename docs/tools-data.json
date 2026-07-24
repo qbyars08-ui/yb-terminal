@@ -54,7 +54,7 @@
   "IQMX": {
    "held": 3.1,
    "health": "INTACT",
-   "conviction": 58,
+   "conviction": 59,
    "stance": "neutral"
   },
   "LPKFF": {
@@ -83,9 +83,7 @@
    "layer": "Datacenters",
    "thesis": "GPU cloud infrastructure with $19.4B Microsoft + $27B Meta backlog. ~$46B locked, total backlog approaching $50B.",
    "held": 9.8,
-   "health": "INTACT",
-   "conviction": 64,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "NOK": {
    "held": 2.9,
@@ -105,7 +103,9 @@
    "layer": "Adjacent Tech",
    "thesis": "Lidar + cameras + full perception stack for robotics. REV8 launched. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 8.4,
-   "health": "INTACT"
+   "health": "INTACT",
+   "conviction": 60,
+   "stance": "bull"
   },
   "PENG": {
    "layer": "Datacenters",
@@ -128,9 +128,7 @@
    "layer": "Networking",
    "thesis": "First AI-inference production order landing on a recovering core, a 5.4M-share float, net cash worth a quarter of the cap, and $0.55 of EPS torque per $10M of revenue",
    "held": 3.7,
-   "health": "INTACT",
-   "conviction": 58,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "WYY": {
    "layer": "Adjacent Tech",
@@ -145,14 +143,14 @@
    "thesis": "Only public photonic quantum pure-play. Room-temperature qubits on fiber. DARPA + Lockheed + AMD customers. 5-year thesis.",
    "held": 6.1,
    "health": "INTACT",
-   "conviction": 59,
-   "stance": "neutral"
+   "conviction": 60,
+   "stance": "bull"
   },
   "ADBE": {},
   "ASML": {
    "layer": "Compute",
    "thesis": "EUV lithography monopoly, EUR 38.8B backlog, irreplaceable",
-   "conviction": 56,
+   "conviction": 57,
    "stance": "neutral"
   },
   "AVAV": {
@@ -170,7 +168,7 @@
   "BE": {
    "layer": "Power & Grid",
    "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 55,
+   "conviction": 56,
    "stance": "neutral"
   },
   "BIRD": {
@@ -181,7 +179,9 @@
   },
   "BN": {
    "layer": "Power",
-   "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power"
+   "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
+   "conviction": 39,
+   "stance": "bear"
   },
   "CC": {},
   "CEG": {
@@ -212,7 +212,7 @@
   "IREN": {
    "layer": "DataCenter",
    "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 48,
+   "conviction": 49,
    "stance": "neutral"
   },
   "KTOS": {
@@ -224,7 +224,7 @@
   "LITE": {
    "layer": "Networking",
    "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "LLY": {
@@ -237,7 +237,7 @@
   "LPTH": {
    "layer": "Physics",
    "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 47,
+   "conviction": 48,
    "stance": "neutral"
   },
   "LWLG": {
@@ -261,12 +261,14 @@
   "MRVL": {
    "layer": "Compute",
    "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
-   "conviction": 52,
+   "conviction": 53,
    "stance": "neutral"
   },
   "NOW": {
    "layer": "Software",
-   "thesis": "Enterprise automation platform, AI agents for IT"
+   "thesis": "Enterprise automation platform, AI agents for IT",
+   "conviction": 65,
+   "stance": "bull"
   },
   "NVDA": {
    "layer": "Compute",
@@ -276,9 +278,7 @@
   },
   "OKLO": {
    "layer": "Power",
-   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 52,
-   "stance": "neutral"
+   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors"
   },
   "ON": {
    "layer": "Compute",
@@ -289,14 +289,12 @@
   },
   "PANW": {
    "layer": "DataCenter",
-   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B",
-   "conviction": 57,
-   "stance": "neutral"
+   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B"
   },
   "PLTR": {
    "layer": "Software",
    "thesis": "AI software platform, 82% gross margins, government + commercial",
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "POET": {
@@ -366,7 +364,7 @@
   "DDOG": {},
   "DE": {},
   "DELL": {
-   "conviction": 43,
+   "conviction": 46,
    "stance": "neutral"
   },
   "DIS": {},
@@ -393,18 +391,15 @@
   "IWM": {},
   "JPM": {},
   "KO": {},
-  "LMT": {
-   "conviction": 46,
-   "stance": "neutral"
-  },
+  "LMT": {},
   "MA": {},
   "MCD": {},
   "META": {
-   "conviction": 52,
+   "conviction": 50,
    "stance": "neutral"
   },
   "MSFT": {
-   "conviction": 52,
+   "conviction": 51,
    "stance": "neutral"
   },
   "NET": {},
