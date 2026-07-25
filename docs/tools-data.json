@@ -4,17 +4,13 @@
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
    "held": 5.1,
-   "health": "INTACT",
-   "conviction": 64,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "ANET": {
    "layer": "Networking",
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
    "health": "INTACT",
-   "conviction": 61,
-   "stance": "bull",
    "earnings": "2026-08-04"
   },
   "ARM": {
@@ -22,8 +18,6 @@
    "thesis": "IP toll on every non-x86 AI chip, v9 royalty rate 2x v8, hyperscaler share approaching 50%, royalty annuity model",
    "held": 5.2,
    "health": "INTACT",
-   "conviction": 68,
-   "stance": "bull",
    "earnings": "2026-07-29"
   },
   "ASTS": {
@@ -37,75 +31,55 @@
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
    "health": "INTACT",
-   "conviction": 53,
-   "stance": "neutral",
    "earnings": "2026-08-06"
   },
   "CRDO": {
    "layer": "Networking",
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
-   "health": "INTACT",
-   "conviction": 59,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "IQMX": {
    "held": 3.1,
-   "health": "INTACT",
-   "conviction": 58,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "LPKFF": {
    "layer": "Photonics",
    "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
    "held": 1.6,
-   "health": "BROKEN",
-   "conviction": 54,
-   "stance": "neutral"
+   "health": "BROKEN"
   },
   "LUMN": {
    "held": 3.4,
-   "health": "BROKEN",
-   "conviction": 46,
-   "stance": "neutral"
+   "health": "BROKEN"
   },
   "MU": {
    "layer": "Compute & Memory",
    "thesis": "HBM is the AI bottleneck, sold out through 2026, only US-domiciled supplier of three globally",
    "held": 12.9,
-   "health": "INTACT",
-   "conviction": 69,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "NBIS": {
    "layer": "Datacenters",
    "thesis": "GPU cloud infrastructure with $19.4B Microsoft + $27B Meta backlog. ~$46B locked, total backlog approaching $50B.",
    "held": 9.8,
-   "health": "INTACT",
-   "conviction": 65,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "NOK": {
    "held": 2.9,
-   "health": "BROKEN",
-   "conviction": 60,
-   "stance": "bull"
+   "health": "BROKEN"
   },
   "OSS": {
    "layer": "Datacenters",
    "thesis": "The rugged box for AI in the field: 55% revenue growth, 1.8x book-to-bill, zero debt, turning itself into a defense-AI supplier in real time",
    "held": 5.1,
-   "health": "STRESSED",
-   "conviction": 58,
-   "stance": "neutral"
+   "health": "STRESSED"
   },
   "OUST": {
    "layer": "Adjacent Tech",
    "thesis": "Lidar + cameras + full perception stack for robotics. REV8 launched. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 8.4,
-   "health": "INTACT",
-   "conviction": 60,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "PENG": {
    "layer": "Datacenters",
@@ -124,62 +98,44 @@
    "layer": "Networking",
    "thesis": "First AI-inference production order landing on a recovering core, a 5.4M-share float, net cash worth a quarter of the cap, and $0.55 of EPS torque per $10M of revenue",
    "held": 3.7,
-   "health": "INTACT",
-   "conviction": 58,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "WYY": {
    "layer": "Adjacent Tech",
    "thesis": "A $126M certified federal-identity microcap riding the zero-trust mandate, up from under $3 to $13 and still uncovered",
    "held": 7.1,
-   "health": "INTACT",
-   "conviction": 52,
-   "stance": "neutral"
+   "health": "INTACT"
   },
   "XNDU": {
    "layer": "Physics",
    "thesis": "Only public photonic quantum pure-play. Room-temperature qubits on fiber. DARPA + Lockheed + AMD customers. 5-year thesis.",
    "held": 6.1,
-   "health": "INTACT",
-   "conviction": 60,
-   "stance": "bull"
+   "health": "INTACT"
   },
   "ADBE": {},
   "ASML": {
    "layer": "Compute",
-   "thesis": "EUV lithography monopoly, EUR 38.8B backlog, irreplaceable",
-   "conviction": 57,
-   "stance": "neutral"
+   "thesis": "EUV lithography monopoly, EUR 38.8B backlog, irreplaceable"
   },
   "AVAV": {
    "layer": "Space",
-   "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%",
-   "conviction": 43,
-   "stance": "neutral"
+   "thesis": "Most important drone company, Switchblade proven in Ukraine, revenue +143%"
   },
   "AVGO": {
    "layer": "Compute IP + Networking (dual)",
-   "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position.",
-   "conviction": 68,
-   "stance": "bull"
+   "thesis": "Custom AI silicon for Google TPU + Meta MTIA + ~90% Ethernet switch share. Dual-layer position."
   },
   "BE": {
    "layer": "Power & Grid",
-   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet",
-   "conviction": 55,
-   "stance": "neutral"
+   "thesis": "Solid oxide fuel cells for behind-the-meter datacenter power, paired with VST as the Power & Grid layer's two-path bet"
   },
   "BIRD": {
    "layer": "Other",
-   "thesis": "Allbirds consumer brand, pending exit",
-   "conviction": 36,
-   "stance": "bear"
+   "thesis": "Allbirds consumer brand, pending exit"
   },
   "BN": {
    "layer": "Power",
-   "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power",
-   "conviction": 39,
-   "stance": "bear"
+   "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power"
   },
   "CC": {},
   "CEG": {
@@ -188,101 +144,69 @@
   },
   "COHR": {
    "layer": "Networking",
-   "thesis": "25% optical transceiver market share, NVIDIA $2B partnership",
-   "conviction": 49,
-   "stance": "neutral"
+   "thesis": "25% optical transceiver market share, NVIDIA $2B partnership"
   },
   "FN": {
    "layer": "Photonics",
-   "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
-   "conviction": 48,
-   "stance": "neutral"
+   "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales"
   },
   "HIMS": {
    "layer": "Pharma",
-   "thesis": "Telehealth GLP-1 compound, DTC platform",
-   "conviction": 40,
-   "stance": "neutral"
+   "thesis": "Telehealth GLP-1 compound, DTC platform"
   },
   "INV": {},
   "IREN": {
    "layer": "DataCenter",
-   "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power",
-   "conviction": 48,
-   "stance": "neutral"
+   "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power"
   },
   "KTOS": {
    "layer": "Space",
-   "thesis": "Autonomous combat drones, Valkyrie program of record",
-   "conviction": 44,
-   "stance": "neutral"
+   "thesis": "Autonomous combat drones, Valkyrie program of record"
   },
   "LITE": {
    "layer": "Networking",
-   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal",
-   "conviction": 52,
-   "stance": "neutral"
+   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal"
   },
   "LLY": {
    "layer": "Pharma",
    "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "conviction": 55,
-   "stance": "neutral",
    "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
-   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue.",
-   "conviction": 48,
-   "stance": "neutral"
+   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue."
   },
   "LWLG": {
    "layer": "Networking",
-   "thesis": "Electro-optic polymer modulators, 200G+ capable",
-   "conviction": 53,
-   "stance": "neutral"
+   "thesis": "Electro-optic polymer modulators, 200G+ capable"
   },
   "MBLY": {
    "layer": "Auto",
-   "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash",
-   "conviction": 58,
-   "stance": "neutral"
+   "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash"
   },
   "MOD": {
    "layer": "DataCenter",
-   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation",
-   "conviction": 44,
-   "stance": "neutral"
+   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation"
   },
   "MRVL": {
    "layer": "Compute",
-   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue",
-   "conviction": 53,
-   "stance": "neutral"
+   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
   },
   "NOW": {
    "layer": "Software",
-   "thesis": "Enterprise automation platform, AI agents for IT",
-   "conviction": 65,
-   "stance": "bull"
+   "thesis": "Enterprise automation platform, AI agents for IT"
   },
   "NVDA": {
    "layer": "Compute",
-   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue",
-   "conviction": 55,
-   "stance": "neutral"
+   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue"
   },
   "OKLO": {
    "layer": "Power",
-   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors",
-   "conviction": 53,
-   "stance": "neutral"
+   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors"
   },
   "ON": {
    "layer": "Compute",
    "thesis": "Analog + power chips for EV and AI infrastructure",
-   "conviction": 52,
-   "stance": "neutral",
    "earnings": "2026-08-03"
   },
   "PANW": {
@@ -291,9 +215,7 @@
   },
   "PLTR": {
    "layer": "Software",
-   "thesis": "AI software platform, 82% gross margins, government + commercial",
-   "conviction": 51,
-   "stance": "neutral"
+   "thesis": "AI software platform, 82% gross margins, government + commercial"
   },
   "POET": {
    "layer": "Networking",
@@ -310,42 +232,29 @@
   "SKHY": {},
   "TLN": {
    "layer": "Power",
-   "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE",
-   "conviction": 44,
-   "stance": "neutral"
+   "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE"
   },
   "TSEM": {
    "layer": "Networking",
-   "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout",
-   "conviction": 45,
-   "stance": "neutral"
+   "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout"
   },
   "VRT": {
    "layer": "DataCenter",
-   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play",
-   "conviction": 49,
-   "stance": "neutral"
+   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play"
   },
   "VST": {
    "layer": "Power & Grid",
    "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "conviction": 58,
-   "stance": "neutral",
    "earnings": "2026-08-06"
   },
   "WOLF": {
    "layer": "Power & Grid",
-   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
-   "conviction": 38,
-   "stance": "bear"
+   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased"
   },
   "AAPL": {},
   "ABNB": {},
   "AMD": {},
-  "AMZN": {
-   "conviction": 54,
-   "stance": "neutral"
-  },
+  "AMZN": {},
   "BA": {},
   "BRK-B": {},
   "CAT": {},
@@ -356,45 +265,24 @@
   "CVX": {},
   "DDOG": {},
   "DE": {},
-  "DELL": {
-   "conviction": 45,
-   "stance": "neutral"
-  },
+  "DELL": {},
   "DIS": {},
   "F": {},
-  "GE": {
-   "conviction": 49,
-   "stance": "neutral"
-  },
+  "GE": {},
   "GM": {},
-  "GOOGL": {
-   "conviction": 55,
-   "stance": "neutral"
-  },
+  "GOOGL": {},
   "HON": {},
   "HOOD": {},
-  "INTC": {
-   "conviction": 42,
-   "stance": "neutral"
-  },
-  "IONQ": {
-   "conviction": 45,
-   "stance": "neutral"
-  },
+  "INTC": {},
+  "IONQ": {},
   "IWM": {},
   "JPM": {},
   "KO": {},
-  "LMT": {
-   "conviction": 47,
-   "stance": "neutral"
-  },
+  "LMT": {},
   "MA": {},
   "MCD": {},
   "META": {},
-  "MSFT": {
-   "conviction": 50,
-   "stance": "neutral"
-  },
+  "MSFT": {},
   "NET": {},
   "NFLX": {},
   "NKE": {},
@@ -402,39 +290,21 @@
   "ORCL": {},
   "PEP": {},
   "PYPL": {},
-  "QBTS": {
-   "conviction": 48,
-   "stance": "neutral"
-  },
-  "QCOM": {
-   "conviction": 46,
-   "stance": "neutral"
-  },
+  "QBTS": {},
+  "QCOM": {},
   "QQQ": {},
-  "RGTI": {
-   "conviction": 41,
-   "stance": "neutral"
-  },
-  "RTX": {
-   "conviction": 45,
-   "stance": "neutral"
-  },
+  "RGTI": {},
+  "RTX": {},
   "SBUX": {},
   "SCHD": {},
   "SHOP": {},
-  "SMCI": {
-   "conviction": 50,
-   "stance": "neutral"
-  },
+  "SMCI": {},
   "SNOW": {},
   "SOFI": {},
   "SPOT": {},
   "SPY": {},
   "TSLA": {},
-  "TSM": {
-   "conviction": 55,
-   "stance": "neutral"
-  },
+  "TSM": {},
   "TXN": {},
   "UBER": {},
   "UNH": {},
