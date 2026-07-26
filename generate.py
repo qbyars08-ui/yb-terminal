@@ -10,6 +10,7 @@ import json
 import math
 import re
 import sys
+import urllib.request
 from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
@@ -48,8 +49,48 @@ SUBSTACK = "https://youngbullinvests.substack.com"
 
 # ── Data fetching ────────────────────────────────────────────────
 
+SITE_QUOTES_API = "https://young-bull-site.vercel.app/api/quotes"
+
+
+def fetch_prices_site(tickers):
+    """Primary quote source: our own Vercel API (FMP-backed, no Yahoo
+    rate-limit exposure). Batched; returns {ticker: {price, changePct}}."""
+    prices = {}
+    print(f"  fetching {len(tickers)} quotes via site API...")
+    for i in range(0, len(tickers), 50):
+        batch = tickers[i:i + 50]
+        try:
+            url = f"{SITE_QUOTES_API}?tickers={','.join(batch)}"
+            req = urllib.request.Request(
+                url, headers={"User-Agent": "yb-terminal-refresh/1.0"})
+            with urllib.request.urlopen(req, timeout=25) as r:
+                payload = json.loads(r.read().decode("utf-8"))
+            for t, q in (payload.get("quotes") or {}).items():
+                price = q.get("price")
+                if price is None or not math.isfinite(float(price)):
+                    continue  # blank beats fake
+                pct = q.get("changePct")
+                prices[t] = {"price": round(float(price), 2),
+                             "changePct": round(float(pct), 2)
+                             if pct is not None else None}
+        except Exception as e:
+            print(f"  WARN: site API batch failed: {e}")
+    print(f"  got {len(prices)}/{len(tickers)} via site API")
+    return prices
+
+
 def fetch_prices(tickers):
-    """Fetch quotes for all tickers via yfinance (handles Yahoo auth)."""
+    """Quotes: site API first; yfinance fills any gaps (Yahoo has been
+    blocking bulk downloads since ~07-24, so it is the fallback now)."""
+    prices = fetch_prices_site(tickers)
+    missing = [t for t in tickers if t not in prices]
+    if not missing:
+        return prices
+    return {**fetch_prices_yf(missing), **prices}
+
+
+def fetch_prices_yf(tickers):
+    """Fallback quote source via yfinance (handles Yahoo auth)."""
     prices = {}
     print(f"  fetching {len(tickers)} quotes via yfinance...")
     try:
