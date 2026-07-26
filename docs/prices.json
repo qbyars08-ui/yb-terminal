@@ -175,21 +175,21 @@
   "price": 6.05,
   "changePct": -9.43
  },
- "POET": {
-  "price": 6.89,
-  "changePct": -9.34
+ "CC": {
+  "price": 17.22,
+  "changePct": -1.43
  },
  "FN": {
   "price": 476.04,
   "changePct": -8.05
  },
- "CC": {
-  "price": 17.22,
-  "changePct": -1.43
- },
  "INV": {
   "price": 2.89,
   "changePct": -3.02
+ },
+ "POET": {
+  "price": 6.89,
+  "changePct": -9.34
  },
  "PPSI": {
   "price": 2.98,
@@ -263,14 +263,6 @@
   "price": 23.09,
   "changePct": -11.06
  },
- "LMT": {
-  "price": 582.6,
-  "changePct": 2.46
- },
- "DELL": {
-  "price": 437.5,
-  "changePct": -0.42
- },
  "SITM": {
   "price": 554.46,
   "changePct": -3.81
@@ -327,6 +319,10 @@
   "price": 628.16,
   "changePct": 2.97
  },
+ "DELL": {
+  "price": 437.5,
+  "changePct": -0.42
+ },
  "DIS": {
   "price": 94.85,
   "changePct": 2.18
@@ -358,6 +354,10 @@
  "KO": {
   "price": 82.25,
   "changePct": 1.33
+ },
+ "LMT": {
+  "price": 582.6,
+  "changePct": 2.46
  },
  "MA": {
   "price": 539.66,

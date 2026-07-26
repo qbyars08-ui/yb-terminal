@@ -293,20 +293,20 @@
    "layer": "Networking",
    "thesis": "Electro-optic polymer modulators, 200G+ capable"
   },
-  "POET": {
-   "layer": "Networking",
-   "thesis": "Silicon photonics for optical interconnects, TSMC partnership",
-   "conviction": 55,
-   "stance": "neutral"
-  },
+  "CC": {},
   "FN": {
    "layer": "Photonics",
    "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales",
    "conviction": 47,
    "stance": "neutral"
   },
-  "CC": {},
   "INV": {},
+  "POET": {
+   "layer": "Networking",
+   "thesis": "Silicon photonics for optical interconnects, TSMC partnership",
+   "conviction": 55,
+   "stance": "neutral"
+  },
   "PPSI": {
    "layer": "Power & Grid",
    "thesis": "The purest 'AI ran out of power and the grid can't keep up' bet I found, on-site megawatts in 6 months instead of years"
@@ -387,14 +387,6 @@
    "conviction": 38,
    "stance": "bear"
   },
-  "LMT": {
-   "conviction": 49,
-   "stance": "neutral"
-  },
-  "DELL": {
-   "conviction": 45,
-   "stance": "neutral"
-  },
   "SITM": {
    "layer": "Networking",
    "thesis": "The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company"
@@ -412,6 +404,10 @@
   "CVX": {},
   "DDOG": {},
   "DE": {},
+  "DELL": {
+   "conviction": 45,
+   "stance": "neutral"
+  },
   "DIS": {},
   "F": {},
   "GM": {},
@@ -420,6 +416,10 @@
   "IWM": {},
   "JPM": {},
   "KO": {},
+  "LMT": {
+   "conviction": 49,
+   "stance": "neutral"
+  },
   "MA": {},
   "MCD": {},
   "NET": {},
