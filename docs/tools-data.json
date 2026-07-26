@@ -289,10 +289,6 @@
    "stance": "neutral",
    "earnings": "2026-08-03"
   },
-  "LWLG": {
-   "layer": "Networking",
-   "thesis": "Electro-optic polymer modulators, 200G+ capable"
-  },
   "CC": {},
   "FN": {
    "layer": "Photonics",
@@ -301,6 +297,10 @@
    "stance": "neutral"
   },
   "INV": {},
+  "LWLG": {
+   "layer": "Networking",
+   "thesis": "Electro-optic polymer modulators, 200G+ capable"
+  },
   "POET": {
    "layer": "Networking",
    "thesis": "Silicon photonics for optical interconnects, TSMC partnership",
@@ -377,21 +377,17 @@
    "conviction": 54,
    "stance": "neutral"
   },
-  "INTC": {
-   "conviction": 42,
-   "stance": "neutral"
+  "SITM": {
+   "layer": "Networking",
+   "thesis": "The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company"
   },
+  "SKHY": {},
   "WOLF": {
    "layer": "Power & Grid",
    "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased",
    "conviction": 38,
    "stance": "bear"
   },
-  "SITM": {
-   "layer": "Networking",
-   "thesis": "The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company"
-  },
-  "SKHY": {},
   "AAPL": {},
   "ABNB": {},
   "BA": {},
@@ -413,6 +409,10 @@
   "GM": {},
   "HON": {},
   "HOOD": {},
+  "INTC": {
+   "conviction": 42,
+   "stance": "neutral"
+  },
   "IWM": {},
   "JPM": {},
   "KO": {},
@@ -442,10 +442,10 @@
    "conviction": 41,
    "stance": "neutral"
   },
-  "SMCI": {},
   "SBUX": {},
   "SCHD": {},
   "SHOP": {},
+  "SMCI": {},
   "SNOW": {},
   "SOFI": {},
   "SPOT": {},
