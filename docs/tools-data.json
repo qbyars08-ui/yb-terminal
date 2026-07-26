@@ -87,9 +87,7 @@
    "layer": "Datacenters",
    "thesis": "The rugged box for AI in the field: 55% revenue growth, 1.8x book-to-bill, zero debt, turning itself into a defense-AI supplier in real time",
    "held": 5.1,
-   "health": "STRESSED",
-   "conviction": 58,
-   "stance": "neutral"
+   "health": "STRESSED"
   },
   "OUST": {
    "layer": "Adjacent Tech",
@@ -293,9 +291,7 @@
   },
   "LWLG": {
    "layer": "Networking",
-   "thesis": "Electro-optic polymer modulators, 200G+ capable",
-   "conviction": 52,
-   "stance": "neutral"
+   "thesis": "Electro-optic polymer modulators, 200G+ capable"
   },
   "POET": {
    "layer": "Networking",
@@ -376,10 +372,7 @@
    "conviction": 46,
    "stance": "neutral"
   },
-  "QBTS": {
-   "conviction": 48,
-   "stance": "neutral"
-  },
+  "QBTS": {},
   "GOOGL": {
    "conviction": 54,
    "stance": "neutral"
@@ -449,10 +442,7 @@
    "conviction": 41,
    "stance": "neutral"
   },
-  "SMCI": {
-   "conviction": 50,
-   "stance": "neutral"
-  },
+  "SMCI": {},
   "SBUX": {},
   "SCHD": {},
   "SHOP": {},
