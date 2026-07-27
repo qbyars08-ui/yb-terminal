@@ -1,5 +1,34 @@
 {
  "tickers": {
+  "RGTI": {
+   "conviction": 41,
+   "stance": "neutral"
+  },
+  "RTX": {
+   "conviction": 43,
+   "stance": "neutral"
+  },
+  "SBUX": {},
+  "SCHD": {},
+  "SHOP": {},
+  "SMCI": {},
+  "SNOW": {},
+  "SOFI": {},
+  "SPOT": {},
+  "SPY": {},
+  "TSLA": {},
+  "TSM": {
+   "conviction": 55,
+   "stance": "neutral"
+  },
+  "TXN": {},
+  "UBER": {},
+  "UNH": {},
+  "V": {},
+  "VOO": {},
+  "VTI": {},
+  "WMT": {},
+  "XOM": {},
   "ALMU": {
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
@@ -429,35 +458,6 @@
    "conviction": 46,
    "stance": "neutral"
   },
-  "QQQ": {},
-  "RGTI": {
-   "conviction": 41,
-   "stance": "neutral"
-  },
-  "RTX": {
-   "conviction": 43,
-   "stance": "neutral"
-  },
-  "SBUX": {},
-  "SCHD": {},
-  "SHOP": {},
-  "SMCI": {},
-  "SNOW": {},
-  "SOFI": {},
-  "SPOT": {},
-  "SPY": {},
-  "TSLA": {},
-  "TSM": {
-   "conviction": 55,
-   "stance": "neutral"
-  },
-  "TXN": {},
-  "UBER": {},
-  "UNH": {},
-  "V": {},
-  "VOO": {},
-  "VTI": {},
-  "WMT": {},
-  "XOM": {}
+  "QQQ": {}
  }
 }
