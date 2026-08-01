@@ -195,6 +195,10 @@
   "price": 2.91,
   "changePct": -2.02
  },
+ "RAAQ": {
+  "price": 13.42,
+  "changePct": 0.0
+ },
  "SITM": {
   "price": 535.2,
   "changePct": 1.39
@@ -384,8 +388,8 @@
   "changePct": -0.76
  },
  "QBTS": {
-  "price": 16.21,
-  "changePct": -9.84
+  "price": 18.08,
+  "changePct": 0.56
  },
  "QCOM": {
   "price": 147.61,
