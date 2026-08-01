@@ -1,5 +1,73 @@
 {
  "tickers": {
+  "SITM": {
+   "layer": "Networking",
+   "thesis": "The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company"
+  },
+  "SKHY": {},
+  "TLN": {
+   "layer": "Power",
+   "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE"
+  },
+  "VRT": {
+   "layer": "DataCenter",
+   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play"
+  },
+  "WOLF": {
+   "layer": "Power & Grid",
+   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased"
+  },
+  "AAPL": {},
+  "ABNB": {},
+  "AMD": {},
+  "AMZN": {},
+  "BRK-B": {},
+  "CAT": {},
+  "COIN": {},
+  "COST": {},
+  "CRM": {},
+  "CRWD": {},
+  "DDOG": {},
+  "DE": {},
+  "DELL": {},
+  "F": {},
+  "GE": {},
+  "GOOGL": {},
+  "HON": {},
+  "HOOD": {},
+  "INTC": {},
+  "IONQ": {},
+  "IWM": {},
+  "JPM": {},
+  "LMT": {},
+  "MA": {},
+  "MCD": {},
+  "MSFT": {},
+  "NET": {},
+  "NFLX": {},
+  "O": {},
+  "ORCL": {},
+  "PYPL": {},
+  "QBTS": {},
+  "QCOM": {},
+  "QQQ": {},
+  "RGTI": {},
+  "RTX": {},
+  "SBUX": {},
+  "SCHD": {},
+  "SMCI": {},
+  "SNOW": {},
+  "SOFI": {},
+  "SPOT": {},
+  "SPY": {},
+  "TSLA": {},
+  "TXN": {},
+  "UBER": {},
+  "UNH": {},
+  "V": {},
+  "VOO": {},
+  "VTI": {},
+  "XOM": {},
   "ALMU": {
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
@@ -10,7 +78,8 @@
    "layer": "Networking",
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
-   "health": "INTACT"
+   "health": "INTACT",
+   "earnings": "2026-08-04"
   },
   "ARM": {
    "layer": "Compute & Memory",
@@ -28,7 +97,8 @@
    "layer": "Datacenters",
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
-   "health": "INTACT"
+   "health": "INTACT",
+   "earnings": "2026-08-06"
   },
   "CRDO": {
    "layer": "Networking",
@@ -88,7 +158,8 @@
    "layer": "Adjacent Tech",
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
-   "health": "STRESSED"
+   "health": "STRESSED",
+   "earnings": "2026-08-06"
   },
   "SILC": {
    "layer": "Networking",
@@ -165,7 +236,8 @@
   },
   "LLY": {
    "layer": "Pharma",
-   "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale"
+   "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
+   "earnings": "2026-08-05"
   },
   "LPTH": {
    "layer": "Physics",
@@ -201,7 +273,8 @@
   },
   "ON": {
    "layer": "Compute",
-   "thesis": "Analog + power chips for EV and AI infrastructure"
+   "thesis": "Analog + power chips for EV and AI infrastructure",
+   "earnings": "2026-08-03"
   },
   "PANW": {
    "layer": "DataCenter",
@@ -222,94 +295,6 @@
   "RAAQ": {
    "layer": "Quantum",
    "thesis": "The cheap IonQ hiding in a SPAC ticker: IQM lists as IQMX at ~50x sales while the crowd pays 80x+ for the American name"
-  },
-  "SITM": {
-   "layer": "Networking",
-   "thesis": "The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company"
-  },
-  "SKHY": {},
-  "SVAC": {},
-  "TLN": {
-   "layer": "Power",
-   "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE"
-  },
-  "TSEM": {
-   "layer": "Networking",
-   "thesis": "Silicon photonics revenue doubled, $920M SiPho buildout"
-  },
-  "VRT": {
-   "layer": "DataCenter",
-   "thesis": "Gold standard AI cooling, $15B backlog, thermal bottleneck pure-play"
-  },
-  "VST": {
-   "layer": "Power & Grid",
-   "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity."
-  },
-  "WOLF": {
-   "layer": "Power & Grid",
-   "thesis": "The 800-volt AI datacenter runs on silicon carbide, Wolfspeed owns the substrate layer at ~33.7% share, and Chapter 11 handed over the franchise with 70% of the debt erased"
-  },
-  "AAPL": {},
-  "ABNB": {},
-  "AMD": {},
-  "AMZN": {},
-  "BA": {},
-  "BRK-B": {},
-  "CAT": {},
-  "COIN": {},
-  "COST": {},
-  "CRM": {},
-  "CRWD": {},
-  "CVX": {},
-  "DDOG": {},
-  "DE": {},
-  "DELL": {},
-  "DIS": {},
-  "F": {},
-  "GE": {},
-  "GM": {},
-  "GOOGL": {},
-  "HON": {},
-  "HOOD": {},
-  "INTC": {},
-  "IONQ": {},
-  "IWM": {},
-  "JPM": {},
-  "KO": {},
-  "LMT": {},
-  "MA": {},
-  "MCD": {},
-  "META": {},
-  "MSFT": {},
-  "NET": {},
-  "NFLX": {},
-  "NKE": {},
-  "O": {},
-  "ORCL": {},
-  "PEP": {},
-  "PYPL": {},
-  "QBTS": {},
-  "QCOM": {},
-  "QQQ": {},
-  "RGTI": {},
-  "RTX": {},
-  "SBUX": {},
-  "SCHD": {},
-  "SHOP": {},
-  "SMCI": {},
-  "SNOW": {},
-  "SOFI": {},
-  "SPOT": {},
-  "SPY": {},
-  "TSLA": {},
-  "TSM": {},
-  "TXN": {},
-  "UBER": {},
-  "UNH": {},
-  "V": {},
-  "VOO": {},
-  "VTI": {},
-  "WMT": {},
-  "XOM": {}
+  }
  }
 }
