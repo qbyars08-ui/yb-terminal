@@ -1,25 +1,5 @@
 {
  "tickers": {
-  "RGTI": {},
-  "RTX": {},
-  "SBUX": {},
-  "SCHD": {},
-  "SHOP": {},
-  "SMCI": {},
-  "SNOW": {},
-  "SOFI": {},
-  "SPOT": {},
-  "SPY": {},
-  "TSLA": {},
-  "TSM": {},
-  "TXN": {},
-  "UBER": {},
-  "UNH": {},
-  "V": {},
-  "VOO": {},
-  "VTI": {},
-  "WMT": {},
-  "XOM": {},
   "ALMU": {
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
@@ -30,8 +10,7 @@
    "layer": "Networking",
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
-   "health": "INTACT",
-   "earnings": "2026-08-04"
+   "health": "INTACT"
   },
   "ARM": {
    "layer": "Compute & Memory",
@@ -49,8 +28,7 @@
    "layer": "Datacenters",
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
-   "health": "INTACT",
-   "earnings": "2026-08-06"
+   "health": "INTACT"
   },
   "CRDO": {
    "layer": "Networking",
@@ -110,8 +88,7 @@
    "layer": "Adjacent Tech",
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
-   "health": "STRESSED",
-   "earnings": "2026-08-06"
+   "health": "STRESSED"
   },
   "SILC": {
    "layer": "Networking",
@@ -188,8 +165,7 @@
   },
   "LLY": {
    "layer": "Pharma",
-   "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale",
-   "earnings": "2026-08-05"
+   "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale"
   },
   "LPTH": {
    "layer": "Physics",
@@ -225,8 +201,7 @@
   },
   "ON": {
    "layer": "Compute",
-   "thesis": "Analog + power chips for EV and AI infrastructure",
-   "earnings": "2026-08-03"
+   "thesis": "Analog + power chips for EV and AI infrastructure"
   },
   "PANW": {
    "layer": "DataCenter",
@@ -268,8 +243,7 @@
   },
   "VST": {
    "layer": "Power & Grid",
-   "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "earnings": "2026-08-06"
+   "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity."
   },
   "WOLF": {
    "layer": "Power & Grid",
@@ -316,6 +290,26 @@
   "PYPL": {},
   "QBTS": {},
   "QCOM": {},
-  "QQQ": {}
+  "QQQ": {},
+  "RGTI": {},
+  "RTX": {},
+  "SBUX": {},
+  "SCHD": {},
+  "SHOP": {},
+  "SMCI": {},
+  "SNOW": {},
+  "SOFI": {},
+  "SPOT": {},
+  "SPY": {},
+  "TSLA": {},
+  "TSM": {},
+  "TXN": {},
+  "UBER": {},
+  "UNH": {},
+  "V": {},
+  "VOO": {},
+  "VTI": {},
+  "WMT": {},
+  "XOM": {}
  }
 }
