@@ -1,80 +1,4 @@
 {
- "RGTI": {
-  "price": 14.95,
-  "changePct": 0.61
- },
- "RTX": {
-  "price": 215.22,
-  "changePct": 0.39
- },
- "SBUX": {
-  "price": 105.25,
-  "changePct": -0.57
- },
- "SCHD": {
-  "price": 33.47,
-  "changePct": 0.18
- },
- "SHOP": {
-  "price": 117.15,
-  "changePct": -4.29
- },
- "SMCI": {
-  "price": 28.4,
-  "changePct": 2.42
- },
- "SOFI": {
-  "price": 16.31,
-  "changePct": -0.97
- },
- "SPOT": {
-  "price": 499.94,
-  "changePct": -4.34
- },
- "SPY": {
-  "price": 747.03,
-  "changePct": 0.72
- },
- "TSLA": {
-  "price": 311.21,
-  "changePct": 0.76
- },
- "TSM": {
-  "price": 404.25,
-  "changePct": 0.23
- },
- "TXN": {
-  "price": 275.74,
-  "changePct": -0.58
- },
- "UBER": {
-  "price": 70.36,
-  "changePct": -0.01
- },
- "UNH": {
-  "price": 414.4,
-  "changePct": -1.68
- },
- "V": {
-  "price": 366.13,
-  "changePct": -0.04
- },
- "VOO": {
-  "price": 686.65,
-  "changePct": 0.71
- },
- "VTI": {
-  "price": 368.21,
-  "changePct": 0.53
- },
- "WMT": {
-  "price": 111.2,
-  "changePct": 0.09
- },
- "XOM": {
-  "price": 155.44,
-  "changePct": -0.97
- },
  "ALMU": {
   "price": 16.2,
   "changePct": 5.68
@@ -270,10 +194,6 @@
  "PPSI": {
   "price": 2.91,
   "changePct": -2.02
- },
- "RAAQ": {
-  "price": 13.42,
-  "changePct": 0.0
  },
  "SITM": {
   "price": 535.2,
@@ -474,5 +394,85 @@
  "QQQ": {
   "price": 687.99,
   "changePct": 0.65
+ },
+ "RGTI": {
+  "price": 14.95,
+  "changePct": 0.61
+ },
+ "RTX": {
+  "price": 215.22,
+  "changePct": 0.39
+ },
+ "SBUX": {
+  "price": 105.25,
+  "changePct": -0.57
+ },
+ "SCHD": {
+  "price": 33.47,
+  "changePct": 0.18
+ },
+ "SHOP": {
+  "price": 117.15,
+  "changePct": -4.29
+ },
+ "SMCI": {
+  "price": 28.4,
+  "changePct": 2.42
+ },
+ "SNOW": {
+  "price": 293.28,
+  "changePct": -1.62
+ },
+ "SOFI": {
+  "price": 16.31,
+  "changePct": -0.97
+ },
+ "SPOT": {
+  "price": 499.94,
+  "changePct": -4.34
+ },
+ "SPY": {
+  "price": 747.03,
+  "changePct": 0.72
+ },
+ "TSLA": {
+  "price": 311.21,
+  "changePct": 0.76
+ },
+ "TSM": {
+  "price": 404.25,
+  "changePct": 0.23
+ },
+ "TXN": {
+  "price": 275.74,
+  "changePct": -1.08
+ },
+ "UBER": {
+  "price": 70.36,
+  "changePct": -0.01
+ },
+ "UNH": {
+  "price": 414.4,
+  "changePct": -1.68
+ },
+ "V": {
+  "price": 366.13,
+  "changePct": -0.04
+ },
+ "VOO": {
+  "price": 686.65,
+  "changePct": 0.71
+ },
+ "VTI": {
+  "price": 368.21,
+  "changePct": 0.53
+ },
+ "WMT": {
+  "price": 111.2,
+  "changePct": 0.09
+ },
+ "XOM": {
+  "price": 155.44,
+  "changePct": -0.97
  }
 }
