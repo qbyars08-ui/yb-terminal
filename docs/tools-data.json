@@ -10,8 +10,7 @@
    "layer": "Networking",
    "thesis": "Ethernet backbone for AI, $3.25B AI revenue, cloud switching dominance",
    "held": 6.3,
-   "health": "INTACT",
-   "earnings": "2026-08-04"
+   "health": "INTACT"
   },
   "ARM": {
    "layer": "Compute & Memory",
