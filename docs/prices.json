@@ -99,10 +99,6 @@
   "price": 2.33,
   "changePct": 2.64
  },
- "BN": {
-  "price": 44.54,
-  "changePct": -0.18
- },
  "CC": {
   "price": 14.59,
   "changePct": -18.63
@@ -195,10 +191,6 @@
   "price": 3.05,
   "changePct": -1.29
  },
- "RAAQ": {
-  "price": 13.42,
-  "changePct": 0.0
- },
  "SITM": {
   "price": 543.12,
   "changePct": -6.85
@@ -206,10 +198,6 @@
  "SKHY": {
   "price": 151.03,
   "changePct": -2.17
- },
- "SVAC": {
-  "price": 9.12,
-  "changePct": 0.0
  },
  "TLN": {
   "price": 329.84,
@@ -379,17 +367,13 @@
   "price": 144.39,
   "changePct": -0.93
  },
- "PEP": {
-  "price": 138.78,
-  "changePct": -0.23
- },
  "PYPL": {
   "price": 57.93,
   "changePct": -1.04
  },
  "QBTS": {
-  "price": 16.21,
-  "changePct": -25.74
+  "price": 21.39,
+  "changePct": -2.02
  },
  "QCOM": {
   "price": 157.53,
