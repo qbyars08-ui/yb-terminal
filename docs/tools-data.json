@@ -28,7 +28,8 @@
    "layer": "Datacenters",
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
-   "health": "INTACT"
+   "health": "INTACT",
+   "earnings": "2026-08-06"
   },
   "CRDO": {
    "layer": "Networking",
@@ -88,7 +89,8 @@
    "layer": "Adjacent Tech",
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
-   "health": "INTACT"
+   "health": "INTACT",
+   "earnings": "2026-08-06"
   },
   "SILC": {
    "layer": "Networking",
@@ -128,6 +130,10 @@
   "BIRD": {
    "layer": "Other",
    "thesis": "Allbirds consumer brand, pending exit"
+  },
+  "BN": {
+   "layer": "Power",
+   "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power"
   },
   "CC": {},
   "CEG": {
@@ -215,11 +221,16 @@
    "layer": "Power & Grid",
    "thesis": "The purest 'AI ran out of power and the grid can't keep up' bet I found, on-site megawatts in 6 months instead of years"
   },
+  "RAAQ": {
+   "layer": "Quantum",
+   "thesis": "The cheap IonQ hiding in a SPAC ticker: IQM lists as IQMX at ~50x sales while the crowd pays 80x+ for the American name"
+  },
   "SITM": {
    "layer": "Networking",
    "thesis": "The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company"
   },
   "SKHY": {},
+  "SVAC": {},
   "TLN": {
    "layer": "Power",
    "thesis": "17-year $18B AWS contract, lowest valuation in power sector at 19x forward PE"
@@ -234,7 +245,8 @@
   },
   "VST": {
    "layer": "Power & Grid",
-   "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity."
+   "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
+   "earnings": "2026-08-06"
   },
   "WOLF": {
    "layer": "Power & Grid",
@@ -277,6 +289,7 @@
   "NKE": {},
   "O": {},
   "ORCL": {},
+  "PEP": {},
   "PYPL": {},
   "QBTS": {},
   "QCOM": {},
