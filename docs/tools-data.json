@@ -28,8 +28,7 @@
    "layer": "Datacenters",
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
-   "health": "INTACT",
-   "earnings": "2026-08-06"
+   "health": "INTACT"
   },
   "CRDO": {
    "layer": "Networking",
@@ -65,7 +64,7 @@
   },
   "NOK": {
    "held": 2.9,
-   "health": "STRESSED"
+   "health": "BROKEN"
   },
   "OSS": {
    "layer": "Datacenters",
@@ -89,8 +88,7 @@
    "layer": "Adjacent Tech",
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
-   "health": "INTACT",
-   "earnings": "2026-08-06"
+   "health": "INTACT"
   },
   "SILC": {
    "layer": "Networking",
@@ -245,8 +243,7 @@
   },
   "VST": {
    "layer": "Power & Grid",
-   "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity.",
-   "earnings": "2026-08-06"
+   "thesis": "Largest US nuclear fleet outside CEG. 20-year Microsoft + Meta PPAs locking long-dated capacity."
   },
   "WOLF": {
    "layer": "Power & Grid",
