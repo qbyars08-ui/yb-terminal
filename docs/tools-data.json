@@ -28,7 +28,7 @@
    "layer": "Datacenters",
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
-   "health": "INTACT"
+   "health": "STRESSED"
   },
   "CRDO": {
    "layer": "Networking",
@@ -218,10 +218,6 @@
   "PPSI": {
    "layer": "Power & Grid",
    "thesis": "The purest 'AI ran out of power and the grid can't keep up' bet I found, on-site megawatts in 6 months instead of years"
-  },
-  "RAAQ": {
-   "layer": "Quantum",
-   "thesis": "The cheap IonQ hiding in a SPAC ticker: IQM lists as IQMX at ~50x sales while the crowd pays 80x+ for the American name"
   },
   "SITM": {
    "layer": "Networking",
