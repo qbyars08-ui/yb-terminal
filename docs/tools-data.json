@@ -88,7 +88,7 @@
    "layer": "Adjacent Tech",
    "thesis": "Launch + space components. Neutron H2'26 catalyst. Adjacent Tech sleeve, NOT Physical Layer.",
    "held": 2.7,
-   "health": "INTACT"
+   "health": "STRESSED"
   },
   "SILC": {
    "layer": "Networking",
