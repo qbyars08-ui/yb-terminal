@@ -195,10 +195,6 @@
   "price": 2.87,
   "changePct": -2.38
  },
- "XOM": {
-  "price": 156.71,
-  "changePct": 0.17
- },
  "SITM": {
   "price": 557.86,
   "changePct": -7.01
@@ -474,5 +470,9 @@
  "WMT": {
   "price": 103.09,
   "changePct": 0.45
+ },
+ "XOM": {
+  "price": 156.71,
+  "changePct": 0.17
  }
 }
