@@ -1,5 +1,130 @@
 {
  "tickers": {
+  "CC": {},
+  "CEG": {
+   "layer": "Power",
+   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand"
+  },
+  "COHR": {
+   "layer": "Networking",
+   "thesis": "25% optical transceiver market share, NVIDIA $2B partnership"
+  },
+  "FN": {
+   "layer": "Photonics",
+   "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales"
+  },
+  "HIMS": {
+   "layer": "Pharma",
+   "thesis": "Telehealth GLP-1 compound, DTC platform"
+  },
+  "INV": {},
+  "IREN": {
+   "layer": "DataCenter",
+   "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power"
+  },
+  "KTOS": {
+   "layer": "Space",
+   "thesis": "Autonomous combat drones, Valkyrie program of record"
+  },
+  "LITE": {
+   "layer": "Networking",
+   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal"
+  },
+  "LLY": {
+   "layer": "Pharma",
+   "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale"
+  },
+  "LPTH": {
+   "layer": "Physics",
+   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue."
+  },
+  "LWLG": {
+   "layer": "Networking",
+   "thesis": "Electro-optic polymer modulators, 200G+ capable"
+  },
+  "MBLY": {
+   "layer": "Auto",
+   "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash"
+  },
+  "MOD": {
+   "layer": "DataCenter",
+   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation"
+  },
+  "MRVL": {
+   "layer": "Compute",
+   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
+  },
+  "NOW": {
+   "layer": "Software",
+   "thesis": "Enterprise automation platform, AI agents for IT"
+  },
+  "NVDA": {
+   "layer": "Compute",
+   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue"
+  },
+  "OKLO": {
+   "layer": "Power",
+   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors"
+  },
+  "ON": {
+   "layer": "Compute",
+   "thesis": "Analog + power chips for EV and AI infrastructure"
+  },
+  "PANW": {
+   "layer": "DataCenter",
+   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B"
+  },
+  "PLTR": {
+   "layer": "Software",
+   "thesis": "AI software platform, 82% gross margins, government + commercial"
+  },
+  "POET": {
+   "layer": "Networking",
+   "thesis": "Silicon photonics for optical interconnects, TSMC partnership"
+  },
+  "PPSI": {
+   "layer": "Power & Grid",
+   "thesis": "The purest 'AI ran out of power and the grid can't keep up' bet I found, on-site megawatts in 6 months instead of years"
+  },
+  "AMZN": {},
+  "BA": {},
+  "BRK-B": {},
+  "CAT": {},
+  "COIN": {},
+  "COST": {},
+  "CRM": {},
+  "CRWD": {},
+  "CVX": {},
+  "DDOG": {},
+  "DE": {},
+  "DELL": {},
+  "DIS": {},
+  "F": {},
+  "GE": {},
+  "GM": {},
+  "GOOGL": {},
+  "HON": {},
+  "HOOD": {},
+  "INTC": {},
+  "IONQ": {},
+  "IWM": {},
+  "JPM": {},
+  "KO": {},
+  "LMT": {},
+  "MA": {},
+  "MCD": {},
+  "META": {},
+  "MSFT": {},
+  "NET": {},
+  "NFLX": {},
+  "NKE": {},
+  "O": {},
+  "ORCL": {},
+  "PEP": {},
+  "PYPL": {},
+  "QBTS": {},
+  "QCOM": {},
+  "QQQ": {},
   "ALMU": {
    "layer": "Photonics & Test Materials",
    "thesis": "Indium phosphide quantum-dot photonic ICs, picks-and-shovels substrate for the next generation of optical interconnect",
@@ -133,96 +258,6 @@
    "layer": "Power",
    "thesis": "World's premier infrastructure capital allocator, $180B deployable, 5000MW power"
   },
-  "CC": {},
-  "CEG": {
-   "layer": "Power",
-   "thesis": "Largest US nuclear fleet, 20yr Microsoft + Meta contracts, beneficiary of AI power demand"
-  },
-  "COHR": {
-   "layer": "Networking",
-   "thesis": "25% optical transceiver market share, NVIDIA $2B partnership"
-  },
-  "FN": {
-   "layer": "Photonics",
-   "thesis": "Don't buy the optical stock, buy the Thai factory that physically builds the 800G and 1.6T transceivers for all of them at 5x sales"
-  },
-  "HIMS": {
-   "layer": "Pharma",
-   "thesis": "Telehealth GLP-1 compound, DTC platform"
-  },
-  "INV": {},
-  "IREN": {
-   "layer": "DataCenter",
-   "thesis": "Bitcoin miner pivoting to AI, $9.7B Microsoft contract, 3GW power"
-  },
-  "KTOS": {
-   "layer": "Space",
-   "thesis": "Autonomous combat drones, Valkyrie program of record"
-  },
-  "LITE": {
-   "layer": "Networking",
-   "thesis": "Only 200G/lane EML supplier at volume, NVIDIA $2B deal"
-  },
-  "LLY": {
-   "layer": "Pharma",
-   "thesis": "GLP-1 franchise (Zepbound, Mounjaro), manufacturing scale"
-  },
-  "LPTH": {
-   "layer": "Physics",
-   "thesis": "Infrared optical components for defense and AI-adjacent imaging. Freeform optics moat, Visimid IR thermal module acquisition, pivoting from commercial to defense revenue."
-  },
-  "LWLG": {
-   "layer": "Networking",
-   "thesis": "Electro-optic polymer modulators, 200G+ capable"
-  },
-  "MBLY": {
-   "layer": "Auto",
-   "thesis": "70% ADAS market share, Intel forced selling creating artificial discount, $1.7B cash"
-  },
-  "MOD": {
-   "layer": "DataCenter",
-   "thesis": "Fastest growing cooling stock, data center revenue +119%, cheapest cooling valuation"
-  },
-  "MRVL": {
-   "layer": "Compute",
-   "thesis": "AI revenue $2.5B+, acquired Celestial AI for photonics, data center 75% of revenue"
-  },
-  "NOW": {
-   "layer": "Software",
-   "thesis": "Enterprise automation platform, AI agents for IT"
-  },
-  "NVDA": {
-   "layer": "Compute",
-   "thesis": "GPU dominance, CUDA ecosystem, $215.9B revenue"
-  },
-  "OKLO": {
-   "layer": "Power",
-   "thesis": "Sam Altman-backed SMR, first-mover in advanced fission microreactors"
-  },
-  "ON": {
-   "layer": "Compute",
-   "thesis": "Analog + power chips for EV and AI infrastructure"
-  },
-  "PANW": {
-   "layer": "DataCenter",
-   "thesis": "Leading cybersecurity platformization, next-gen security ARR $6.3B"
-  },
-  "PLTR": {
-   "layer": "Software",
-   "thesis": "AI software platform, 82% gross margins, government + commercial"
-  },
-  "POET": {
-   "layer": "Networking",
-   "thesis": "Silicon photonics for optical interconnects, TSMC partnership"
-  },
-  "PPSI": {
-   "layer": "Power & Grid",
-   "thesis": "The purest 'AI ran out of power and the grid can't keep up' bet I found, on-site megawatts in 6 months instead of years"
-  },
-  "RAAQ": {
-   "layer": "Quantum",
-   "thesis": "The cheap IonQ hiding in a SPAC ticker: IQM lists as IQMX at ~50x sales while the crowd pays 80x+ for the American name"
-  },
   "SITM": {
    "layer": "Networking",
    "thesis": "The clock is the bottleneck nobody prices: 395 people, revenue +88%, datacenter segment +158% with seven straight triple-digit quarters, and a Renesas deal that roughly doubles the company"
@@ -252,45 +287,6 @@
   "AAPL": {},
   "ABNB": {},
   "AMD": {},
-  "AMZN": {},
-  "BA": {},
-  "BRK-B": {},
-  "CAT": {},
-  "COIN": {},
-  "COST": {},
-  "CRM": {},
-  "CRWD": {},
-  "CVX": {},
-  "DDOG": {},
-  "DE": {},
-  "DELL": {},
-  "DIS": {},
-  "F": {},
-  "GE": {},
-  "GM": {},
-  "GOOGL": {},
-  "HON": {},
-  "HOOD": {},
-  "INTC": {},
-  "IONQ": {},
-  "IWM": {},
-  "JPM": {},
-  "KO": {},
-  "LMT": {},
-  "MA": {},
-  "MCD": {},
-  "META": {},
-  "MSFT": {},
-  "NET": {},
-  "NFLX": {},
-  "NKE": {},
-  "O": {},
-  "ORCL": {},
-  "PEP": {},
-  "PYPL": {},
-  "QBTS": {},
-  "QCOM": {},
-  "QQQ": {},
   "RGTI": {},
   "RTX": {},
   "SBUX": {},
