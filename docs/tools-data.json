@@ -34,17 +34,11 @@
    "layer": "Networking",
    "thesis": "Everyone fights over the GPU; Credo sells the wires between them, tripled revenue to $1.335B with 68% GM and guides 80%+ for FY27",
    "held": 8.3,
-   "health": "INTACT"
+   "health": "STRESSED"
   },
   "IQMX": {
    "held": 3.1,
    "health": "INTACT"
-  },
-  "LPKFF": {
-   "layer": "Photonics",
-   "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
-   "held": 1.6,
-   "health": "BROKEN"
   },
   "LUMN": {
    "held": 3.4,
@@ -218,10 +212,6 @@
   "PPSI": {
    "layer": "Power & Grid",
    "thesis": "The purest 'AI ran out of power and the grid can't keep up' bet I found, on-site megawatts in 6 months instead of years"
-  },
-  "RAAQ": {
-   "layer": "Quantum",
-   "thesis": "The cheap IonQ hiding in a SPAC ticker: IQM lists as IQMX at ~50x sales while the crowd pays 80x+ for the American name"
   },
   "SITM": {
    "layer": "Networking",
