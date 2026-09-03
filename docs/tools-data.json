@@ -28,7 +28,7 @@
    "layer": "Datacenters",
    "thesis": "Bitcoin miner pivoting to AI hosting, Datacenter layer pivot bet, sub-$1B cost basis entry",
    "held": 2.6,
-   "health": "STRESSED"
+   "health": "INTACT"
   },
   "CRDO": {
    "layer": "Networking",
@@ -39,12 +39,6 @@
   "IQMX": {
    "held": 3.1,
    "health": "INTACT"
-  },
-  "LPKFF": {
-   "layer": "Photonics",
-   "thesis": "The German laser company drilling the glass substrates AI chip packaging moves to next",
-   "held": 1.6,
-   "health": "BROKEN"
   },
   "LUMN": {
    "held": 3.4,
