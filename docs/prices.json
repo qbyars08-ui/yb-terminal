@@ -28,8 +28,8 @@
   "changePct": -0.0
  },
  "LPKFF": {
-  "price": 15.33,
-  "changePct": 2.47
+  "price": 15.45,
+  "changePct": 3.28
  },
  "LUMN": {
   "price": 6.77,
@@ -324,8 +324,8 @@
   "changePct": 1.28
  },
  "IWM": {
-  "price": 295.97,
-  "changePct": 0.26
+  "price": 296.01,
+  "changePct": 0.28
  },
  "JPM": {
   "price": 358.64,
@@ -460,7 +460,7 @@
   "changePct": -0.97
  },
  "VOO": {
-  "price": 708.05,
+  "price": 708.01,
   "changePct": -0.38
  },
  "VTI": {
