@@ -324,8 +324,8 @@
   "changePct": -3.41
  },
  "IWM": {
-  "price": 287.76,
-  "changePct": -0.99
+  "price": 287.7,
+  "changePct": -1.01
  },
  "JPM": {
   "price": 353.56,
@@ -372,8 +372,8 @@
   "changePct": -0.9
  },
  "ORCL": {
-  "price": 153.17,
-  "changePct": -5.23
+  "price": 152.94,
+  "changePct": -5.38
  },
  "PEP": {
   "price": 136.65,
@@ -432,8 +432,8 @@
   "changePct": -0.24
  },
  "SPY": {
-  "price": 757.89,
-  "changePct": -0.59
+  "price": 757.83,
+  "changePct": -0.6
  },
  "TSLA": {
   "price": 363.56,
@@ -460,8 +460,8 @@
   "changePct": -0.05
  },
  "VOO": {
-  "price": 696.7,
-  "changePct": -0.59
+  "price": 696.65,
+  "changePct": -0.6
  },
  "VTI": {
   "price": 373.24,
