@@ -195,18 +195,6 @@
   "price": 3.06,
   "changePct": 3.03
  },
- "SITM": {
-  "price": 635.66,
-  "changePct": 5.54
- },
- "SKHY": {
-  "price": 190.07,
-  "changePct": 0.94
- },
- "SVAC": {
-  "price": 9.12,
-  "changePct": 0.0
- },
  "TLN": {
   "price": 312.74,
   "changePct": 0.39
@@ -394,6 +382,14 @@
  "QQQ": {
   "price": 714.88,
   "changePct": 0.87
+ },
+ "SITM": {
+  "price": 635.66,
+  "changePct": 5.54
+ },
+ "SKHY": {
+  "price": 190.07,
+  "changePct": 0.94
  },
  "RGTI": {
   "price": 15.27,
